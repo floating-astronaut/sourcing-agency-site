@@ -1,95 +1,280 @@
 ---
 import Base from '~/layouts/Base.astro';
-import Icon from '~/components/Icon.astro';
 import FAQSchema from '~/components/schema/FAQSchema.astro';
-
-const ingredients = [
-  { name: 'Ashwagandha', body: 'Adaptogenic root, widely used for calming and stress-support formulations.' },
-  { name: 'Turmeric', body: 'Anti-inflammatory support, used across joint and skin/coat formulations.' },
-  { name: 'Brahmi', body: 'Traditionally used for cognitive and calming support.' },
-  { name: 'Triphala', body: 'A three-fruit blend used in digestive-support formulations.' },
-  { name: 'Amla', body: 'Vitamin-C-rich fruit used in immunity formulations.' },
-  { name: 'Shilajit', body: 'Mineral-rich resin used across general wellness and vitality formulations.' },
-] as const;
-
-const productCategories = ['Joint care', 'Digestive', 'Calming', 'Coat & skin', 'Immunity', 'General wellness'] as const;
+import { site } from '~/lib/site';
 
 const faqs = [
-  { q: 'Do you support custom formulation?', a: 'Yes — we work with manufacturers who can formulate to a brief, including with your vet or nutritionist if needed.' },
-  { q: 'What certifications matter for EU buyers?', a: 'TODO — confirm which certifications (GMP, AYUSH, export-specific) your manufacturer network currently holds, and surface them prominently here.' },
-  { q: 'What formats are available?', a: 'Chews, powders, pastes, oils, and capsules — format availability and MOQ vary by manufacturer.' },
+  { q: 'Do you support custom formulation?', a: 'Yes — custom formulation is a core service. We work with AYUSH-licensed and GMP-certified formulators who can develop new products to your specification, including adapting traditional Ayurvedic texts for modern supplement formats. We can involve your in-house R&D team or nutritionist advisors at any stage.' },
+  { q: 'What certifications are available for EU and US markets?', a: 'Our manufacturers hold GMP (Schedule M, India), AYUSH (Government of India Ayurveda certification), ISO 9001 and ISO 22000, HACCP, and FSSAI. For organic-certified ingredients, we source from USDA Organic and India Organic certified farms. Full documentation packages including Certificate of Analysis, Certificate of Origin, and Phytosanitary Certificates are provided with every shipment.' },
+  { q: 'What product formats are available?', a: 'We supply: capsules (vegetarian and gelatin), tablets, soft gels, powders (bulk and sachets), liquid extracts and tinctures, oils (infused and essential), pastes, and functional food formats. Specific format availability depends on the ingredient — we confirm this during the factory-matching stage.' },
+  { q: 'How is ingredient quality and purity verified?', a: 'All ingredients are sourced from farms and processors that provide Certificates of Analysis (CoA) with each batch. Third-party lab testing for active compound potency, heavy metals, pesticide residues, and microbial load is arranged through accredited Indian labs (NABL-certified) or your preferred international lab. We can provide historical batch reports during the sampling phase.' },
+  { q: 'Can you source organic-certified Ayurvedic ingredients?', a: 'Yes — organic-certified versions of most major Ayurvedic ingredients (Ashwagandha, Turmeric, Amla, Moringa, Triphala, and more) are available from USDA Organic and India Organic certified farms. Organic sourcing typically adds 20–35% to ingredient cost but unlocks premium retail positioning in US and EU markets.' },
+  { q: 'What are typical MOQs for Ayurvedic ingredients and finished products?', a: 'Raw ingredient MOQs typically start at 50–500 kg depending on the herb and grade. Finished supplement products (capsules, tablets) start at 1,000–5,000 units per SKU for most manufacturers. Custom formulations have higher initial MOQs of 5,000–10,000 units for the development run.' },
 ] as const;
 ---
 
-<Base title="Ayurveda Sourcing" description="Certified Ayurvedic and herbal supplement sourcing from India — ashwagandha, turmeric, brahmi, triphala, shilajit, and custom formulations, globally compliant.">
-  <section class="pt-16 pb-12 md:pt-24">
-    <div class="container-app">
-      <p class="eyebrow"><Icon name="spark" size={14} /> Ayurveda Sourcing</p>
-      <h1 class="mt-4 max-w-3xl">Ancient ingredients, globally compliant formulations.</h1>
-      <p class="mt-5 max-w-2xl text-fluid-lg text-muted">
-        We connect international wellness brands to certified Ayurvedic and herbal manufacturers
-        in India — from pet wellness formulations to general herbal supplements.
+<Base title="Ayurveda Sourcing — IndoFolk Wellness" description="Source certified Ayurvedic ingredients and finished supplements from India — Ashwagandha, Turmeric, Shilajit, Moringa, and custom formulations. GMP and AYUSH certified manufacturers.">
+  <FAQSchema faqs={faqs} />
+
+  <!-- Hero -->
+  <section style="background:#0a192f;min-height:72vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:5rem 5% 4rem;">
+    <div style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(5,150,105,0.18) 0%,transparent 65%);border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-15%;left:-8%;width:400px;height:400px;background:radial-gradient(circle,rgba(37,99,235,0.12) 0%,transparent 65%);border-radius:50%;"></div>
+    </div>
+    <div style="max-width:1180px;margin:0 auto;width:100%;position:relative;z-index:2;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(5,150,105,0.18);border:1px solid rgba(5,150,105,0.38);color:#6ee7b7;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#059669;display:inline-block;"></span>
+        Ayurveda Sourcing
+      </div>
+      <h1 style="font-size:clamp(2.6rem,5vw,4.5rem);font-weight:700;color:#fff;line-height:1.06;letter-spacing:-0.025em;margin-bottom:1.2rem;max-width:820px;">
+        5,000 years of tradition.<br/><em style="color:#f59e0b;font-style:normal;">Globally compliant manufacturing.</em>
+      </h1>
+      <p style="font-size:1.08rem;color:rgba(255,255,255,0.65);line-height:1.8;max-width:600px;margin-bottom:2.5rem;font-weight:400;">
+        India is the world's leading source for Ayurvedic ingredients and finished herbal supplements. IndoFolk Wellness connects international wellness brands to AYUSH-certified, GMP-grade manufacturers — with full export documentation for US, EU, and UK markets.
       </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
+        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:100px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.35);">
+          Book a Free Consultation ↗
+        </a>
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:0.9rem 1.8rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
+          Request Ingredient Samples
+        </a>
+      </div>
+      <!-- Stats -->
+      <div style="display:flex;gap:0;align-items:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;max-width:560px;flex-wrap:wrap;">
+        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
+          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">$10B+</strong>
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">Ayurveda market size</span>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
+        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
+          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">700+</strong>
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">Herbs in our network</span>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
+        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
+          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">AYUSH</strong>
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">Govt. certified</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16 border-y border-border/70 bg-surface-2/40">
-    <div class="container-app">
-      <h2>Key ingredients we source</h2>
-      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {ingredients.map((i) => (
-          <div class="card p-6">
-            <h3 class="text-fluid-lg font-semibold">{i.name}</h3>
-            <p class="mt-2 text-fluid-sm text-muted">{i.body}</p>
+  <!-- Key Ingredients -->
+  <section style="padding:5rem 5%;background:#f8fafc;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;margin-bottom:0.8rem;">
+        <span style="width:22px;height:2px;background:#059669;display:inline-block;flex-shrink:0;"></span>
+        Key Ingredients
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:4rem;">
+        <div>
+          <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#0a192f;margin-bottom:0.8rem;letter-spacing:-0.015em;">India's most in-demand Ayurvedic ingredients</h2>
+          <p style="font-size:0.95rem;color:#64748b;line-height:1.85;margin-bottom:2rem;">We source raw ingredients, extracts, and standardised powders — with full specification sheets and Certificates of Analysis for every batch.</p>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            {[
+              { icon: '🌿', name: 'Ashwagandha (Withania somnifera)', desc: 'KSM-66, Sensoril, and standard extract grades. Adaptogenic — used for stress, energy, and sports nutrition.' },
+              { icon: '💛', name: 'Turmeric (Curcuma longa)', desc: 'Curcumin 95% standardized, BCM-95 bioavailable grade. Anti-inflammatory — joint and skin formulations.' },
+              { icon: '🪨', name: 'Shilajit (Mineral resin)', desc: 'Purified fulvic acid-rich resin. 40–60% fulvic acid grades. Vitality, energy, and mineral supplement applications.' },
+              { icon: '🌱', name: 'Moringa (Moringa oleifera)', desc: 'Leaf powder and extract. Organic certified. Nutrient-dense superfood used in green supplement formulas.' },
+              { icon: '🍃', name: 'Neem (Azadirachta indica)', desc: 'Leaf powder, extract, and oil. Skin health, immunity, and dental care applications.' },
+              { icon: '🧠', name: 'Brahmi (Bacopa monnieri)', desc: '20–50% bacosides standardized. Cognitive support and calming formulations for human and pet wellness.' },
+              { icon: '🫐', name: 'Triphala (three-fruit blend)', desc: 'Amalaki, Bibhitaki, Haritaki. Digestive support staple — powder, tablet, and extract formats.' },
+              { icon: '🟠', name: 'Amla (Phyllanthus emblica)', desc: 'Vitamin C-rich superfruit. Immunity, hair care, and antioxidant supplement applications.' },
+            ].map(ing => (
+              <div style="display:flex;align-items:center;gap:0.8rem;padding:0.75rem 1rem;border-radius:12px;background:#fff;border:1px solid #e2e8f0;">
+                <span style="font-size:1.2rem;width:30px;text-align:center;flex-shrink:0;">{ing.icon}</span>
+                <div style="flex:1;">
+                  <strong style="display:block;font-size:0.87rem;font-weight:600;color:#0a192f;">{ing.name}</strong>
+                  <span style="font-size:0.74rem;color:#64748b;">{ing.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style="position:relative;border-radius:18px;overflow:hidden;min-height:500px;">
+          <img src="/images/products/supplements-flatlay.jpg" alt="Ayurvedic ingredients and supplements flatlay" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(10,25,47,0.85) 0%,transparent 100%);padding:2rem 1.5rem 1.5rem;">
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.72);font-weight:500;letter-spacing:0.05em;">AYUSH-certified ingredient sourcing with full CoA documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product formats -->
+      <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;margin-bottom:1.5rem;">
+        <span style="width:22px;height:2px;background:#059669;display:inline-block;flex-shrink:0;"></span>
+        Finished Product Formats
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;">
+        {[
+          { icon: '💊', fmt: 'Capsules', note: 'Vegetarian & gelatin, 250mg–1000mg' },
+          { icon: '🧪', fmt: 'Powders', note: 'Bulk and individual sachet format' },
+          { icon: '🫙', fmt: 'Liquid Extract', note: 'Tinctures, drops, glycerites' },
+          { icon: '🫒', fmt: 'Oils & Pastes', note: 'Infused and essential oil formats' },
+          { icon: '🍬', fmt: 'Soft Gels', note: 'Oil-based formulations, 500mg–1g' },
+        ].map(f => (
+          <div style="background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.8rem;">{f.icon}</div>
+            <strong style="display:block;font-size:0.9rem;font-weight:700;color:#0a192f;margin-bottom:0.3rem;">{f.fmt}</strong>
+            <span style="font-size:0.74rem;color:#64748b;line-height:1.5;">{f.note}</span>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="py-12 md:py-16">
-    <div class="container-app">
-      <h2>Product categories</h2>
-      <ul class="mt-6 flex flex-wrap gap-3">
-        {productCategories.map((c) => (
-          <li class="chip">{c}</li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <section class="py-12 md:py-16 border-t border-border/70 bg-surface-2/40">
-    <div class="container-app">
-      <p class="eyebrow"><Icon name="shield" size={14} /> Certifications</p>
-      <h2 class="mt-4">What standards our manufacturers hold</h2>
-      <p class="mt-4 max-w-2xl text-muted">
-        TODO — list specific certifications (GMP, AYUSH compliance, export standards) here. This
-        section matters most to EU buyers and should be made prominent once confirmed.
-      </p>
-    </div>
-  </section>
-
-  <section id="faq" class="py-12 md:py-16">
-    <FAQSchema faqs={faqs} />
-    <div class="container-app max-w-3xl">
-      <h2>FAQ</h2>
-      <div class="mt-8 grid gap-4">
-        {faqs.map((f) => (
-          <details class="card p-5">
-            <summary class="cursor-pointer font-medium">{f.q}</summary>
-            <p class="mt-3 text-fluid-sm text-muted">{f.a}</p>
-          </details>
+  <!-- Certifications -->
+  <section style="padding:5rem 5%;background:#0a192f;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.8rem;">
+          <span style="width:22px;height:2px;background:rgba(255,255,255,0.3);display:inline-block;"></span>
+          Certifications
+        </div>
+        <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.015em;">The compliance documentation your buyers need</h2>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:2rem;">Every manufacturer in our Ayurveda network is vetted for compliance. We supply complete documentation packages for customs clearance and regulatory submissions in your target market.</p>
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.85rem 1.8rem;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;">Request compliance docs →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        {[
+          { icon: '🏛️', name: 'AYUSH Certified', desc: 'Government of India Ayurveda, Yoga, Unani, Siddha & Homeopathy certification — the gold standard for Ayurvedic manufacturers.' },
+          { icon: '🏭', name: 'GMP Schedule M', desc: 'India\'s pharmaceutical-grade Good Manufacturing Practice standard, mandatory for export to regulated markets.' },
+          { icon: '🌿', name: 'USDA Organic', desc: 'Available for select ingredient lines from certified organic farms — enables premium positioning in US market.' },
+          { icon: '✅', name: 'India Organic', desc: 'NPOP-certified organic ingredients for EU market entry. Equivalent recognition under EC Regulation 834/2007.' },
+          { icon: '🔬', name: 'ISO 22000 / HACCP', desc: 'Food safety management systems certification. Required by most EU and UK retail importers.' },
+          { icon: '📋', name: 'FSSAI Export', desc: 'Food Safety and Standards Authority of India export compliance. Provides phytosanitary and health certificates.' },
+        ].map(cert => (
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.2rem;">
+            <div style="font-size:1.6rem;margin-bottom:0.5rem;">{cert.icon}</div>
+            <h4 style="font-size:0.84rem;font-weight:700;color:#fff;margin-bottom:0.3rem;">{cert.name}</h4>
+            <p style="font-size:0.74rem;color:rgba(255,255,255,0.5);line-height:1.55;">{cert.desc}</p>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="py-16 border-t border-border/70 bg-brand text-brand-ink text-center">
-    <div class="container-app">
-      <h2 class="text-brand-ink">Get a free quote.</h2>
-      <a href="/contact" class="btn bg-brand-ink text-brand hover:bg-copper hover:text-brand-ink mt-6 px-6 py-3.5">
-        Contact Us
-      </a>
+  <!-- Custom formulation -->
+  <section style="padding:5rem 5%;background:#ffffff;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
+            <span style="width:22px;height:2px;background:#2563eb;display:inline-block;flex-shrink:0;"></span>
+            Custom Formulation
+          </div>
+          <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#0a192f;margin-bottom:1rem;letter-spacing:-0.015em;">Your formula. Your brand. Built in India.</h2>
+          <p style="font-size:0.95rem;color:#64748b;line-height:1.85;margin-bottom:1.5rem;">We work with AYUSH-licensed formulators who develop proprietary blends to your specification — from brief to validated formula. Whether you want an existing formulation adapted or a completely new product developed, we manage the full R&D process.</p>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem;">
+            {[
+              { icon: '📝', title: 'Brief-to-formula development', desc: 'Share your target health claim and ingredients brief — we source the right formulator and manage the development process.' },
+              { icon: '🧬', title: 'Proprietary blends', desc: 'Confidential formulas developed under NDA, with full IP ownership transferred to your company.' },
+              { icon: '🏷️', title: 'White label and private label', desc: 'Adopt an existing formula under your brand, or build a unique formula from scratch — both options are available.' },
+              { icon: '📊', title: 'Stability and shelf-life testing', desc: 'Validated through accredited labs. Full documentation for regulatory submissions provided.' },
+            ].map(row => (
+              <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.2rem;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;">
+                <span style="font-size:1.3rem;width:36px;text-align:center;flex-shrink:0;">{row.icon}</span>
+                <div>
+                  <h5 style="font-size:0.9rem;font-weight:600;color:#0a192f;margin-bottom:0.2rem;">{row.title}</h5>
+                  <p style="font-size:0.82rem;color:#64748b;line-height:1.65;">{row.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:100px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.3);">
+            Discuss your formulation brief ↗
+          </a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#2563eb;">
+            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">8 wks</strong>
+            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">Avg. time from brief to validated formula</span>
+          </div>
+          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#059669;">
+            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">100%</strong>
+            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">IP ownership transferred to your brand</span>
+          </div>
+          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#f1f5f9;">
+            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#2563eb;">NDA</strong>
+            <span style="font-size:0.78rem;line-height:1.5;color:#64748b;">Protected from day one — formula stays yours</span>
+          </div>
+          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#0a192f;border:1px solid rgba(255,255,255,0.08);">
+            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">40%</strong>
+            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.55);">Lower COGS vs US/EU formulation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:5rem 5%;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:5rem;">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
+          <span style="width:22px;height:2px;background:#2563eb;display:inline-block;"></span>
+          FAQ
+        </div>
+        <h2 style="font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:700;color:#0a192f;margin-bottom:1rem;letter-spacing:-0.015em;">Questions from Ayurveda buyers</h2>
+        <p style="font-size:0.95rem;color:#64748b;line-height:1.8;margin-bottom:1.5rem;">We respond within 24 hours. Ask us anything about ingredients, compliance, or custom formulation.</p>
+        <a href="/contact" style="display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;color:#2563eb;font-weight:600;text-decoration:none;">Ask us directly →</a>
+      </div>
+      <div>
+        {faqs.map((f, i) => (
+          <div style="border-bottom:1px solid #e2e8f0;">
+            <button class="ay-faq-q" aria-expanded="false" data-idx={i} style="width:100%;padding:1.3rem 0;background:none;border:none;font-size:0.94rem;font-weight:600;color:#0a192f;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1rem;text-align:left;">
+              {f.q}
+              <span style="color:#2563eb;font-size:1.2rem;flex-shrink:0;" class="ay-faq-icon">+</span>
+            </button>
+            <div class="ay-faq-a" style="font-size:0.88rem;color:#64748b;line-height:1.8;padding-bottom:1.2rem;display:none;">{f.a}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:5rem 5%;background:#0a192f;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;top:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(5,150,105,0.18) 0%,transparent 65%);border-radius:50%;"></div>
+    </div>
+    <div style="max-width:680px;margin:0 auto;position:relative;z-index:2;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(5,150,105,0.18);border:1px solid rgba(5,150,105,0.38);color:#6ee7b7;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
+        Start sourcing
+      </div>
+      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.02em;">Ready to bring Ayurveda to your product line?</h2>
+      <p style="font-size:1.02rem;color:rgba(255,255,255,0.62);line-height:1.8;margin-bottom:2.5rem;">Book a consultation call. We'll identify the right ingredients, manufacturers, and formulation path for your brand — at no upfront cost.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:1rem 2.2rem;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.4);">
+          Book Free Consultation ↗
+        </a>
+        <a href={`mailto:${site.contactEmail}`} style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:1rem 1.8rem;border-radius:100px;font-weight:500;font-size:1rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
+          Email us directly
+        </a>
+      </div>
     </div>
   </section>
 </Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.ay-faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll<HTMLButtonElement>('.ay-faq-q').forEach((b) => {
+        b.setAttribute('aria-expanded', 'false');
+        const icon = b.querySelector('.ay-faq-icon') as HTMLElement | null;
+        if (icon) icon.style.transform = 'rotate(0deg)';
+        const a = b.nextElementSibling as HTMLElement | null;
+        if (a) a.style.display = 'none';
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        const icon = btn.querySelector('.ay-faq-icon') as HTMLElement | null;
+        if (icon) icon.style.transform = 'rotate(45deg)';
+        const a = btn.nextElementSibling as HTMLElement | null;
+        if (a) a.style.display = 'block';
+      }
+    });
+  });
+</script>

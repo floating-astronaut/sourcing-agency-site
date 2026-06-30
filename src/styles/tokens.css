@@ -1,24 +1,24 @@
-/* Design tokens — IndoFolk Wellness brand: deep forest green, warm
-   off-white, copper accent. Colors as space-separated RGB triplets so
-   Tailwind can compose alpha via <alpha-value>. */
+/* Design tokens — IndoFolk Wellness
+   Premium B2B palette: deep navy + cobalt blue + amber accent.
+   RGB triplets so Tailwind can compose alpha via <alpha-value>. */
 
 :root {
   /* ---- Color (RGB channels) ---- */
-  --color-bg:         250 247 242;   /* #FAF7F2 warm ivory */
+  --color-bg:         248 250 252;   /* #F8FAFC clean off-white */
   --color-surface:    255 255 255;   /* #FFFFFF card surface */
-  --color-surface-2:  240 233 220;   /* #F0E9DC input surface */
-  --color-border:     225 215 196;   /* #E1D7C4 warm taupe border */
-  --color-fg:          27  42  32;   /* #1B2A20 deep forest-black text */
-  --color-muted:       91 107  94;   /* #5B6B5E warm sage-gray */
-  --color-subtle:     139 150 144;   /* #8B9690 */
+  --color-surface-2:  241 245 249;   /* #F1F5F9 subtle alt section */
+  --color-border:     226 232 240;   /* #E2E8F0 cool gray border */
+  --color-fg:          10  25  47;   /* #0A192F deep navy text */
+  --color-muted:       71  85 105;   /* #475569 slate-600 */
+  --color-subtle:     148 163 184;   /* #94A3B8 slate-400 */
 
-  --color-brand:       30  59  41;   /* #1E3B29 deep forest green */
-  --color-brand-ink:  250 247 242;   /* warm ivory text on brand bg */
-  --color-copper:     181 101  29;   /* #B5651D copper accent */
-  --color-copper-light: 217 143  79; /* #D98F4F lighter copper for hover */
-  --color-danger:     192  57  43;
-  --color-warn:       217 164  65;
-  --color-ok:          30  59  41;
+  --color-brand:       37  99 235;   /* #2563EB cobalt blue — CTAs */
+  --color-brand-ink:  255 255 255;   /* white text on brand bg */
+  --color-copper:     245 158  11;   /* #F59E0B amber — accents & hover */
+  --color-copper-light: 251 191  36; /* #FBB724 lighter amber */
+  --color-danger:     220  38  38;
+  --color-warn:       245 158  11;
+  --color-ok:          16 185 129;
 
   /* ---- Radii ---- */
   --radius-sm: 6px;
