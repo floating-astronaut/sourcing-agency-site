@@ -13,7 +13,8 @@ export async function getStaticPaths() {
 interface Props { entry: CollectionEntry<'blog'>; }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, summary, tags, publishedAt, updatedAt, readingMinutes, cover, coverAlt } = entry.data;
+const { title, summary, seoDescription, focusKeyword, tags, publishedAt, updatedAt, readingMinutes, cover, coverAlt } = entry.data;
+const metaDesc = seoDescription || summary;
 
 function fmtDate(d: Date): string {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
@@ -23,7 +24,7 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: title,
-  description: summary,
+  description: metaDesc,
   datePublished: publishedAt.toISOString(),
   dateModified: (updatedAt ?? publishedAt).toISOString(),
   author: { '@type': 'Organization', name: site.parent },
@@ -34,7 +35,7 @@ const articleLd = {
 };
 ---
 
-<Base title={title} description={summary}>
+<Base title={title} description={metaDesc}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleLd).replaceAll('</', '<\\/')} is:inline />
   </Fragment>

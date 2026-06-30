@@ -30,7 +30,7 @@ const blog = defineCollection({
       title: z.string(),
       summary: z.string(),
       tags: z.array(z.string()).default([]),
-      author: z.string().default('Placeholder Sourcing Co.'),
+      author: z.string().default('IndoFolk Wellness'),
       cover: image().optional(),
       coverAlt: z.string().optional(),
       publishedAt: z.coerce.date(),
@@ -38,6 +38,8 @@ const blog = defineCollection({
       readingMinutes: z.number().int().positive().optional(),
       featured: z.boolean().default(false),
       draft: z.boolean().default(false),
+      seoDescription: z.string().optional(),
+      focusKeyword: z.string().optional(),
     }),
 });
 
