@@ -1,0 +1,71 @@
+---
+// TODO: the founder story below is adapted from the brief + the live site's
+// mission language. Have Divyanshu review/rewrite in his own voice before
+// publishing — this is a reasonable starting draft, not a final quote.
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+
+const values = [
+  { title: 'Margin transparency', body: 'We’re upfront about how we earn on every order, so our incentives stay aligned with yours.' },
+  { title: 'Quality-first', body: 'Every order moves through sampling and QC before it ships — no exceptions.' },
+  { title: 'Long-term partnerships', body: 'We’re built for reorders and growing relationships, not one-off transactions.' },
+] as const;
+---
+
+<Base title="About" description="IndoFolk Wellness is a sourcing agency connecting global pet care and Ayurvedic wellness brands to vetted Indian manufacturers.">
+  <section class="pt-16 pb-12 md:pt-24">
+    <div class="container-app max-w-3xl">
+      <p class="eyebrow"><Icon name="spark" size={14} /> About</p>
+      <h1 class="mt-4">A strategic sourcing partner, not a faceless exporter.</h1>
+      <p class="mt-6 text-fluid-lg text-muted">
+        IndoFolk Wellness exists to make India&rsquo;s manufacturing depth accessible to pet care
+        and Ayurvedic wellness brands abroad &mdash; without the sourcing headaches of finding,
+        vetting, and managing an overseas factory relationship alone.
+      </p>
+      <p class="mt-4 text-fluid-lg text-muted">
+        We&rsquo;re a sourcing agency, not a manufacturer. That distinction matters: buyers are
+        trusting us with their supply chain, not just placing an order. We manage the whole
+        process &mdash; matching you to the right factory, coordinating samples, running quality
+        control, and handling export documentation &mdash; so you get the product, not the
+        overhead of managing it yourself.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 border-y border-border/70 bg-surface-2/40">
+    <div class="container-app max-w-3xl">
+      <p class="eyebrow"><Icon name="target" size={14} /> Team</p>
+      <h2 class="mt-4">Divyanshu</h2>
+      <p class="mt-4 text-muted">
+        <!-- TODO: real founder bio — keep it light and personal per the brief, not corporate. -->
+        Founder of IndoFolk Wellness. Direct point of contact for sourcing consultations &mdash;
+        book time below or reach out by email.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="shield" size={14} /> Values</p>
+      <h2 class="mt-4">What we hold ourselves to</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {values.map((v) => (
+          <div class="card p-6">
+            <h3 class="text-fluid-lg font-semibold">{v.title}</h3>
+            <p class="mt-2 text-fluid-sm text-muted">{v.body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-8 text-fluid-sm text-subtle">Startup India Certified.</p>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-border/70 bg-brand text-brand-ink text-center">
+    <div class="container-app">
+      <h2 class="text-brand-ink">Get in touch.</h2>
+      <a href="/contact" class="btn bg-brand-ink text-brand hover:bg-copper hover:text-brand-ink mt-6 px-6 py-3.5">
+        Contact Us
+      </a>
+    </div>
+  </section>
+</Base>

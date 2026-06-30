@@ -1,20 +1,21 @@
-# sourcing-agency-site
+# indofolkwellness-site
 
-Astro 4 (static) + Tailwind 3 marketing site for a B2B sourcing agency.
-Derived from the `glitch-grow-site` design system, stripped of all
-commerce/OAuth/competitive-SEO functionality and rewritten with placeholder
-sourcing-agency content.
+Astro 4 (static) + Tailwind 3 marketing site for **IndoFolk Wellness (IFW)** —
+a sourcing agency connecting pet care and Ayurvedic wellness brands across
+the US, UK, and EU to vetted Indian manufacturers.
+
+Built from the `glitch-grow-site` design system (Nuraveda-Labs), then
+re-themed and re-written for IFW per the **IFW Automation Master Brief**
+(29 June 2026, section 4 — Website Revamp Structure).
 
 ## Stack
 
 - **Astro** (`output: 'static'`) + **Tailwind 3**, MDX content collections
 - **Contact form**: posts to `/api/contact`, a Cloudflare Pages Function
   (`functions/api/contact.ts` + `functions/_email.ts`) — Turnstile-verified,
-  emails via Resend, optional Slack/webhook/Meta CAPI sinks. No Node server,
-  no database.
-- **Deployment target: Cloudflare Pages.** Not deployed yet — needs a CF
-  Pages project created and connected to this repo, plus the env vars in
-  `.env.example` set in the dashboard.
+  emails via Resend. Form fields (Name, Email, Company, Country, Category,
+  Message) match the brief's spec exactly.
+- **Deployment target: Cloudflare Pages.** Not deployed yet.
 
 ## Local dev
 
@@ -23,46 +24,64 @@ pnpm install
 pnpm dev
 ```
 
-## Content
+## Pages
 
-Blog posts live in `src/content/blog/*.mdx`, case studies in
-`src/content/case-studies/*.mdx`. Both currently contain one placeholder
-entry with `draft: true` — delete or rewrite it, set `draft: false` to
-publish. Schema is defined in `src/content/config.ts`.
+- `/` — Home (hero, trust bar, how it works, category lanes, why IFW,
+  social proof, footer CTA)
+- `/pet-care-sourcing` — Pet Care lane (products, process, FAQ)
+- `/ayurveda-sourcing` — Ayurveda lane (ingredients, products, certs, FAQ)
+- `/about` — Story, founder (Divyanshu), values
+- `/contact` — Form + Calendly + direct contact info
+- `/blog`, `/case-studies` — content-collection driven, one placeholder
+  entry each (`draft: true`)
 
-## Domain plan (Wix DNS constraint)
+## Visual direction
 
-The buyer's current domain is registered/managed on Wix, and Wix doesn't
-allow changing nameservers — so the zone can't move to Cloudflare. That
-rules out a Cloudflare-managed apex (bare `domain.com`) custom domain on
-Pages, since apex CNAME-flattening requires the zone to be on Cloudflare.
+Deep forest green (`--color-brand`, `#1E3B29`), warm ivory background
+(`--color-bg`, `#FAF7F2`), copper accent (`--color-copper`, `#B5651D`) — per
+the brief's "not a generic B2B grey-and-blue" direction. Tokens live in
+`src/styles/tokens.css`. The brief also calls for **real photography over
+illustration** (factory shots, product shots, no stock imagery) — no images
+are wired into the site yet; that's the next visual pass.
 
-Plan: serve the site at **`www.<domain>`** — add a CNAME at Wix DNS pointing
-`www` to the Cloudflare Pages project's `*.pages.dev` hostname, then use
-Wix's domain-forwarding feature to redirect the bare apex to `www`.
+## Where the content came from
 
-## What's placeholder — fill in before launch
+- Brand positioning, page structure, hero copy, FAQ topics, and the
+  Pet Care / Ayurveda category split: the **IFW Automation Master Brief**.
+- Contact details, address, social links, and Calendly URL: scraped from
+  the **live site** (indofolkwellness.com, a Wix site) on 2026-06-30.
+- The live site's "About" team section was Wix template placeholder content
+  (fake names like "Sarah Suarez" with generic boilerplate bios) — **not**
+  carried over. Only Divyanshu (the actual founder, per the brief and the
+  live contact page's email) is named on the new About page.
 
-- **Brand**: `src/lib/site.ts` (`name`, `tagline`, `description`,
-  `contactEmail`, `legalEntity`, `socialLinks`), and `functions/_email.ts`
-  (`BRAND` object — kept in sync manually, same pattern as the upstream repo).
-- **Copy**: every section on `src/pages/index.astro` (services, process
-  steps, FAQ answers) is placeholder text.
-- **Legal**: `src/pages/legal/privacy.astro` and `terms.astro` are stub
-  templates with `TODO` markers — not real policies. Do not publish as-is.
-- **Content**: the one sample blog post and one sample case study are
-  drafts proving the collections render — replace them.
-- **Assets**: `public/favicon.svg` and `public/og-default.png` (referenced
-  by `site.ts` but not yet created) are placeholders.
-- **Domain**: `astro.config.mjs` and `site.ts` default to a `*.pages.dev`
-  URL until the real domain is wired up (see above).
-- **Secrets**: `.env.example` lists variable names only — no real
-  Turnstile/Resend/etc. keys are configured anywhere in this repo.
+## Domain plan (unchanged from the original scaffold)
 
-## Not ported from the upstream template (v1 scope cut)
+`indofolkwellness.com` is on Wix, which doesn't allow changing nameservers
+— so the zone can't move to Cloudflare for an apex custom domain on Pages.
+Plan: serve at `www.indofolkwellness.com` (CNAME to the Pages project),
+apex-forwarded to `www` via Wix's domain-forwarding feature.
 
-`LeadFormModal`, `MobileStickyCta`, `AnnouncementBar`, `YouTubeEmbed`, the
-satori-based `/api/og/[slug].png` OG-image generator, and the
-products/vs/alternatives/glossary/tools pSEO pages were all dropped as
-out-of-scope for a first sourcing-agency scaffold. Re-add from
-`Nuraveda-Labs/glitch-grow-site` if needed later.
+## What's still placeholder — fill in before launch
+
+- **Numbers**: manufacturer-network size, orders fulfilled, and any client
+  quote on the homepage's Social Proof section are `TODO` — the brief
+  explicitly says not to fabricate these.
+- **Certifications**: the Pet Care and Ayurveda pages both have `TODO`
+  markers where specific certifications (GMP, AYUSH, export standards)
+  should be named — confirm with the manufacturer network before publishing.
+- **MOQs / lead times**: `TODO` on the Pet Care FAQ — confirm current
+  ranges.
+- **Founder bio**: About page has a placeholder Divyanshu intro — have him
+  rewrite it in his own voice per the brief ("light and real").
+- **Legal**: `legalEntity` in `src/lib/site.ts` has the verified live
+  address but `TODO`s for entity type and jurisdiction — `/legal/privacy`
+  and `/legal/terms` are stub templates, not real policies.
+- **Contact email**: using `divyanshu@indofolkwellness.com` (the live
+  site's current contact) as the default; the brief's outreach templates
+  consistently sign off with `hello@indofolkwellness.com` instead — confirm
+  which should be public-facing.
+- **Photography**: no real images yet (factory shots, product shots per
+  the brief's visual direction).
+- **Secrets**: `.env.example` lists variable names only.
+- Cloudflare Pages project itself isn't created/connected yet.

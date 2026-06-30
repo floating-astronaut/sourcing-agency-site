@@ -1,91 +1,55 @@
 ---
-// TODO: every string on this page is placeholder copy — replace with real
-// positioning, services, process, and proof once the brand brief is final.
+// Content structure follows the IFW Automation Master Brief (29 June 2026),
+// section 4 "Website Revamp Structure → Home". Numeric claims (manufacturer
+// count, orders fulfilled, countries served) are left as TODO placeholders —
+// no real figures were provided, and the brief explicitly says not to
+// fabricate client quotes/stats.
 import Base from '~/layouts/Base.astro';
 import Icon from '~/components/Icon.astro';
-import ContactForm from '~/components/ContactForm.astro';
 import FAQSchema from '~/components/schema/FAQSchema.astro';
 import { site } from '~/lib/site';
 
-const services = [
-  {
-    icon: 'target' as const,
-    title: 'Supplier Sourcing',
-    blurb: 'We find and shortlist vetted manufacturers matched to your product spec, MOQ, and budget.',
-  },
-  {
-    icon: 'shield' as const,
-    title: 'Factory Audits & QC',
-    blurb: 'On-the-ground factory audits and pre-shipment quality inspections, with photo/video evidence.',
-  },
-  {
-    icon: 'layers' as const,
-    title: 'Sample Management',
-    blurb: 'We coordinate sampling rounds across multiple factories so you can compare quality side by side.',
-  },
-  {
-    icon: 'link' as const,
-    title: 'Logistics & Freight Forwarding',
-    blurb: 'Door-to-door freight, customs documentation, and consolidation across air and ocean.',
-  },
-  {
-    icon: 'cpu' as const,
-    title: 'Private Label / OEM',
-    blurb: 'End-to-end private-label production — from spec sheet to branded, packaged, shipped product.',
-  },
+const howItWorks = [
+  { n: '01', title: 'You brief us', body: 'Tell us the product, category, target price, and timeline.' },
+  { n: '02', title: 'We source the right manufacturer', body: 'Matched from our vetted network of Indian factories.' },
+  { n: '03', title: 'We manage quality and logistics', body: 'Sampling, QC, export documentation, and freight — handled.' },
+  { n: '04', title: 'You receive your order', body: 'Landed, compliant, and ready to sell.' },
 ] as const;
 
-const steps = [
-  { n: '01', title: 'Brief', body: 'Tell us the product, target price, MOQ, and timeline.' },
-  { n: '02', title: 'Source', body: 'We shortlist 3–5 vetted factories matched to your spec.' },
-  { n: '03', title: 'Vet & Audit', body: 'Factory audits and capability checks before you commit.' },
-  { n: '04', title: 'Sample', body: 'Coordinated sampling rounds, compared side by side.' },
-  { n: '05', title: 'Order & Inspect', body: 'Production tracking plus pre-shipment QC.' },
-  { n: '06', title: 'Ship', body: 'Freight, customs, and delivery handled door to door.' },
+const whyIfw = [
+  { icon: 'shield' as const, title: 'Fully managed service', body: 'One point of contact from factory match to delivery — not a directory of suppliers.' },
+  { icon: 'database' as const, title: 'Vetted manufacturer network', body: 'Factories matched to your spec, not the first one that replies.' },
+  { icon: 'chart' as const, title: 'Margin transparency', body: 'We’re upfront about how we earn, so our incentives stay aligned with yours.' },
+  { icon: 'link' as const, title: 'End-to-end documentation', body: 'Export paperwork and compliance handled, so customs isn’t a surprise.' },
 ] as const;
-
-const faqs = [
-  { q: 'What products do you source?', a: 'TODO — list the product categories this agency actually covers.' },
-  { q: 'What are your fees?', a: 'TODO — describe the pricing model (retainer, per-project, % of order value, etc.).' },
-  { q: 'What regions do you source from?', a: 'TODO — name the sourcing regions/countries covered.' },
-  { q: 'How long does a typical sourcing project take?', a: 'TODO — give a realistic timeline range.' },
-];
 ---
 
-<Base title="Sourcing, Vetted." description={site.description}>
-  <section class="container-app pt-24 pb-16 md:pt-32 md:pb-20">
-    <p class="eyebrow"><Icon name="target" size={14} /> Sourcing agency</p>
-    <h1 class="mt-5 max-w-3xl text-fluid-5xl font-bold tracking-tight leading-[1.02]">
-      We find, vet, and manage the <span class="gradient-text">factories</span> that make your product.
-    </h1>
-    <p class="mt-6 max-w-2xl text-fluid-lg text-muted">
-      {site.tagline} From first supplier search to landed freight — one team, one point of contact.
-    </p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="#contact" class="btn btn-primary text-fluid-base px-6 py-3.5">
-        Get a Quote <Icon name="arrow-right" size={16} />
-      </a>
-      <a href="#services" class="btn btn-secondary text-fluid-base px-6 py-3.5">
-        See services
-      </a>
+<Base title="Sourcing from India — Pet Care & Ayurveda">
+  <section class="pt-16 pb-16 md:pt-24 md:pb-20">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="target" size={14} /> Sourcing agency · India</p>
+      <h1 class="mt-5 max-w-3xl">
+        We Source Pet Care and Ayurvedic Products From India <span class="gradient-text">— So You Don&rsquo;t Have To.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl text-fluid-lg text-muted">
+        We handle everything from manufacturer to your door.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact" class="btn btn-primary text-fluid-base px-6 py-3.5">
+          Book a Sourcing Consultation <Icon name="arrow-right" size={16} />
+        </a>
+        <a href="/contact" class="btn btn-secondary text-fluid-base px-6 py-3.5">
+          Contact Us
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="services" class="py-16 md:py-20 border-y border-border/40 bg-surface/20">
-    <div class="container-app">
-      <p class="eyebrow"><Icon name="layers" size={14} /> What we do</p>
-      <h2 class="mt-4">Services</h2>
-      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => (
-          <div class="card p-6">
-            <span class="inline-flex size-9 items-center justify-center rounded-md bg-brand/10 text-brand border border-brand/20">
-              <Icon name={s.icon} size={18} />
-            </span>
-            <h3 class="mt-4 text-fluid-xl font-semibold">{s.title}</h3>
-            <p class="mt-2 text-fluid-sm text-muted">{s.blurb}</p>
-          </div>
-        ))}
-      </div>
+  <section class="py-8 border-y border-border/70 bg-surface-2/40">
+    <div class="container-app flex flex-wrap items-center gap-x-10 gap-y-3 text-fluid-sm text-muted">
+      <span><strong class="text-fg">Markets served</strong> — {site.markets.join(' · ')}</span>
+      <span class="hairline hidden sm:block w-px h-5"></span>
+      <span><strong class="text-fg">Categories</strong> — Pet Care · Ayurveda</span>
     </div>
   </section>
 
@@ -93,10 +57,10 @@ const faqs = [
     <div class="container-app">
       <p class="eyebrow"><Icon name="bolt" size={14} /> Process</p>
       <h2 class="mt-4">How it works</h2>
-      <div class="mt-10 grid gap-6 md:grid-cols-3">
-        {steps.map((s) => (
+      <div class="mt-10 grid gap-6 md:grid-cols-4">
+        {howItWorks.map((s) => (
           <div class="card p-6">
-            <span class="font-mono text-fluid-sm text-brand">{s.n}</span>
+            <span class="font-mono text-fluid-sm text-copper">{s.n}</span>
             <h3 class="mt-2 text-fluid-lg font-semibold">{s.title}</h3>
             <p class="mt-2 text-fluid-sm text-muted">{s.body}</p>
           </div>
@@ -105,45 +69,93 @@ const faqs = [
     </div>
   </section>
 
-  <section class="py-16 md:py-20 border-y border-border/40 bg-surface/20">
+  <section id="categories" class="py-16 md:py-20 border-y border-border/70 bg-surface-2/40">
     <div class="container-app">
-      <p class="eyebrow"><Icon name="chart" size={14} /> Case studies</p>
-      <h2 class="mt-4">Receipts, not promises.</h2>
-      <p class="mt-4 max-w-xl text-muted">TODO — link real case studies here once available.</p>
-      <a href="/case-studies" class="btn btn-secondary mt-6">
-        View case studies <Icon name="arrow-up-right" size={16} />
-      </a>
+      <p class="eyebrow"><Icon name="layers" size={14} /> What we source</p>
+      <h2 class="mt-4">Two lanes. One sourcing partner.</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <a href="/pet-care-sourcing" class="card p-8 block transition-transform hover:-translate-y-0.5">
+          <h3 class="text-fluid-2xl">Pet Care Sourcing</h3>
+          <p class="mt-3 text-muted">Himalayan Yak Chews, soft chews, freeze-dried &amp; dehydrated treats, premium pet food, custom private label.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-fluid-sm text-copper">
+            Explore Pet Care Sourcing <Icon name="arrow-up-right" size={14} />
+          </span>
+        </a>
+        <a href="/ayurveda-sourcing" class="card p-8 block transition-transform hover:-translate-y-0.5">
+          <h3 class="text-fluid-2xl">Ayurveda Sourcing</h3>
+          <p class="mt-3 text-muted">Certified Ayurvedic and herbal supplements — ashwagandha, turmeric, brahmi, triphala, shilajit, and custom formulations.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-fluid-sm text-copper">
+            Explore Ayurveda Sourcing <Icon name="arrow-up-right" size={14} />
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="faq" class="py-16 md:py-20">
-    <FAQSchema faqs={faqs} />
-    <div class="container-app max-w-3xl">
-      <p class="eyebrow"><Icon name="spark" size={14} /> FAQ</p>
-      <h2 class="mt-4">Frequently asked questions</h2>
-      <div class="mt-8 grid gap-4">
-        {faqs.map((f) => (
-          <details class="card p-5">
-            <summary class="cursor-pointer font-medium">{f.q}</summary>
-            <p class="mt-3 text-fluid-sm text-muted">{f.a}</p>
-          </details>
+  <section class="py-16 md:py-20">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="shield" size={14} /> Why IFW</p>
+      <h2 class="mt-4">A strategic sourcing partner, not just an exporter.</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {whyIfw.map((w) => (
+          <div class="card p-6">
+            <span class="inline-flex size-9 items-center justify-center rounded-md bg-brand/10 text-brand border border-brand/20">
+              <Icon name={w.icon} size={18} />
+            </span>
+            <h3 class="mt-4 text-fluid-lg font-semibold">{w.title}</h3>
+            <p class="mt-2 text-fluid-sm text-muted">{w.body}</p>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-16 md:py-20 border-t border-border/40">
-    <div class="container-app grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <p class="eyebrow"><Icon name="send" size={14} /> Get a quote</p>
-        <h2 class="mt-4">Tell us what you're sourcing.</h2>
-        <p class="mt-5 text-fluid-lg text-muted">
-          Reply within one business day. If it's urgent,
-          <a href={`mailto:${site.contactEmail}`} class="text-brand underline decoration-brand/40 hover:decoration-brand">{site.contactEmail}</a>.
-        </p>
+  <section class="py-16 md:py-20 border-y border-border/70 bg-surface-2/40">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="spark" size={14} /> Social proof</p>
+      <!-- TODO: replace with a real, permissioned client quote and real network/order/country figures. -->
+      <blockquote class="mt-6 max-w-2xl text-fluid-xl text-fg">
+        &ldquo;TODO — real client quote goes here, anonymized if needed.&rdquo;
+      </blockquote>
+      <dl class="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+        <div><dt class="text-fluid-xs uppercase tracking-wider text-subtle">Manufacturers</dt><dd class="mt-1 font-mono text-fluid-2xl text-brand">TODO</dd></div>
+        <div><dt class="text-fluid-xs uppercase tracking-wider text-subtle">Orders fulfilled</dt><dd class="mt-1 font-mono text-fluid-2xl text-brand">TODO</dd></div>
+        <div><dt class="text-fluid-xs uppercase tracking-wider text-subtle">Countries served</dt><dd class="mt-1 font-mono text-fluid-2xl text-brand">{site.markets.length}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 md:py-20">
+    <FAQSchema faqs={[
+      { q: 'What does IFW actually do?', a: 'We are a sourcing agency, not a manufacturer or exporter. We match international brands to vetted Indian factories and manage sampling, QC, documentation, and logistics end to end.' },
+      { q: 'What markets do you serve?', a: `We work with buyers across ${site.markets.join(', ')}.` },
+    ]} />
+    <div class="container-app max-w-3xl">
+      <p class="eyebrow"><Icon name="spark" size={14} /> FAQ</p>
+      <h2 class="mt-4">Frequently asked questions</h2>
+      <div class="mt-8 grid gap-4">
+        <details class="card p-5">
+          <summary class="cursor-pointer font-medium">What does IFW actually do?</summary>
+          <p class="mt-3 text-fluid-sm text-muted">We&rsquo;re a sourcing agency, not a manufacturer or exporter. We match international brands to vetted Indian factories and manage sampling, QC, documentation, and logistics end to end.</p>
+        </details>
+        <details class="card p-5">
+          <summary class="cursor-pointer font-medium">What markets do you serve?</summary>
+          <p class="mt-3 text-fluid-sm text-muted">We work with buyers across {site.markets.join(', ')}.</p>
+        </details>
       </div>
-      <div class="md:col-span-7">
-        <ContactForm />
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 border-t border-border/70 bg-brand text-brand-ink">
+    <div class="container-app text-center">
+      <h2 class="text-brand-ink">Ready to start sourcing?</h2>
+      <div class="mt-7 flex flex-wrap gap-3 justify-center">
+        <a href="/contact" class="btn bg-brand-ink text-brand hover:bg-copper hover:text-brand-ink px-6 py-3.5">
+          Book a Sourcing Consultation
+        </a>
+        <a href="/contact" class="btn border border-brand-ink/40 text-brand-ink hover:border-brand-ink px-6 py-3.5">
+          Contact Us
+        </a>
       </div>
     </div>
   </section>

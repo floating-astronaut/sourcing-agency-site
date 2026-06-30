@@ -17,25 +17,45 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
   <div class="grid gap-1">
     <label for="cf-name" class="text-fluid-sm font-medium">Name</label>
     <input id="cf-name" name="name" required autocomplete="name"
-      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-brand" />
+      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper" />
   </div>
 
   <div class="grid gap-1">
     <label for="cf-email" class="text-fluid-sm font-medium">Work email</label>
     <input id="cf-email" type="email" name="email" required autocomplete="email"
-      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-brand" />
+      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper" />
   </div>
 
   <div class="grid gap-1">
     <label for="cf-company" class="text-fluid-sm font-medium">Company</label>
     <input id="cf-company" name="company" autocomplete="organization"
-      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-brand" />
+      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper" />
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div class="grid gap-1">
+      <label for="cf-country" class="text-fluid-sm font-medium">Country</label>
+      <input id="cf-country" name="country" autocomplete="country-name"
+        class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper" />
+    </div>
+
+    <div class="grid gap-1">
+      <label for="cf-category" class="text-fluid-sm font-medium">Category of interest</label>
+      <select id="cf-category" name="category"
+        class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper">
+        <option value="">Select one</option>
+        <option value="Pet Care">Pet Care</option>
+        <option value="Ayurveda">Ayurveda</option>
+        <option value="Both">Both</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
   </div>
 
   <div class="grid gap-1">
-    <label for="cf-message" class="text-fluid-sm font-medium">What are you trying to source?</label>
+    <label for="cf-message" class="text-fluid-sm font-medium">What are you looking to source?</label>
     <textarea id="cf-message" name="message" rows="4" required
-      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-brand resize-y"></textarea>
+      class="bg-surface-2 border border-border rounded-md px-3 py-3 text-base focus-visible:border-copper resize-y"></textarea>
   </div>
 
   {/* Honeypot — bots fill this, humans never see it. */}
@@ -44,7 +64,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
   <div
     class="cf-turnstile min-h-[65px]"
     data-sitekey={siteKey}
-    data-theme="dark"
+    data-theme="light"
     data-size="flexible"
     data-appearance="interaction-only"
   ></div>

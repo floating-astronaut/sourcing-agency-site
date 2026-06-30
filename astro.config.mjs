@@ -4,8 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-// TODO: replace with the real production URL once the domain is finalized.
-const SITE = process.env.PUBLIC_SITE_URL || 'https://sourcing-agency-site.pages.dev';
+const SITE = process.env.PUBLIC_SITE_URL || 'https://www.indofolkwellness.com';
 
 // Static output. The contact form is served by a Cloudflare Pages Function
 // directly out of `/functions/`, not via an Astro adapter — this keeps the

@@ -1,0 +1,95 @@
+---
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+import FAQSchema from '~/components/schema/FAQSchema.astro';
+
+const ingredients = [
+  { name: 'Ashwagandha', body: 'Adaptogenic root, widely used for calming and stress-support formulations.' },
+  { name: 'Turmeric', body: 'Anti-inflammatory support, used across joint and skin/coat formulations.' },
+  { name: 'Brahmi', body: 'Traditionally used for cognitive and calming support.' },
+  { name: 'Triphala', body: 'A three-fruit blend used in digestive-support formulations.' },
+  { name: 'Amla', body: 'Vitamin-C-rich fruit used in immunity formulations.' },
+  { name: 'Shilajit', body: 'Mineral-rich resin used across general wellness and vitality formulations.' },
+] as const;
+
+const productCategories = ['Joint care', 'Digestive', 'Calming', 'Coat & skin', 'Immunity', 'General wellness'] as const;
+
+const faqs = [
+  { q: 'Do you support custom formulation?', a: 'Yes — we work with manufacturers who can formulate to a brief, including with your vet or nutritionist if needed.' },
+  { q: 'What certifications matter for EU buyers?', a: 'TODO — confirm which certifications (GMP, AYUSH, export-specific) your manufacturer network currently holds, and surface them prominently here.' },
+  { q: 'What formats are available?', a: 'Chews, powders, pastes, oils, and capsules — format availability and MOQ vary by manufacturer.' },
+] as const;
+---
+
+<Base title="Ayurveda Sourcing" description="Certified Ayurvedic and herbal supplement sourcing from India — ashwagandha, turmeric, brahmi, triphala, shilajit, and custom formulations, globally compliant.">
+  <section class="pt-16 pb-12 md:pt-24">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="spark" size={14} /> Ayurveda Sourcing</p>
+      <h1 class="mt-4 max-w-3xl">Ancient ingredients, globally compliant formulations.</h1>
+      <p class="mt-5 max-w-2xl text-fluid-lg text-muted">
+        We connect international wellness brands to certified Ayurvedic and herbal manufacturers
+        in India — from pet wellness formulations to general herbal supplements.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 border-y border-border/70 bg-surface-2/40">
+    <div class="container-app">
+      <h2>Key ingredients we source</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {ingredients.map((i) => (
+          <div class="card p-6">
+            <h3 class="text-fluid-lg font-semibold">{i.name}</h3>
+            <p class="mt-2 text-fluid-sm text-muted">{i.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-app">
+      <h2>Product categories</h2>
+      <ul class="mt-6 flex flex-wrap gap-3">
+        {productCategories.map((c) => (
+          <li class="chip">{c}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 border-t border-border/70 bg-surface-2/40">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="shield" size={14} /> Certifications</p>
+      <h2 class="mt-4">What standards our manufacturers hold</h2>
+      <p class="mt-4 max-w-2xl text-muted">
+        TODO — list specific certifications (GMP, AYUSH compliance, export standards) here. This
+        section matters most to EU buyers and should be made prominent once confirmed.
+      </p>
+    </div>
+  </section>
+
+  <section id="faq" class="py-12 md:py-16">
+    <FAQSchema faqs={faqs} />
+    <div class="container-app max-w-3xl">
+      <h2>FAQ</h2>
+      <div class="mt-8 grid gap-4">
+        {faqs.map((f) => (
+          <details class="card p-5">
+            <summary class="cursor-pointer font-medium">{f.q}</summary>
+            <p class="mt-3 text-fluid-sm text-muted">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-border/70 bg-brand text-brand-ink text-center">
+    <div class="container-app">
+      <h2 class="text-brand-ink">Get a free quote.</h2>
+      <a href="/contact" class="btn bg-brand-ink text-brand hover:bg-copper hover:text-brand-ink mt-6 px-6 py-3.5">
+        Contact Us
+      </a>
+    </div>
+  </section>
+</Base>

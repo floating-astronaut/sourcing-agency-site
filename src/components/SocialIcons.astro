@@ -7,9 +7,7 @@ interface Props {
 }
 
 const { label = 'Social profiles', size = 'md' } = Astro.props;
-const itemClass = size === 'sm'
-  ? 'h-8 w-8 rounded-md'
-  : 'h-9 w-9 rounded-md';
+const itemClass = size === 'sm' ? 'h-8 w-8 rounded-md' : 'h-9 w-9 rounded-md';
 const iconClass = size === 'sm' ? 'h-4 w-4' : 'h-5 w-5';
 ---
 <nav aria-label={label} class="flex flex-wrap items-center gap-2">
@@ -19,13 +17,13 @@ const iconClass = size === 'sm' ? 'h-4 w-4' : 'h-5 w-5';
       target="_blank"
       rel="noreferrer"
       class:list={[
-        'inline-flex shrink-0 items-center justify-center border border-border bg-surface/70 text-fg transition-colors hover:border-brand hover:bg-surface-2 hover:text-brand',
+        'inline-flex shrink-0 items-center justify-center border border-border bg-surface text-fg transition-colors hover:border-copper hover:text-copper',
         itemClass,
       ]}
       aria-label={`${item.name}: ${item.handle}`}
       title={item.name}
     >
-      <img src={item.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class:list={[iconClass, 'invert']} />
+      <img src={item.icon} alt="" width="20" height="20" loading="lazy" decoding="async" class:list={[iconClass]} />
     </a>
   ))}
 </nav>

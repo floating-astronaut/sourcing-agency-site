@@ -1,0 +1,86 @@
+---
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+import FAQSchema from '~/components/schema/FAQSchema.astro';
+import { site } from '~/lib/site';
+
+const products = [
+  { title: 'Himalayan Yak Chews', body: 'Sourced direct from Himalayan-region manufacturers — size and flavor variants available.' },
+  { title: 'Soft Chews', body: 'Functional and treat-format soft chews, custom formulation options available.' },
+  { title: 'Freeze-Dried Treats', body: 'Single-ingredient and blended freeze-dried formats.' },
+  { title: 'Dehydrated Treats', body: 'Shelf-stable dehydrated treats across multiple protein sources.' },
+  { title: 'Premium Pet Food', body: 'Formulated pet food production at scale.' },
+  { title: 'Custom Private Label', body: 'Your brand, our manufacturing network — packaging and formulation included.' },
+] as const;
+
+const faqs = [
+  { q: 'What are typical MOQs?', a: 'TODO — MOQ ranges vary by product and factory; confirm current ranges before publishing.' },
+  { q: 'What are typical lead times?', a: 'TODO — confirm current lead-time ranges by category before publishing.' },
+  { q: 'How does the sample process work?', a: 'We coordinate sampling rounds across multiple factories so you can compare quality side by side before committing to an order.' },
+  { q: 'What certifications are available?', a: 'TODO — list the specific export/safety certifications your manufacturer network actually holds.' },
+] as const;
+---
+
+<Base title="Pet Care Sourcing" description="Sourcing premium pet products from India — Himalayan Yak Chews, soft chews, freeze-dried and dehydrated treats, premium pet food, and custom private label.">
+  <section class="pt-16 pb-12 md:pt-24">
+    <div class="container-app">
+      <p class="eyebrow"><Icon name="shield" size={14} /> Pet Care Sourcing</p>
+      <h1 class="mt-4 max-w-3xl">The smartest way to source pet products from India.</h1>
+      <p class="mt-5 max-w-2xl text-fluid-lg text-muted">
+        IndoFolk Wellness connects pet brands across {site.markets.join(', ')} to vetted Indian manufacturers — handling sampling, quality control, export documentation, and logistics end to end.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 border-y border-border/70 bg-surface-2/40">
+    <div class="container-app">
+      <h2>Product categories</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {products.map((p) => (
+          <div class="card p-6">
+            <h3 class="text-fluid-lg font-semibold">{p.title}</h3>
+            <p class="mt-2 text-fluid-sm text-muted">{p.body}</p>
+            <a href="/contact" class="mt-4 inline-flex items-center gap-1.5 text-fluid-sm text-copper">
+              Request a sample <Icon name="arrow-right" size={14} />
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-app">
+      <h2>Compliance &amp; process</h2>
+      <p class="mt-4 max-w-2xl text-muted">
+        Every order moves through factory matching, sample approval, quality control, and export
+        documentation before it ships — so customs and safety compliance for your market are
+        handled before the product ever leaves India.
+      </p>
+    </div>
+  </section>
+
+  <section id="faq" class="py-12 md:py-16 border-t border-border/70">
+    <FAQSchema faqs={faqs} />
+    <div class="container-app max-w-3xl">
+      <h2>FAQ</h2>
+      <div class="mt-8 grid gap-4">
+        {faqs.map((f) => (
+          <details class="card p-5">
+            <summary class="cursor-pointer font-medium">{f.q}</summary>
+            <p class="mt-3 text-fluid-sm text-muted">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-border/70 bg-brand text-brand-ink text-center">
+    <div class="container-app">
+      <h2 class="text-brand-ink">Get a free quote.</h2>
+      <a href="/contact" class="btn bg-brand-ink text-brand hover:bg-copper hover:text-brand-ink mt-6 px-6 py-3.5">
+        Book a Sourcing Consultation
+      </a>
+    </div>
+  </section>
+</Base>

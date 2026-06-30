@@ -1,0 +1,38 @@
+---
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+import ContactForm from '~/components/ContactForm.astro';
+import { site } from '~/lib/site';
+---
+
+<Base title="Contact" description="Book a sourcing consultation or send an inquiry to IndoFolk Wellness.">
+  <section class="pt-16 pb-16 md:pt-24 md:pb-20">
+    <div class="container-app grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="eyebrow"><Icon name="send" size={14} /> Contact</p>
+        <h1 class="mt-4">Tell us what you&rsquo;re sourcing.</h1>
+        <p class="mt-5 text-fluid-lg text-muted">
+          A member of our team replies within one business day. If it&rsquo;s urgent, email
+          <a href={`mailto:${site.contactEmail}`} class="text-copper underline decoration-copper/40 hover:decoration-copper">{site.contactEmail}</a>
+          {' '}or call <a href={`tel:${site.phone.replace(/\s+/g, '')}`} class="text-copper underline decoration-copper/40 hover:decoration-copper">{site.phone}</a>.
+        </p>
+
+        <div class="mt-8 card p-6">
+          <p class="font-medium">Prefer to talk first?</p>
+          <p class="mt-2 text-fluid-sm text-muted">Book a sourcing consultation directly on our calendar.</p>
+          <a href={site.calendlyUrl} target="_blank" rel="noreferrer" class="btn btn-secondary mt-4">
+            Book on Calendly <Icon name="arrow-up-right" size={16} />
+          </a>
+        </div>
+
+        <p class="mt-8 text-fluid-sm text-muted">
+          {site.address.line1}<br />{site.address.line2}<br />
+          {site.locations.join(' · ')}
+        </p>
+      </div>
+      <div class="md:col-span-7">
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</Base>

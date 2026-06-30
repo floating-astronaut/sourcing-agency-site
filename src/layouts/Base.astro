@@ -32,11 +32,13 @@ const orgLd = {
   name: site.parent,
   url: site.url,
   description: site.description,
+  address: { '@type': 'PostalAddress', streetAddress: site.address.line1, addressLocality: 'New Delhi', addressCountry: 'IN' },
   contactPoint: [{
     '@type': 'ContactPoint',
     email: site.contactEmail,
-    contactType: 'customer support',
-    areaServed: 'Worldwide',
+    telephone: site.phone,
+    contactType: 'sales',
+    areaServed: site.markets,
     availableLanguage: ['en'],
   }],
 };
@@ -65,8 +67,8 @@ const pageLd = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#1E3B29" />
     <meta name="generator" content={Astro.generator} />
 
     <title>{fullTitle}</title>
@@ -76,7 +78,6 @@ const pageLd = {
 
     <link rel="alternate" type="application/rss+xml" title={`${site.name} blog`} href={new URL('/rss.xml', site.url).toString()} />
 
-    {/* TODO: replace with real favicon assets under public/ */}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
 
@@ -98,34 +99,16 @@ const pageLd = {
   </head>
 
   <body class="bg-bg text-fg">
-    <div id="header-stack" class="fixed top-0 inset-x-0 z-50">
+    <div id="header-stack" class="sticky top-0 inset-x-0 z-50">
       <Nav />
     </div>
 
-    <main id="main" tabindex="-1" class="pt-[var(--header-stack-h,var(--nav-h))]">
+    <main id="main" tabindex="-1">
       <slot />
     </main>
 
     <Footer />
 
-    {/* Header-stack height tracker — keeps <main>'s top padding in sync
-        with the fixed nav's actual rendered height across breakpoints. */}
-    <script is:inline>
-      (() => {
-        const stack = document.getElementById('header-stack');
-        if (!stack) return;
-        const root = document.documentElement;
-        const apply = () => root.style.setProperty('--header-stack-h', stack.offsetHeight + 'px');
-        apply();
-        if ('ResizeObserver' in window) {
-          new ResizeObserver(apply).observe(stack);
-        } else {
-          window.addEventListener('resize', apply, { passive: true });
-        }
-      })();
-    </script>
-
-    {/* Motion + smooth scroll — deferred off the critical path. */}
     <script>
       const loadMotion = () => import('~/lib/motion.ts').catch(() => {});
       if ('requestIdleCallback' in window) {

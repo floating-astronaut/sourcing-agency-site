@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sourcing-agency-site.pages.dev/sitemap-index.xml
+Sitemap: https://www.indofolkwellness.com/sitemap-index.xml

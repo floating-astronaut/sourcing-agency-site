@@ -4,8 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Tokens pull from CSS variables defined in src/styles/tokens.css.
-        // This lets a future light theme flip without touching the config.
         bg: 'rgb(var(--color-bg) / <alpha-value>)',
         surface: 'rgb(var(--color-surface) / <alpha-value>)',
         'surface-2': 'rgb(var(--color-surface-2) / <alpha-value>)',
@@ -15,8 +13,8 @@ export default {
         subtle: 'rgb(var(--color-subtle) / <alpha-value>)',
         brand: 'rgb(var(--color-brand) / <alpha-value>)',
         'brand-ink': 'rgb(var(--color-brand-ink) / <alpha-value>)',
-        electric: 'rgb(var(--color-electric) / <alpha-value>)',
-        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        copper: 'rgb(var(--color-copper) / <alpha-value>)',
+        'copper-light': 'rgb(var(--color-copper-light) / <alpha-value>)',
         danger: 'rgb(var(--color-danger) / <alpha-value>)',
         warn: 'rgb(var(--color-warn) / <alpha-value>)',
         ok: 'rgb(var(--color-ok) / <alpha-value>)',
@@ -26,7 +24,6 @@ export default {
         mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
-        // Fluid type. Pair with CSS custom properties for overrides.
         'fluid-xs':  'clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem)',
         'fluid-sm':  'clamp(0.875rem, 0.84rem + 0.17vw, 0.9375rem)',
         'fluid-base':'clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)',
@@ -45,10 +42,6 @@ export default {
         lg: 'var(--radius-lg)',
         xl: 'var(--radius-xl)',
         '2xl': 'var(--radius-2xl)',
-      },
-      boxShadow: {
-        'glow-brand': '0 0 0 1px rgb(var(--color-brand) / 0.25), 0 8px 40px -8px rgb(var(--color-brand) / 0.35)',
-        'inset-border': 'inset 0 0 0 1px rgb(var(--color-border) / 0.6)',
       },
       maxWidth: {
         'container': 'var(--container-max)',
