@@ -1,0 +1,66 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('case-studies', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+interface Props { entry: CollectionEntry<'case-studies'>; }
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, client, industry, headline, metrics, summary, services, cover, coverAlt } = entry.data;
+---
+
+<Base title={title} description={summary}>
+  <article class="container-app pt-14 pb-24 md:pt-20">
+    <nav aria-label="Breadcrumb" class="text-fluid-xs text-subtle">
+      <a href="/case-studies" class="hover:text-fg">Case Studies</a>
+      <span class="mx-1">/</span>
+      <span class="text-muted">{title}</span>
+    </nav>
+
+    <header class="mt-6 max-w-3xl">
+      <p class="text-fluid-xs text-subtle">{client} · {industry}</p>
+      <h1 class="mt-4">{headline}</h1>
+      <p class="mt-5 text-fluid-lg text-muted">{summary}</p>
+    </header>
+
+    <dl class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl">
+      {metrics.map((m) => (
+        <div class="card p-4">
+          <dt class="text-fluid-xs uppercase tracking-wider text-subtle">{m.label}</dt>
+          <dd class="mt-1 font-mono text-fluid-2xl text-brand">{m.value}</dd>
+        </div>
+      ))}
+    </dl>
+
+    {services.length > 0 && (
+      <ul class="mt-6 flex flex-wrap gap-2" aria-label="Services">
+        {services.map((s) => (
+          <li class="inline-flex items-center px-2 py-0.5 rounded-md border border-border/60 text-fluid-xs text-muted">{s}</li>
+        ))}
+      </ul>
+    )}
+
+    {cover && (
+      <Image src={cover} alt={coverAlt ?? title} widths={[640, 1024, 1280]} sizes="(min-width: 768px) 800px, 100vw" loading="eager" class="mt-10 w-full h-auto rounded-lg" />
+    )}
+
+    <div class="hairline my-12"></div>
+
+    <div class="prose-tight max-w-3xl text-fg [&_h2]:mt-12 [&_h2]:mb-4 [&_h3]:mt-10 [&_h3]:mb-3 [&_p]:my-4 [&_p]:text-muted [&_ul]:my-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:text-muted [&_strong]:text-fg [&_a]:text-brand [&_a]:underline">
+      <Content />
+    </div>
+
+    <aside class="mt-16 card p-6 md:p-8 flex flex-wrap gap-4 items-center justify-between">
+      <p class="text-fluid-lg">Want a similar result?</p>
+      <a href="/#contact" class="btn btn-primary">
+        Get a quote <Icon name="arrow-right" size={16} />
+      </a>
+    </aside>
+  </article>
+</Base>

@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+
+const entries = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+
+function fmtDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+
+<Base title="Blog" description="Field notes on sourcing, factory vetting, and freight.">
+  <section class="container-app pt-16 pb-10 md:pt-24">
+    <p class="eyebrow"><Icon name="spark" size={14} /> Blog</p>
+    <h1 class="mt-4">Field notes.</h1>
+  </section>
+
+  <section class="container-app pb-24">
+    {entries.length === 0 ? (
+      <div class="card p-8 md:p-10">
+        <p class="text-fluid-lg">First post is being drafted. Check back shortly.</p>
+      </div>
+    ) : (
+      <ul role="list" class="grid gap-6 md:grid-cols-2">
+        {entries.map((entry) => (
+          <li>
+            <a href={`/blog/${entry.slug}`} class="card p-6 md:p-8 block h-full transition-transform hover:-translate-y-0.5">
+              <div class="flex items-center gap-3 text-fluid-xs text-subtle">
+                <time datetime={entry.data.publishedAt.toISOString()}>{fmtDate(entry.data.publishedAt)}</time>
+                {entry.data.readingMinutes && (
+                  <>
+                    <span aria-hidden="true">·</span>
+                    <span>{entry.data.readingMinutes} min read</span>
+                  </>
+                )}
+              </div>
+              <h2 class="mt-3 text-fluid-2xl">{entry.data.title}</h2>
+              <p class="mt-3 text-muted text-fluid-sm">{entry.data.summary}</p>
+              <span class="mt-5 inline-flex items-center gap-1.5 text-fluid-sm">
+                Read post <Icon name="arrow-up-right" size={14} />
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</Base>

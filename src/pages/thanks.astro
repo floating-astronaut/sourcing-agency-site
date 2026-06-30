@@ -1,0 +1,17 @@
+---
+import Base from '~/layouts/Base.astro';
+import Icon from '~/components/Icon.astro';
+---
+
+<Base title="Thanks" noindex={true}>
+  <section class="container-app py-32 text-center">
+    <span class="inline-flex size-14 items-center justify-center rounded-full bg-brand/10 text-brand border border-brand/20 mx-auto">
+      <Icon name="check" size={24} />
+    </span>
+    <h1 class="mt-6">Thanks — message received.</h1>
+    <p class="mt-4 text-fluid-lg text-muted max-w-md mx-auto">
+      We'll reply within one business day.
+    </p>
+    <a href="/" class="btn btn-secondary mt-8">Back home</a>
+  </section>
+</Base>

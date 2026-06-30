@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sourcing-agency-site.pages.dev/sitemap-index.xml

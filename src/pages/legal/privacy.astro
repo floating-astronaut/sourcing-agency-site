@@ -1,0 +1,25 @@
+---
+import Base from '~/layouts/Base.astro';
+import { legalEntity, site } from '~/lib/site';
+---
+
+<Base title="Privacy Policy" noindex={true}>
+  <article class="container-app pt-16 pb-24 max-w-3xl prose-tight">
+    <h1>Privacy Policy</h1>
+    <p class="text-muted">
+      <!-- TODO: replace this entire page with a real privacy policy reviewed
+           against actual data practices before launch. -->
+      This is placeholder text. {legalEntity.name} ("we", "us") operates {site.url}.
+      TODO: describe what personal data is collected (contact form: name, email,
+      company, message), how it's stored (Cloudflare Pages Functions + your
+      email provider), how long it's retained, and users' rights.
+    </p>
+    <p class="text-muted">
+      Registered entity: TODO — {legalEntity.name}, {legalEntity.address}.
+      Jurisdiction: TODO — {legalEntity.jurisdiction}.
+    </p>
+    <p class="text-muted">
+      Contact: <a href={`mailto:${legalEntity.email}`}>{legalEntity.email}</a>
+    </p>
+  </article>
+</Base>

@@ -1,0 +1,24 @@
+---
+import Base from '~/layouts/Base.astro';
+import { legalEntity, site } from '~/lib/site';
+---
+
+<Base title="Terms of Service" noindex={true}>
+  <article class="container-app pt-16 pb-24 max-w-3xl prose-tight">
+    <h1>Terms of Service</h1>
+    <p class="text-muted">
+      <!-- TODO: replace this entire page with real terms drafted/reviewed
+           for the actual sourcing-agency service agreement before launch. -->
+      This is placeholder text. These terms govern use of {site.url}, operated
+      by {legalEntity.name}. TODO: describe the service offered, payment terms,
+      liability limitations, and dispute resolution process appropriate to a
+      sourcing/procurement agency engagement.
+    </p>
+    <p class="text-muted">
+      Jurisdiction: TODO — {legalEntity.jurisdiction}.
+    </p>
+    <p class="text-muted">
+      Contact: <a href={`mailto:${legalEntity.email}`}>{legalEntity.email}</a>
+    </p>
+  </article>
+</Base>
