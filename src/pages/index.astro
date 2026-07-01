@@ -4,668 +4,515 @@ import { site } from '~/lib/site';
 ---
 
 <Base
-  title="India's #1 Sourcing Agency for Pet & Ayurvedic Products"
-  description="Indofolk Wellness is India's trusted B2B sourcing agency. We find the perfect Indian manufacturer, negotiate the best price, manage quality, and deliver to your door. Free consultation."
+  title="India's #1 B2B Sourcing Agency for Pet & Ayurvedic Products"
+  description="IndoFolk Wellness connects global brands to GMP-certified Indian manufacturers for pet treats, supplements, and Ayurvedic products. Factory matching in 48 hours. Free consultation."
 >
-  <Fragment slot="head">
-    <!-- Inter Tight Variable is loaded globally via @fontsource-variable/inter-tight -->
-  </Fragment>
 
-  <!-- ══════════════════════════════════════════════
-       HERO
-  ══════════════════════════════════════════════ -->
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
   <section class="ifw-hero">
-    <div class="ifw-hero-bg">
-      <div class="ifw-hero-glow"></div>
-      <div class="ifw-hero-glow2"></div>
-    </div>
+    <div class="ifw-glow ifw-glow-1"></div>
+    <div class="ifw-glow ifw-glow-2"></div>
     <div class="ifw-hero-inner">
       <div class="ifw-hero-left">
         <div class="ifw-badge">
-          <span class="ifw-badge-dot"></span>
-          India's Trusted B2B Sourcing Partner
+          <span class="ifw-badge-pulse"></span>
+          B2B Sourcing Agency &nbsp;·&nbsp; New Delhi, India
         </div>
-        <h1 class="ifw-h1">
-          Your <em>India Office</em> for Pet &amp; Ayurvedic Sourcing
-        </h1>
+        <h1 class="ifw-h1">Source from India's <em>finest manufacturers.</em></h1>
         <p class="ifw-hero-lead">
-          Tell us what you need. We find the perfect Indian manufacturer, negotiate your price, manage quality, handle shipping — and deliver to your door. <strong>You grow your brand. We handle India.</strong>
+          We find, vet, and manage Indian factories for pet &amp; Ayurvedic products — from first sample to your warehouse door.
         </p>
         <div class="ifw-hero-ctas">
-          <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-btn-primary">
-            📅 Book a Free Consultation
-          </a>
-          <a href="#contact" class="ifw-btn-ghost">Post an Inquiry →</a>
+          <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-cta-primary">Book Free Consultation</a>
+          <a href="#products" class="ifw-cta-ghost">View Products ↓</a>
         </div>
-        <div class="ifw-hero-proof">
-          <div class="ifw-proof-item">
-            <strong>48h</strong>
-            <span>Manufacturer shortlist</span>
-          </div>
-          <div class="ifw-proof-divider"></div>
-          <div class="ifw-proof-item">
-            <strong>200+</strong>
+        <div class="ifw-hero-stats">
+          <div class="ifw-hstat">
+            <strong class="ifw-hstat-num">200+</strong>
             <span>Vetted factories</span>
           </div>
-          <div class="ifw-proof-divider"></div>
-          <div class="ifw-proof-item">
-            <strong>15+</strong>
-            <span>Export countries</span>
+          <div class="ifw-hstat-sep"></div>
+          <div class="ifw-hstat">
+            <strong class="ifw-hstat-num">48h</strong>
+            <span>Manufacturer shortlist</span>
           </div>
-          <div class="ifw-proof-divider"></div>
-          <div class="ifw-proof-item">
-            <strong>24h</strong>
-            <span>First response</span>
+          <div class="ifw-hstat-sep"></div>
+          <div class="ifw-hstat">
+            <strong class="ifw-hstat-num">15+</strong>
+            <span>Export markets</span>
+          </div>
+          <div class="ifw-hstat-sep"></div>
+          <div class="ifw-hstat">
+            <strong class="ifw-hstat-num">1–2%</strong>
+            <span>Transparent fee</span>
           </div>
         </div>
       </div>
       <div class="ifw-hero-right">
-        <div class="ifw-live-card">
-          <div class="ifw-live-tag">
-            <span class="ifw-live-dot"></span> Live Sourcing Example
+        <div class="ifw-mosaic">
+          <img src="/images/products/yak-cheese-branded.jpg" class="ifw-mp ifw-mp-main"
+            alt="Himalayan Yak Cheese Dog Chews — private label ready, sourced from India" loading="eager" />
+          <div class="ifw-mosaic-col">
+            <img src="/images/products/factory.jpg" class="ifw-mp"
+              alt="GMP-certified manufacturing facility in India" loading="eager" />
+            <img src="/images/products/treats-pouches.jpg" class="ifw-mp"
+              alt="Custom private label pet treat pouches manufactured in India" loading="eager" />
           </div>
-          <blockquote class="ifw-live-quote">
-            "We need organic dog treats — natural ingredients, our brand label, shipped to the UK."
-          </blockquote>
-          <div class="ifw-live-steps">
-            <div class="ifw-live-step ifw-done">
-              <div class="ifw-live-check">✓</div>
-              <div>
-                <strong>3 manufacturers shortlisted &amp; vetted</strong>
-                <span>GMP certified, UK-export ready, within 48 hours</span>
-              </div>
-            </div>
-            <div class="ifw-live-step ifw-done">
-              <div class="ifw-live-check">✓</div>
-              <div>
-                <strong>Price negotiated — 26% below initial quote</strong>
-                <span>Final pricing locked before any commitment</span>
-              </div>
-            </div>
-            <div class="ifw-live-step ifw-active">
-              <div class="ifw-live-check ifw-check-orange">→</div>
-              <div>
-                <strong>Samples dispatched to London</strong>
-                <span>Arriving in 8 days for client approval</span>
-              </div>
-            </div>
+          <div class="ifw-mosaic-float">
+            <div class="ifw-mf-num">1–2%</div>
+            <div class="ifw-mf-label">Fee. Savings<br>cover it.</div>
           </div>
-        </div>
-        <div class="ifw-float-badge">
-          <div class="ifw-float-num">1–2%</div>
-          <div class="ifw-float-label">Our fee.<br>Savings cover it.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       TRUST / MARKETS BAR
-  ══════════════════════════════════════════════ -->
-  <div class="ifw-trust-bar">
-    <span class="ifw-trust-label">Sourcing for brands in</span>
-    <div class="ifw-trust-flags">
-      <span class="ifw-flag">🇺🇸 United States</span>
-      <span class="ifw-flag">🇦🇪 UAE</span>
-      <span class="ifw-flag">🇬🇧 United Kingdom</span>
-      <span class="ifw-flag">🇩🇪 Germany</span>
-      <span class="ifw-flag">🇦🇺 Australia</span>
-      <span class="ifw-flag">🇨🇦 Canada</span>
-    </div>
-    <div class="ifw-trust-certs">
-      <span class="ifw-cert">GMP ✓</span>
-      <span class="ifw-cert">USDA Organic ✓</span>
-      <span class="ifw-cert">ISO 9001 ✓</span>
-      <span class="ifw-cert">FSSAI ✓</span>
+  <!-- ══ MARQUEE ═══════════════════════════════════════════ -->
+  <div class="ifw-marquee" aria-hidden="true">
+    <div class="ifw-marquee-track">
+      <span>GMP Certified</span><span class="ifw-mx">·</span>
+      <span>FSSAI Licensed</span><span class="ifw-mx">·</span>
+      <span>USDA Organic</span><span class="ifw-mx">·</span>
+      <span>ISO 9001</span><span class="ifw-mx">·</span>
+      <span>HACCP</span><span class="ifw-mx">·</span>
+      <span>APEDA Export</span><span class="ifw-mx">·</span>
+      <span>India Organic</span><span class="ifw-mx">·</span>
+      <span>Halal Certified</span><span class="ifw-mx">·</span>
+      <span>Lab Tested</span><span class="ifw-mx">·</span>
+      <span>Private Label</span><span class="ifw-mx">·</span>
+      <span>200+ Factories</span><span class="ifw-mx">·</span>
+      <span>15+ Markets</span><span class="ifw-mx">·</span>
+      <span>48h Shortlist</span><span class="ifw-mx">·</span>
+      <span>GMP Certified</span><span class="ifw-mx">·</span>
+      <span>FSSAI Licensed</span><span class="ifw-mx">·</span>
+      <span>USDA Organic</span><span class="ifw-mx">·</span>
+      <span>ISO 9001</span><span class="ifw-mx">·</span>
+      <span>HACCP</span><span class="ifw-mx">·</span>
+      <span>APEDA Export</span><span class="ifw-mx">·</span>
+      <span>India Organic</span><span class="ifw-mx">·</span>
+      <span>Halal Certified</span><span class="ifw-mx">·</span>
+      <span>Lab Tested</span><span class="ifw-mx">·</span>
+      <span>Private Label</span><span class="ifw-mx">·</span>
+      <span>200+ Factories</span><span class="ifw-mx">·</span>
+      <span>15+ Markets</span><span class="ifw-mx">·</span>
+      <span>48h Shortlist</span><span class="ifw-mx">·</span>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       WHAT WE DO — Promise
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-cream" id="about">
+  <!-- ══ SERVICES — 3 Pillars ══════════════════════════════ -->
+  <section class="ifw-section ifw-white" id="about">
     <div class="ifw-container">
-      <div class="ifw-promise-grid">
-        <div class="ifw-promise-left">
-          <div class="ifw-eyebrow">Our Promise</div>
-          <h2 class="ifw-sh">We don't just find<br>suppliers. We find <em>the right one.</em></h2>
-          <blockquote class="ifw-blockquote">
-            "We understand that every brand has different needs — quality bars, certifications, budgets, and timelines. That's why we never send you a generic list. We listen first."
-          </blockquote>
-          <p class="ifw-body-text">
-            India is home to thousands of manufacturers. Most are good. A few are exceptional. The difference between a mediocre supplier and the right one can make or break your product line.
-          </p>
-          <p class="ifw-body-text">
-            At Indofolk Wellness, we've built relationships with India's best factories — the ones that deliver on time, maintain quality across batches, hold the right certifications, and understand what global brands need.
-          </p>
-          <a href="#contact" class="ifw-btn-primary" style="display:inline-flex;margin-top:1.5rem">Tell Us What You Need →</a>
+      <div class="ifw-section-head ifw-centered" data-reveal>
+        <div class="ifw-eyebrow">End-to-End Service</div>
+        <h2 class="ifw-sh">Everything between inquiry<br>and delivery. <em>Handled.</em></h2>
+      </div>
+      <div class="ifw-pillars">
+        <div class="ifw-pillar" data-reveal data-delay="0">
+          <div class="ifw-pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3>Factory Matching</h3>
+          <p>We shortlist 3–5 personally audited manufacturers within 48 hours — matched to your product, certifications, and budget. No cold contacts. Only factories we know.</p>
         </div>
-        <div class="ifw-promise-cards">
-          <div class="ifw-pcard">
-            <div class="ifw-pcard-icon">🎯</div>
-            <div>
-              <h4>We Listen Before We Search</h4>
-              <p>Every engagement starts with a briefing call. We understand your product, market, customers, and standards — before we approach a single manufacturer.</p>
-            </div>
+        <div class="ifw-pillar" data-reveal data-delay="100">
+          <div class="ifw-pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <div class="ifw-pcard">
-            <div class="ifw-pcard-icon">🤝</div>
-            <div>
-              <h4>We Negotiate On Your Side</h4>
-              <p>We know real factory prices. We know where there's room. You get the best deal — we handle every back-and-forth so you don't have to.</p>
-            </div>
-          </div>
-          <div class="ifw-pcard">
-            <div class="ifw-pcard-icon">🧪</div>
-            <div>
-              <h4>We Never Skip Quality</h4>
-              <p>Samples are checked by us before they reach you. Production batches are monitored. We are your eyes and ears in India.</p>
-            </div>
-          </div>
-          <div class="ifw-pcard">
-            <div class="ifw-pcard-icon">🚀</div>
-            <div>
-              <h4>We Make It Genuinely Easy</h4>
-              <p>One point of contact. Clear updates at every step. No chasing manufacturers, no language barriers, no confusing logistics. Just results, delivered.</p>
-            </div>
-          </div>
+          <h3>Quality &amp; Compliance</h3>
+          <p>We audit factories, check samples, run lab tests, and verify every certification — so your product is compliant and consistent before it ever leaves India.</p>
         </div>
+        <div class="ifw-pillar" data-reveal data-delay="200">
+          <div class="ifw-pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3>Export &amp; Delivery</h3>
+          <p>Freight coordination, customs documentation, and full compliance support for your destination market. Door-to-door delivery to 15+ countries worldwide.</p>
+        </div>
+      </div>
+      <div class="ifw-pillars-cta" data-reveal>
+        <a href="#contact" class="ifw-btn-brand">Tell Us What You Need →</a>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       PRODUCT CATEGORIES
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-sand" id="products">
+  <!-- ══ PRODUCTS ══════════════════════════════════════════ -->
+  <section class="ifw-section ifw-subtle" id="products">
     <div class="ifw-container">
-      <div class="ifw-cat-header">
-        <div>
-          <div class="ifw-eyebrow">What We Source</div>
-          <h2 class="ifw-sh" style="margin-bottom:0">Two Specialisations. <em>One Expert Partner.</em></h2>
-        </div>
+      <div class="ifw-section-head" data-reveal>
+        <div class="ifw-eyebrow">What We Source</div>
+        <h2 class="ifw-sh">Two specialisations. <em>One expert partner.</em></h2>
       </div>
 
-      <!-- Pet Products Subheading -->
-      <div class="ifw-cat-sub-head">
-        <div class="ifw-cat-sub-label">
-          <span class="ifw-cat-pill ifw-cat-pill-orange">🐾 Pet Products</span>
-          <span class="ifw-cat-note">Our primary focus — India's fastest-growing export category</span>
-        </div>
-        <a href="#contact" class="ifw-cat-sub-cta">Source Pet Products →</a>
+      <div class="ifw-cat-sub" data-reveal>
+        <span class="ifw-cat-pill ifw-pill-blue">🐾 Pet Products</span>
+        <span class="ifw-cat-note">India's fastest-growing export category</span>
+        <a href="/pet-care-sourcing" class="ifw-cat-link">Explore pet sourcing →</a>
       </div>
 
-      <!-- Pet Product Image Cards Grid -->
       <div class="ifw-prod-grid">
-
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/yak-cheese-branded.jpg" alt="Himalayan Yak Cheese Dog Chews — branded packaging with natural chew bars, private label ready" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-hot">🔥 #1 Seller</span>
-            <span class="ifw-prod-pl-tag">Private Label Ready</span>
+        <div class="ifw-prod-card" data-reveal data-delay="0">
+          <div class="ifw-prod-img">
+            <img src="/images/products/yak-cheese-branded.jpg"
+              alt="Himalayan Yak Cheese Dog Chews — branded packaging, private label ready" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-hot">#1 Seller</span>
+            <span class="ifw-prod-pl">Private Label</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Yak Cheese Chews</h4>
-            <p class="ifw-prod-desc">100% natural Himalayan yak milk chews — lactose-free, long-lasting, high-protein. Bestseller in US &amp; UK markets.</p>
-            <div class="ifw-prod-tags">
-              <span>Natural</span><span>Lactose-Free</span><span>Human-Grade</span>
-            </div>
+            <h4>Yak Cheese Chews</h4>
+            <p>100% natural Himalayan yak milk — lactose-free, long-lasting, high-protein. Bestseller in US &amp; UK markets.</p>
+            <div class="ifw-prod-tags"><span>Natural</span><span>Lactose-Free</span><span>Human-Grade</span></div>
             <a href="#contact" class="ifw-prod-cta">Source This →</a>
           </div>
         </div>
 
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/treats-pouches.jpg" alt="Chicken jerky and fish treats in custom private label pouches with dog breed photos" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-demand">High Demand</span>
-            <span class="ifw-prod-pl-tag">Private Label Ready</span>
+        <div class="ifw-prod-card" data-reveal data-delay="75">
+          <div class="ifw-prod-img">
+            <img src="/images/products/treats-pouches.jpg"
+              alt="Chicken jerky and fish treats in custom private label pouches" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-demand">High Demand</span>
+            <span class="ifw-prod-pl">Private Label</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Chicken, Fish &amp; Meat Treats</h4>
-            <p class="ifw-prod-desc">Chicken jerky, fish skins, salmon strips — single-ingredient, air-dried, human-grade. In your brand's packaging.</p>
-            <div class="ifw-prod-tags">
-              <span>Single Ingredient</span><span>Air-Dried</span><span>Human-Grade</span>
-            </div>
+            <h4>Meat &amp; Fish Treats</h4>
+            <p>Chicken jerky, fish skins, salmon strips — single-ingredient, air-dried, human-grade. In your brand's packaging.</p>
+            <div class="ifw-prod-tags"><span>Single Ingredient</span><span>Air-Dried</span><span>Human-Grade</span></div>
             <a href="#contact" class="ifw-prod-cta">Source This →</a>
           </div>
         </div>
 
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/pet-supplements.jpg" alt="Pet supplement range — Hip and Joint, Omega-3 Oil, Probiotic, Digestive Enzymes, Multivitamin, Calcium" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-pl">Private Label</span>
-            <span class="ifw-prod-pl-tag">Custom Formula</span>
+        <div class="ifw-prod-card" data-reveal data-delay="150">
+          <div class="ifw-prod-img">
+            <img src="/images/products/pet-supplements.jpg"
+              alt="Pet supplement range — Hip and Joint, Omega-3, Probiotic, Digestive Enzymes" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-pl">Custom Formula</span>
+            <span class="ifw-prod-pl">Private Label</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Pet Supplements</h4>
-            <p class="ifw-prod-desc">Hip &amp; Joint, Omega-3, Digestive Enzymes, Probiotic, Multivitamin, Calcium — vet-formulated, in your brand.</p>
-            <div class="ifw-prod-tags">
-              <span>Vet-Formulated</span><span>Tablet / Capsule</span><span>Custom SKUs</span>
-            </div>
+            <h4>Pet Supplements</h4>
+            <p>Hip &amp; Joint, Omega-3, Digestive Enzymes, Probiotic, Multivitamin — vet-formulated, in your brand.</p>
+            <div class="ifw-prod-tags"><span>Vet-Formulated</span><span>Tablet/Capsule</span><span>Custom SKUs</span></div>
             <a href="#contact" class="ifw-prod-cta">Source This →</a>
           </div>
         </div>
 
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/functional-treats.jpg" alt="Functional dog treats and bone-shaped biscuits with turmeric, omega-3 and natural ingredients" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-hot">Herbal Formula</span>
-            <span class="ifw-prod-pl-tag">Private Label Ready</span>
+        <div class="ifw-prod-card" data-reveal data-delay="225">
+          <div class="ifw-prod-img">
+            <img src="/images/products/functional-treats.jpg"
+              alt="Functional dog treats and biscuits with turmeric, omega-3 and natural ingredients" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-hot">Herbal Formula</span>
+            <span class="ifw-prod-pl">Private Label</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Functional Treats &amp; Biscuits</h4>
-            <p class="ifw-prod-desc">Soft chews &amp; bone-shaped biscuits with Glucosamine, Turmeric, Omega-3. Treats with a purpose — joint, calming, immunity.</p>
-            <div class="ifw-prod-tags">
-              <span>Soft Chew</span><span>Herbal</span><span>Joint Health</span>
-            </div>
+            <h4>Functional Treats</h4>
+            <p>Soft chews &amp; biscuits with Glucosamine, Turmeric, Omega-3. Treats with purpose — joint, calming, immunity.</p>
+            <div class="ifw-prod-tags"><span>Soft Chew</span><span>Herbal</span><span>Joint Health</span></div>
             <a href="#contact" class="ifw-prod-cta">Source This →</a>
           </div>
         </div>
 
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/freeze-dried.jpg" alt="Freeze-dried pet treats variety — chicken cubes, salmon pieces and whole dried fish" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-new">Trending</span>
-            <span class="ifw-prod-pl-tag">Private Label Ready</span>
+        <div class="ifw-prod-card" data-reveal data-delay="300">
+          <div class="ifw-prod-img">
+            <img src="/images/products/freeze-dried.jpg"
+              alt="Freeze-dried pet treats — chicken cubes, salmon pieces and dried fish" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-new">Trending</span>
+            <span class="ifw-prod-pl">Private Label</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Freeze-Dried Treats</h4>
-            <p class="ifw-prod-desc">Freeze-dried chicken, salmon, fish — raw nutrition, clean label. Premium positioning for upscale pet brands.</p>
-            <div class="ifw-prod-tags">
-              <span>Raw Nutrition</span><span>Clean Label</span><span>Premium</span>
-            </div>
+            <h4>Freeze-Dried Treats</h4>
+            <p>Freeze-dried chicken, salmon, fish — raw nutrition, clean label. Premium positioning for upscale brands.</p>
+            <div class="ifw-prod-tags"><span>Raw Nutrition</span><span>Clean Label</span><span>Premium</span></div>
             <a href="#contact" class="ifw-prod-cta">Source This →</a>
           </div>
         </div>
 
-        <div class="ifw-prod-card">
-          <div class="ifw-prod-img-wrap">
-            <img src="/images/products/private-label.jpg" alt="Private label pet product packaging range — custom pouches, jars and boxes with brand designs" loading="lazy" />
-            <span class="ifw-prod-overlay-badge ifw-badge-pl">Your Brand</span>
-            <span class="ifw-prod-pl-tag">All Categories</span>
+        <div class="ifw-prod-card" data-reveal data-delay="375">
+          <div class="ifw-prod-img">
+            <img src="/images/products/private-label.jpg"
+              alt="Private label pet product packaging range — custom pouches, jars and boxes" loading="lazy" />
+            <span class="ifw-prod-badge ifw-badge-pl">Your Brand</span>
+            <span class="ifw-prod-pl">All Categories</span>
           </div>
           <div class="ifw-prod-body">
-            <h4 class="ifw-prod-title">Private Label Ready</h4>
-            <p class="ifw-prod-desc">Every product available under your brand — custom packaging, OEM formulations, retail-ready from GMP-certified factories.</p>
-            <div class="ifw-prod-tags">
-              <span>Custom Packaging</span><span>OEM</span><span>GMP Certified</span>
-            </div>
+            <h4>Private Label Ready</h4>
+            <p>Every product under your brand — custom packaging, OEM formulations, retail-ready from GMP-certified factories.</p>
+            <div class="ifw-prod-tags"><span>Custom Packaging</span><span>OEM</span><span>GMP Certified</span></div>
             <a href="#contact" class="ifw-prod-cta">Get Started →</a>
           </div>
         </div>
-
       </div>
 
-      <!-- Ayurvedic Products Subheading -->
-      <div class="ifw-cat-sub-head" style="margin-top:3.5rem">
-        <div class="ifw-cat-sub-label">
-          <span class="ifw-cat-pill ifw-cat-pill-green">🌿 Ayurvedic Products</span>
-          <span class="ifw-cat-note">Certified organic herbs, oils &amp; formulations</span>
-        </div>
-        <a href="#contact" class="ifw-cat-sub-cta">Source Ayurvedic Products →</a>
+      <!-- Ayurvedic -->
+      <div class="ifw-cat-sub" style="margin-top:4rem" data-reveal>
+        <span class="ifw-cat-pill ifw-pill-green">🌿 Ayurvedic Products</span>
+        <span class="ifw-cat-note">Certified organic herbs, oils &amp; formulations</span>
+        <a href="/ayurveda-sourcing" class="ifw-cat-link">Explore Ayurveda sourcing →</a>
       </div>
 
-      <!-- Ayurvedic Products: list + photo -->
       <div class="ifw-ayur-grid">
-        <div class="ifw-ayur-products">
+        <div class="ifw-ayur-visual" data-reveal>
+          <img src="/images/products/supplements-flatlay.jpg"
+            alt="Ayurvedic supplement ingredients and finished products sourced from India" loading="lazy" />
+          <div class="ifw-ayur-overlay">USDA Organic · GMP · ISO 9001 · India Organic</div>
+        </div>
+        <div class="ifw-ayur-items" data-reveal data-delay="150">
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">🪨</span>
             <div><strong>Shilajit</strong><span>Resin, powder, capsule — lab-verified purity, fulvic acid certified</span></div>
-            <span class="ifw-pprod-tag ifw-tag-hot">Premium</span>
+            <span class="ifw-ayur-tag ifw-tag-premium">Premium</span>
           </div>
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">🌱</span>
             <div><strong>Ashwagandha</strong><span>USDA Organic, KSM-66 &amp; Sensoril certified, root extract</span></div>
-            <span class="ifw-pprod-tag ifw-tag-hot">Best Seller</span>
+            <span class="ifw-ayur-tag ifw-tag-hot">Best Seller</span>
           </div>
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">🟡</span>
-            <div><strong>Turmeric / Curcumin</strong><span>Standardised 95% curcuminoids, organic certified, black pepper blend</span></div>
-            <span class="ifw-pprod-tag ifw-tag-new">Organic</span>
+            <div><strong>Turmeric / Curcumin</strong><span>95% curcuminoids standardised, organic certified, black pepper blend</span></div>
+            <span class="ifw-ayur-tag ifw-tag-organic">Organic</span>
           </div>
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">🌾</span>
             <div><strong>Moringa &amp; Neem</strong><span>Powder, capsule, extract — India Organic &amp; USDA certified</span></div>
-            <span class="ifw-pprod-tag">Herbal</span>
+            <span class="ifw-ayur-tag">Herbal</span>
           </div>
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">💛</span>
             <div><strong>Herbal Oils &amp; Extracts</strong><span>Neem, Black Seed, Brahmi, Tulsi — cold-pressed &amp; steam-distilled</span></div>
-            <span class="ifw-pprod-tag">Cold Pressed</span>
+            <span class="ifw-ayur-tag">Cold Pressed</span>
           </div>
           <div class="ifw-ayur-item">
             <span class="ifw-ayur-icon">🧪</span>
-            <div><strong>Custom Formulations</strong><span>OEM / private label Ayurvedic supplements in any format</span></div>
-            <span class="ifw-pprod-tag ifw-tag-new">Private Label</span>
-          </div>
-        </div>
-        <div class="ifw-ayur-visual">
-          <img src="/images/products/supplements-flatlay.jpg" alt="Functional pet supplements and herbal ingredients including turmeric, omega-3, and natural treat varieties sourced from India" loading="lazy" />
-          <div class="ifw-ayur-overlay">
-            <span>USDA Organic · GMP · ISO 9001 · India Organic</span>
+            <div><strong>Custom Formulations</strong><span>OEM / private label Ayurvedic supplements in any delivery format</span></div>
+            <span class="ifw-ayur-tag ifw-tag-organic">Private Label</span>
           </div>
         </div>
       </div>
-
-      <p class="ifw-cat-footer">
+      <p class="ifw-cat-footer" data-reveal>
         Don't see your product? If it's made in India, we can source it.
         <a href="#contact">Tell us what you need →</a>
       </p>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       WHY INDIA — Visual Stats + Comparison Table
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-dark" id="why-india">
+  <!-- ══ WHY INDIA — Dark stats ════════════════════════════ -->
+  <section class="ifw-section ifw-dark" id="why-india">
     <div class="ifw-container">
-      <div class="ifw-why-india-grid">
-        <div class="ifw-why-india-left">
-          <div class="ifw-eyebrow ifw-ey-light">Why Source from India</div>
-          <h2 class="ifw-sh ifw-sh-light">India: The World's <em>Best-Kept</em> Sourcing Secret</h2>
-          <p class="ifw-body-text ifw-text-muted-light">
-            Savvy global brands are discovering that India's manufacturers produce world-class products at 30–50% less than Western equivalents — with an authentic natural ingredient story consumers love.
-          </p>
-          <div class="ifw-why-pts">
-            <div class="ifw-why-pt">
-              <div class="ifw-why-pt-icon">💰</div>
-              <div>
-                <h5>30–50% Lower Production Costs</h5>
-                <p>Same or better quality. Your margins grow significantly without cutting corners on ingredients or processes.</p>
-              </div>
-            </div>
-            <div class="ifw-why-pt">
-              <div class="ifw-why-pt-icon">🌿</div>
-              <div>
-                <h5>Authentic Natural Ingredients</h5>
-                <p>Neem, Ashwagandha, Turmeric, Hemp — grown organically in India for centuries. A genuine story consumers pay premium for.</p>
-              </div>
-            </div>
-            <div class="ifw-why-pt">
-              <div class="ifw-why-pt-icon">📋</div>
-              <div>
-                <h5>Full Certification Capability</h5>
-                <p>GMP, USDA Organic, ISO 9001, FSSAI — all certifications your target market requires, available from our network.</p>
-              </div>
-            </div>
-            <div class="ifw-why-pt">
-              <div class="ifw-why-pt-icon">🏷️</div>
-              <div>
-                <h5>Private Label Expertise</h5>
-                <p>Custom formulations, branding, and retail-ready packaging for global markets — your product, your brand, made in India.</p>
-              </div>
-            </div>
+      <div class="ifw-section-head ifw-centered" data-reveal>
+        <div class="ifw-eyebrow ifw-ey-light">Why Source From India</div>
+        <h2 class="ifw-sh ifw-sh-light">India gives you an<br><em>unfair competitive advantage.</em></h2>
+      </div>
+      <div class="ifw-india-stats" data-reveal>
+        <div class="ifw-istat">
+          <strong class="ifw-istat-num">30–50%</strong>
+          <span class="ifw-istat-label">Cost savings vs. Western sourcing</span>
+        </div>
+        <div class="ifw-istat-sep"></div>
+        <div class="ifw-istat">
+          <strong class="ifw-istat-num">$350B</strong>
+          <span class="ifw-istat-label">Global pet market by 2027</span>
+        </div>
+        <div class="ifw-istat-sep"></div>
+        <div class="ifw-istat">
+          <strong class="ifw-istat-num">200+</strong>
+          <span class="ifw-istat-label">Vetted factories in our network</span>
+        </div>
+        <div class="ifw-istat-sep"></div>
+        <div class="ifw-istat">
+          <strong class="ifw-istat-num">5,000</strong>
+          <span class="ifw-istat-label">Years of Ayurvedic tradition</span>
+        </div>
+      </div>
+      <div class="ifw-india-pts" data-reveal data-delay="150">
+        <div class="ifw-india-pt">
+          <div class="ifw-india-pt-icon">💰</div>
+          <div>
+            <h5>Radically lower production costs</h5>
+            <p>Same or better quality. 30–50% less than Western equivalents. Your margins grow without cutting corners on ingredients or processes.</p>
           </div>
         </div>
-        <div class="ifw-why-india-right">
-          <div class="ifw-stats-mosaic">
-            <div class="ifw-stat-tile ifw-stat-terra">
-              <strong>30–50%</strong>
-              <span>Lower production cost vs Western sources</span>
-            </div>
-            <div class="ifw-stat-tile ifw-stat-sage">
-              <strong>$350B</strong>
-              <span>Global pet market by 2027 — 12% annual growth</span>
-            </div>
-            <div class="ifw-stat-tile ifw-stat-parch">
-              <strong>40%</strong>
-              <span>Consumers actively prefer natural / herbal products</span>
-            </div>
-            <div class="ifw-stat-tile ifw-stat-deep">
-              <strong>200+</strong>
-              <span>Manufacturers in our personally vetted network</span>
-            </div>
+        <div class="ifw-india-pt">
+          <div class="ifw-india-pt-icon">🌿</div>
+          <div>
+            <h5>Authentic natural ingredients</h5>
+            <p>Ashwagandha, Turmeric, Neem — grown organically in India for centuries. A genuine provenance story consumers pay premium for.</p>
           </div>
-          <div class="ifw-compare-box">
-            <div class="ifw-compare-title">With Indofolk vs Going Alone</div>
-            <div class="ifw-compare-scroll">
-              <table class="ifw-compare-table">
-                <thead>
-                  <tr>
-                    <th>What you need</th>
-                    <th class="ifw-col-no">Going alone</th>
-                    <th class="ifw-col-yes">With Indofolk</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Vetted manufacturer list</td><td class="ifw-col-no">❌ Weeks of research</td><td class="ifw-col-yes">✅ 48 hours</td></tr>
-                  <tr><td>Factory-direct pricing</td><td class="ifw-col-no">❌ Full retail quote</td><td class="ifw-col-yes">✅ 20–35% lower</td></tr>
-                  <tr><td>Quality checks in India</td><td class="ifw-col-no">❌ Risk it</td><td class="ifw-col-yes">✅ Checked before shipment</td></tr>
-                  <tr><td>Export documentation</td><td class="ifw-col-no">❌ Figure it out</td><td class="ifw-col-yes">✅ Fully handled</td></tr>
-                  <tr><td>Language &amp; time zone</td><td class="ifw-col-no">❌ Your problem</td><td class="ifw-col-yes">✅ One point of contact</td></tr>
-                  <tr><td>Private label &amp; packaging</td><td class="ifw-col-no">❌ Find vendors yourself</td><td class="ifw-col-yes">✅ End-to-end managed</td></tr>
-                </tbody>
-              </table>
-            </div>
+        </div>
+        <div class="ifw-india-pt">
+          <div class="ifw-india-pt-icon">🏆</div>
+          <div>
+            <h5>Full certification capability</h5>
+            <p>GMP, USDA Organic, ISO 9001, FSSAI — all certifications your target market requires, available from our vetted network.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       FACTORY STRIP
-  ══════════════════════════════════════════════ -->
-  <div class="ifw-factory-strip">
-    <img src="/images/products/factory.jpg" alt="GMP-certified pet product manufacturing facility in India — branded pouches moving along a production line" loading="lazy" />
+  <!-- ══ FACTORY STRIP — Cinematic ═════════════════════════ -->
+  <div class="ifw-factory">
+    <img src="/images/products/factory.jpg"
+      alt="GMP-certified manufacturing facility — IndoFolk Wellness partner factory in India" loading="lazy" />
     <div class="ifw-factory-overlay">
       <div class="ifw-factory-content">
-        <div class="ifw-eyebrow ifw-ey-light">Our Manufacturing Partners</div>
-        <h3>GMP-Certified Factories.<br>Personally Audited. Globally Ready.</h3>
-        <p>Every manufacturer in our network has been physically visited and audited by our team. No directory listings. No cold contacts. Only factories that consistently deliver.</p>
-        <a href="#contact" class="ifw-btn-primary">See How We Vet Manufacturers →</a>
-      </div>
-      <div class="ifw-factory-badges">
-        <div class="ifw-factory-badge">🏆 GMP Certified</div>
-        <div class="ifw-factory-badge">🌱 USDA Organic</div>
-        <div class="ifw-factory-badge">🔬 Lab Tested</div>
-        <div class="ifw-factory-badge">📦 Export Ready</div>
+        <h3>Personally audited.<br>GMP-certified.<br>Export-ready.</h3>
+        <a href="#contact" class="ifw-factory-cta">Enquire Now →</a>
+        <div class="ifw-factory-chips">
+          <span>GMP</span><span>USDA Organic</span><span>Lab Tested</span><span>Export Ready</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════
-       PROCESS — 6 Steps
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-cream" id="process">
+  <!-- ══ PROCESS — Horizontal timeline ═════════════════════ -->
+  <section class="ifw-section ifw-white" id="process">
     <div class="ifw-container">
-      <div class="ifw-eyebrow">How We Work</div>
-      <h2 class="ifw-sh">Six Steps. <em>Zero Stress.</em></h2>
-      <p class="ifw-section-lead">From your first message to your warehouse — here's exactly what happens. No surprises, no ambiguity.</p>
-
-      <div class="ifw-process-grid">
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">01</div>
-          <div class="ifw-proc-icon">📋</div>
-          <h3>Understand Your Requirements</h3>
-          <p>Product specs, target market, certifications needed, MOQ, budget, and timeline. We ask the questions most agencies skip.</p>
-          <div class="ifw-proc-time">⏱ 30-minute briefing call</div>
+      <div class="ifw-section-head ifw-centered" data-reveal>
+        <div class="ifw-eyebrow">How We Work</div>
+        <h2 class="ifw-sh">From inquiry to delivery.<br><em>Four clear steps.</em></h2>
+      </div>
+      <div class="ifw-timeline" data-reveal>
+        <div class="ifw-tl-track">
+          <div class="ifw-tl-progress" id="tlProgress"></div>
         </div>
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">02</div>
-          <div class="ifw-proc-icon">🔍</div>
-          <h3>Shortlist the Best Manufacturers</h3>
-          <p>3–5 personally vetted factories matched to your brief. Certifications verified, facility audited, export track record confirmed.</p>
-          <div class="ifw-proc-time">⏱ Shortlist within 48 hours</div>
-        </div>
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">03</div>
-          <div class="ifw-proc-icon">🧪</div>
-          <h3>Sampling &amp; Quality Checks</h3>
-          <p>We coordinate sample production and check samples ourselves before dispatching to you. We iterate until it's exactly right.</p>
-          <div class="ifw-proc-time">⏱ Samples in 2–4 weeks</div>
-        </div>
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">04</div>
-          <div class="ifw-proc-icon">💰</div>
-          <h3>Price Negotiation</h3>
-          <p>We negotiate on your behalf using our deep factory relationships. You get the best possible deal — typically 20–35% below initial quotes.</p>
-          <div class="ifw-proc-time">⏱ Saves you 20–35%</div>
-        </div>
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">05</div>
-          <div class="ifw-proc-icon">🏭</div>
-          <h3>Production Coordination</h3>
-          <p>We oversee timelines, monitor quality at every production stage, manage packaging compliance, and ensure regulations are met.</p>
-          <div class="ifw-proc-time">⏱ Full visibility throughout</div>
-        </div>
-        <div class="ifw-proc-card">
-          <div class="ifw-proc-num">06</div>
-          <div class="ifw-proc-icon">🚢</div>
-          <h3>Shipping &amp; Export</h3>
-          <p>Freight coordination, customs documentation, all compliance checks required for export — your products delivered worldwide.</p>
-          <div class="ifw-proc-time">⏱ Door-to-door, worldwide</div>
+        <div class="ifw-tl-steps">
+          <div class="ifw-tl-step">
+            <div class="ifw-tl-node">01</div>
+            <h4>Brief</h4>
+            <p>30-min call. We learn your product, market, certifications needed, and budget.</p>
+            <span class="ifw-tl-time">30-min call</span>
+          </div>
+          <div class="ifw-tl-step">
+            <div class="ifw-tl-node">02</div>
+            <h4>Shortlist</h4>
+            <p>3–5 audited factories delivered. Certifications verified. Best price negotiated.</p>
+            <span class="ifw-tl-time">Within 48 hours</span>
+          </div>
+          <div class="ifw-tl-step">
+            <div class="ifw-tl-node">03</div>
+            <h4>Sample</h4>
+            <p>We check samples ourselves before you see them. Iterate until it's exactly right.</p>
+            <span class="ifw-tl-time">2–4 weeks</span>
+          </div>
+          <div class="ifw-tl-step">
+            <div class="ifw-tl-node">04</div>
+            <h4>Deliver</h4>
+            <p>Production supervised. All export docs handled. Door-to-door, worldwide.</p>
+            <span class="ifw-tl-time">Door-to-door</span>
+          </div>
         </div>
       </div>
-
-      <div class="ifw-process-cta">
-        <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-btn-primary">
-          📅 Start with a Free 30-Min Call
-        </a>
-        <span class="ifw-process-note">No commitment. Just clarity.</span>
+      <div class="ifw-process-cta" data-reveal>
+        <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-btn-brand">Book a Free 30-Min Call →</a>
+        <span>No commitment. Just clarity.</span>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       WHY INDOFOLK — Differentiators + Certs
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-sand" id="why-us">
+  <!-- ══ CERTIFICATIONS ════════════════════════════════════ -->
+  <section class="ifw-section ifw-subtle">
     <div class="ifw-container">
-      <div class="ifw-why-layout">
-        <div class="ifw-why-left">
-          <div class="ifw-eyebrow">Why Indofolk Wellness</div>
-          <h2 class="ifw-sh">"We built the agency <em>we wish had existed</em> when sourcing from India."</h2>
-          <p class="ifw-body-text">Too many global brands have been burned by unreliable Indian suppliers — late deliveries, inconsistent quality, communication gaps. We built Indofolk because we knew it didn't have to be this way.</p>
-          <p class="ifw-body-text">With deep manufacturer relationships, genuine end-to-end management, and a commitment to our clients' success, we've built a sourcing operation that works — reliably, transparently, every time.</p>
-          <div class="ifw-why-rows">
-            <div class="ifw-why-row">
-              <div class="ifw-why-check">✓</div>
-              <div>
-                <h5>Every Manufacturer is Personally Vetted</h5>
-                <p>Not just listed — physically audited. GMP, USDA Organic, FSSAI, ISO, and export certifications verified before they join our network.</p>
-              </div>
-            </div>
-            <div class="ifw-why-row">
-              <div class="ifw-why-check">✓</div>
-              <div>
-                <h5>One Dedicated Contact, Always Available</h5>
-                <p>Across US, UAE, and European time zones. No ticketing systems, no queues — just a person who knows your business.</p>
-              </div>
-            </div>
-            <div class="ifw-why-row">
-              <div class="ifw-why-check">✓</div>
-              <div>
-                <h5>Transparent 1–2% Fee</h5>
-                <p>We're upfront about how we earn. Our negotiation savings alone typically cover our fee many times over.</p>
-              </div>
-            </div>
-            <div class="ifw-why-row">
-              <div class="ifw-why-check">✓</div>
-              <div>
-                <h5>D2C Startups &amp; Large Importers Welcome</h5>
-                <p>Small MOQ test orders or large-scale bulk shipments — every client gets the same dedicated, end-to-end care.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ifw-why-right">
-          <div class="ifw-stats-2x2">
-            <div class="ifw-stat2 ifw-s2-terra"><strong>40+</strong><span>Years combined expertise in pet &amp; Ayurvedic sourcing</span></div>
-            <div class="ifw-stat2 ifw-s2-sage"><strong>200+</strong><span>Vetted Indian manufacturers across categories</span></div>
-            <div class="ifw-stat2 ifw-s2-light"><strong>15+</strong><span>Export countries including USA, UAE &amp; UK</span></div>
-            <div class="ifw-stat2 ifw-s2-dark"><strong>24h</strong><span>Average first response on new sourcing inquiries</span></div>
-          </div>
-          <div class="ifw-cert-grid">
-            <div class="ifw-cert-card"><div class="ifw-cert-icon">🏆</div><h4>GMP Certified</h4><p>All supplement &amp; treat manufacturers hold Good Manufacturing Practice certification</p></div>
-            <div class="ifw-cert-card"><div class="ifw-cert-icon">🌱</div><h4>USDA Organic</h4><p>Certified organic options across all herbal and botanical product categories</p></div>
-            <div class="ifw-cert-card"><div class="ifw-cert-icon">🔬</div><h4>Lab Tested</h4><p>Third-party lab testing available for all supplement and functional treat categories</p></div>
-            <div class="ifw-cert-card"><div class="ifw-cert-icon">📦</div><h4>Export Ready</h4><p>Full compliance support for USA, UK, UAE and EU import requirements</p></div>
-          </div>
-        </div>
+      <div class="ifw-section-head ifw-centered" data-reveal>
+        <div class="ifw-eyebrow">Compliance &amp; Certifications</div>
+        <h2 class="ifw-sh">Your product. <em>Fully certified.</em></h2>
       </div>
+      <div class="ifw-cert-strip" data-reveal>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">🏆</span>GMP Certified</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">🌱</span>USDA Organic</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">🔬</span>FSSAI Licensed</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">📋</span>ISO 9001</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">✅</span>HACCP</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">📦</span>APEDA</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">🍃</span>India Organic</div>
+        <div class="ifw-cert-pill"><span class="ifw-cp-icon">☪️</span>Halal</div>
+      </div>
+      <p class="ifw-cert-note" data-reveal>Full compliance documentation provided with every shipment.<br>We handle the paperwork — you focus on growing your brand.</p>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-cream">
+  <!-- ══ TESTIMONIALS — Editorial ══════════════════════════ -->
+  <section class="ifw-section ifw-dark" id="why-us">
     <div class="ifw-container">
-      <div class="ifw-eyebrow">Client Stories</div>
-      <h2 class="ifw-sh">Brands That Trust <em>Us</em></h2>
-      <div class="ifw-testi-grid">
-        <div class="ifw-testi-card">
-          <div class="ifw-testi-quote">"</div>
-          <div class="ifw-testi-stars">★★★★★</div>
-          <p class="ifw-testi-text">Indofolk completely changed how we source from India. They found a manufacturer we never would have discovered — GMP certified, export-ready, and 28% cheaper than our previous supplier. Every step was handled for us.</p>
-          <div class="ifw-testi-author">
-            <div class="ifw-testi-avatar">S</div>
-            <div><strong>Sarah Mitchell</strong><span>Founder, PawNatural Co. — USA 🇺🇸</span></div>
+      <div class="ifw-section-head ifw-centered" data-reveal>
+        <div class="ifw-eyebrow ifw-ey-light">Client Stories</div>
+        <h2 class="ifw-sh ifw-sh-light">Brands that <em>trust us.</em></h2>
+      </div>
+      <div class="ifw-testi-featured" data-reveal>
+        <div class="ifw-testi-qmark">"</div>
+        <blockquote class="ifw-testi-quote">
+          Indofolk completely changed how we source from India. They found a manufacturer we never would have discovered — GMP certified, export-ready, and 28% cheaper than our previous supplier. Every step was handled for us.
+        </blockquote>
+        <div class="ifw-testi-attr">
+          <div class="ifw-testi-avatar">S</div>
+          <div>
+            <strong>Sarah Mitchell</strong>
+            <span>Founder, PawNatural Co. — United States 🇺🇸</span>
           </div>
-        </div>
-        <div class="ifw-testi-card">
-          <div class="ifw-testi-quote">"</div>
           <div class="ifw-testi-stars">★★★★★</div>
-          <p class="ifw-testi-text">We were nervous about sourcing from India for the first time. Indofolk held our hand through every step — sampling, negotiation, customs paperwork. Feels like having a real team in India.</p>
-          <div class="ifw-testi-author">
+        </div>
+      </div>
+      <div class="ifw-testi-secondary">
+        <div class="ifw-testi-card" data-reveal>
+          <p>"We were nervous about sourcing from India for the first time. Indofolk held our hand through every step — sampling, negotiation, customs paperwork. Feels like having a real team in India."</p>
+          <div class="ifw-testi-attr">
             <div class="ifw-testi-avatar">J</div>
-            <div><strong>James Thornton</strong><span>Head of Procurement, GreenPaws UK 🇬🇧</span></div>
+            <div>
+              <strong>James Thornton</strong>
+              <span>Head of Procurement, GreenPaws UK 🇬🇧</span>
+            </div>
           </div>
         </div>
-        <div class="ifw-testi-card">
-          <div class="ifw-testi-quote">"</div>
-          <div class="ifw-testi-stars">★★★★★</div>
-          <p class="ifw-testi-text">We needed a certified organic Ashwagandha supplier fast. Indofolk came back with three options in 48 hours — all USDA certified, all export-ready. Outstanding quality, unbeatable pricing. Our go-to for all India sourcing now.</p>
-          <div class="ifw-testi-author">
+        <div class="ifw-testi-card" data-reveal data-delay="150">
+          <p>"We needed certified organic Ashwagandha fast. Indofolk came back with three options in 48 hours — all USDA certified, all export-ready. Outstanding quality, unbeatable pricing."</p>
+          <div class="ifw-testi-attr">
             <div class="ifw-testi-avatar">F</div>
-            <div><strong>Fatima Al-Rashid</strong><span>Co-founder, Natura Wellness — UAE 🇦🇪</span></div>
+            <div>
+              <strong>Fatima Al-Rashid</strong>
+              <span>Co-founder, Natura Wellness — UAE 🇦🇪</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       FAQ
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-sand" id="faq">
+  <!-- ══ FAQ ════════════════════════════════════════════════ -->
+  <section class="ifw-section ifw-subtle" id="faq">
     <div class="ifw-container">
       <div class="ifw-faq-layout">
-        <div class="ifw-faq-left">
+        <div class="ifw-faq-left" data-reveal>
           <div class="ifw-eyebrow">FAQ</div>
-          <h2 class="ifw-sh" style="font-size:2rem">Everything<br>you want<br>to know</h2>
-          <p class="ifw-body-text">Can't find your answer? We respond to every inquiry within 24 hours.</p>
+          <h2 class="ifw-sh" style="font-size:2.2rem">Everything<br>you want<br>to know.</h2>
+          <p class="ifw-body-text" style="margin-top:1rem">Can't find your answer? We reply within 24 hours.</p>
           <a href="#contact" class="ifw-faq-link">Ask us directly →</a>
         </div>
-        <div class="ifw-faq-list" id="faqList">
+        <div class="ifw-faq-list" id="faqList" data-reveal data-delay="150">
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">What exactly does a sourcing agency do?<span class="ifw-faq-icon">+</span></button>
             <div class="ifw-faq-a">We act as your procurement partner in India. We identify manufacturers, negotiate prices, manage quality control, coordinate production, and handle logistics — so you don't have to navigate Indian supply chains alone. Think of us as your India office.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">What does Indofolk Wellness charge?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">We charge a small service fee of just 1–2% of the total order value. We also earn a 5–10% commission from the manufacturer. Your out-of-pocket cost is minimal — and our negotiation savings typically cover our fee several times over.</div>
+            <div class="ifw-faq-a">We charge a small service fee of 1–2% of the total order value. We also earn a 5–10% commission from the manufacturer. Our negotiation savings typically cover our fee several times over.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">What is the minimum order quantity?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">It varies by product and manufacturer. We work with brands at every stage — from D2C startups placing their first test order to large-scale importers. Tell us your requirement and we'll find a manufacturer that fits your MOQ needs.</div>
+            <div class="ifw-faq-a">It varies by product and manufacturer. We work with brands at every stage — from D2C startups placing their first test order to large-scale importers. Tell us your requirement and we'll find a manufacturer that fits.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">How long does the entire process take?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">You'll have your first manufacturer shortlist within 48 hours. Sampling takes 2–4 weeks. Production and delivery timelines depend on the product and destination, but we provide a full timeline upfront and keep you updated at every milestone.</div>
+            <div class="ifw-faq-a">You'll have your first manufacturer shortlist within 48 hours. Sampling takes 2–4 weeks. Production and delivery timelines depend on the product and destination — we provide a full timeline upfront and keep you updated at every milestone.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">Which countries do you export to?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">We export to the USA, UAE, UK, Germany, Australia, Canada, and 15+ other countries. We handle all export documentation, customs paperwork, and import compliance requirements for your destination market.</div>
+            <div class="ifw-faq-a">USA, UAE, UK, Germany, Australia, Canada, and 15+ other countries. We handle all export documentation, customs paperwork, and import compliance requirements for your destination market.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">What certifications do your manufacturers hold?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">Our manufacturer network holds GMP, USDA Organic, India Organic, FSSAI, ISO 9001, Halal, Kosher, and other certifications depending on the product category. We match you to manufacturers with the specific certifications your market requires.</div>
+            <div class="ifw-faq-a">GMP, USDA Organic, India Organic, FSSAI, ISO 9001, Halal, Kosher, and others depending on the category. We match you to manufacturers with the specific certifications your market requires.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">Can you do private label and custom formulations?<span class="ifw-faq-icon">+</span></button>
-            <div class="ifw-faq-a">Absolutely — private label is one of our most popular services. We source products with your branding, develop custom formulations, and arrange custom packaging. Your product, your brand, made in India.</div>
+            <div class="ifw-faq-a">Absolutely — private label is one of our most popular services. Custom formulations, branding, and custom packaging — your product, your brand, made in India.</div>
           </div>
           <div class="ifw-faq-item">
             <button class="ifw-faq-q" aria-expanded="false">How do you ensure product quality?<span class="ifw-faq-icon">+</span></button>
@@ -676,17 +523,15 @@ import { site } from '~/lib/site';
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════
-       CONTACT / LEAD FORM
-  ══════════════════════════════════════════════ -->
-  <section class="ifw-section ifw-bg-terra" id="contact">
+  <!-- ══ CONTACT ════════════════════════════════════════════ -->
+  <section class="ifw-section ifw-dark" id="contact">
     <div class="ifw-container">
       <div class="ifw-contact-grid">
-        <div class="ifw-contact-left">
+        <div class="ifw-contact-left" data-reveal>
           <div class="ifw-eyebrow ifw-ey-light">Ready to Start?</div>
-          <h2 class="ifw-sh ifw-sh-light">Tell us what you need.<br>We'll handle the rest.</h2>
-          <p class="ifw-body-text ifw-text-muted-light" style="margin-bottom:2rem">
-            No commitment, no fee for the first consultation. Tell us what you're looking to source and we'll come back within 24 hours with a clear plan, manufacturer options, and an honest assessment.
+          <h2 class="ifw-sh ifw-sh-light">Tell us what you need.<br><em>We'll handle the rest.</em></h2>
+          <p class="ifw-contact-lead">
+            Free consultation. No commitment until you approve a quote. We reply within 24 hours with manufacturer options and clear next steps.
           </p>
           <div class="ifw-contact-checks">
             <div class="ifw-ccheck">Free initial sourcing consultation</div>
@@ -694,38 +539,25 @@ import { site } from '~/lib/site';
             <div class="ifw-ccheck">No obligation until you approve a quote</div>
             <div class="ifw-ccheck">Private label &amp; custom formulation supported</div>
           </div>
-
           <div class="ifw-calendly-block">
-            <p class="ifw-calendly-title">Prefer to talk first?</p>
-            <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-calendly-btn">
-              📅 Book a 30-Minute Call (Free)
+            <p class="ifw-cal-title">Prefer to talk first?</p>
+            <a href={site.calendlyUrl} target="_blank" rel="noopener" class="ifw-cal-btn">
+              📅 Book a 30-Min Call (Free)
             </a>
-            <p class="ifw-calendly-sub">Pick a time that works for you — we'll come prepared.</p>
+            <p class="ifw-cal-sub">Pick a time that works — we'll come prepared.</p>
           </div>
-
-          <div class="ifw-contact-or"><span>or reach us directly</span></div>
           <div class="ifw-contact-direct">
-            <a href="https://wa.me/919971318109" target="_blank" rel="noopener" class="ifw-wa-btn">
-              💬 WhatsApp: +91 99713 18109
-            </a>
-            <a href={`mailto:${site.contactEmail}`} class="ifw-email-btn">
-              ✉️ {site.contactEmail}
-            </a>
+            <a href="https://wa.me/919971318109" target="_blank" rel="noopener" class="ifw-wa-btn">💬 WhatsApp: +91 99713 18109</a>
+            <a href={`mailto:${site.contactEmail}`} class="ifw-email-btn">✉️ {site.contactEmail}</a>
           </div>
         </div>
 
-        <div class="ifw-contact-right">
+        <div class="ifw-contact-right" data-reveal data-delay="150">
           <div class="ifw-form-card">
             <h3 class="ifw-form-title">Post Your Sourcing Inquiry</h3>
             <p class="ifw-form-sub">Fill in what you can — we'll reach out within 24 hours.</p>
-            <form
-              id="sourcingForm"
-              class="ifw-form"
-              method="POST"
-              action="/thanks"
-              data-netlify="true"
-              name="sourcing-inquiry"
-            >
+            <form id="sourcingForm" class="ifw-form" method="POST" action="/thanks"
+              data-netlify="true" name="sourcing-inquiry">
               <input type="hidden" name="form-name" value="sourcing-inquiry" />
               <div class="ifw-form-row">
                 <div class="ifw-form-group">
@@ -769,409 +601,553 @@ import { site } from '~/lib/site';
               </div>
               <div class="ifw-form-group">
                 <label for="f-requirement">What are you looking to source? <span class="ifw-req">*</span></label>
-                <textarea
-                  id="f-requirement"
-                  name="requirement"
-                  required
-                  rows="4"
+                <textarea id="f-requirement" name="requirement" required rows="4"
                   placeholder="E.g. Yak Cheese Chews — natural, USDA certified, private label, shipping to USA. MOQ ~500 units."
-                  class="ifw-input ifw-textarea"
-                ></textarea>
+                  class="ifw-input ifw-textarea"></textarea>
               </div>
-              <button type="submit" class="ifw-submit-btn">
-                Send My Sourcing Inquiry →
-              </button>
+              <button type="submit" class="ifw-submit-btn">Send My Sourcing Inquiry →</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 </Base>
 
 <style is:global>
-  /* ── All ifw-* classes use Inter Tight (loaded globally) ── */
-
   /* ── Layout ── */
   .ifw-container { max-width: 1180px; margin: 0 auto; padding: 0 5%; }
   .ifw-section   { padding: 6rem 5%; position: relative; }
-  .ifw-bg-cream  { background: #ffffff; }
-  .ifw-bg-sand   { background: #f8fafc; }
-  .ifw-bg-dark   { background: #0a192f; }
-  .ifw-bg-terra  { background: #0a192f; position: relative; overflow: hidden; }
+  .ifw-white     { background: #ffffff; }
+  .ifw-subtle    { background: #f8fafc; }
+  .ifw-dark      { background: #040d1f; overflow: hidden; }
+  .ifw-section-head { margin-bottom: 3rem; }
+  .ifw-section-head.ifw-centered { text-align: center; display: flex; flex-direction: column; align-items: center; }
 
-  /* ── Eyebrow ── */
+  /* ── Scroll reveal ── */
+  [data-reveal] {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);
+  }
+  [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+  [data-reveal][data-delay="75"]  { transition-delay: 0.075s; }
+  [data-reveal][data-delay="100"] { transition-delay: 0.1s; }
+  [data-reveal][data-delay="150"] { transition-delay: 0.15s; }
+  [data-reveal][data-delay="200"] { transition-delay: 0.2s; }
+  [data-reveal][data-delay="225"] { transition-delay: 0.225s; }
+  [data-reveal][data-delay="300"] { transition-delay: 0.3s; }
+  [data-reveal][data-delay="375"] { transition-delay: 0.375s; }
+
+  /* ── Typography ── */
   .ifw-eyebrow {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
     color: #2563eb; display: flex; align-items: center; gap: 8px; margin-bottom: 0.8rem;
   }
-  .ifw-eyebrow::before { content: ''; width: 22px; height: 2px; background: #2563eb; display: inline-block; flex-shrink: 0; }
-  .ifw-ey-light { color: rgba(255,255,255,0.6); }
-  .ifw-ey-light::before { background: rgba(255,255,255,0.4); }
-
-  /* ── Section Heading ── */
+  .ifw-eyebrow::before { content: ''; width: 24px; height: 2px; background: currentColor; display: inline-block; flex-shrink: 0; border-radius: 1px; }
+  .ifw-ey-light { color: rgba(255,255,255,0.45); }
   .ifw-sh {
-    font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 700; line-height: 1.12;
-    color: #0a192f; margin-bottom: 0.8rem; letter-spacing: -0.02em;
+    font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 700; line-height: 1.1;
+    color: #040d1f; letter-spacing: -0.025em; margin-bottom: 0;
   }
   .ifw-sh em { color: #2563eb; font-style: normal; }
   .ifw-sh-light { color: #fff; }
   .ifw-sh-light em { color: #f59e0b; }
-  .ifw-section-lead { font-size: 1.05rem; line-height: 1.85; color: #64748b; max-width: 580px; font-weight: 400; margin-bottom: 3rem; }
-  .ifw-body-text { font-size: 0.96rem; line-height: 1.9; color: #64748b; font-weight: 400; margin-bottom: 1rem; }
-  .ifw-body-text strong { color: #0a192f; font-weight: 600; }
-  .ifw-text-muted-light { color: rgba(255,255,255,0.72); }
+  .ifw-body-text { font-size: 0.96rem; line-height: 1.9; color: #64748b; }
 
   /* ── Buttons ── */
-  .ifw-btn-primary {
+  .ifw-btn-brand {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #2563eb; color: #fff; padding: 0.9rem 2rem; border-radius: 100px;
+    font-weight: 700; font-size: 0.92rem; text-decoration: none;
+    transition: all 0.25s; box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+  }
+  .ifw-btn-brand:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.4); }
+
+  .ifw-cta-primary {
     display: inline-flex; align-items: center; gap: 8px;
     background: #2563eb; color: #fff; padding: 0.9rem 2rem; border-radius: 100px;
-    font-weight: 700; font-size: 0.92rem; text-decoration: none; letter-spacing: 0.02em;
-    transition: all 0.28s; box-shadow: 0 4px 24px rgba(37,99,235,0.35);
+    font-weight: 700; font-size: 0.92rem; text-decoration: none;
+    transition: all 0.25s; box-shadow: 0 4px 20px rgba(37,99,235,0.4);
   }
-  .ifw-btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.45); }
-  .ifw-btn-ghost {
+  .ifw-cta-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.5); }
+
+  .ifw-cta-ghost {
     display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8);
     padding: 0.9rem 1.8rem; border-radius: 100px; font-weight: 500; font-size: 0.92rem;
-    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.22); transition: all 0.28s;
+    text-decoration: none; border: 1.5px solid rgba(255,255,255,0.2); transition: all 0.25s;
   }
-  .ifw-btn-ghost:hover { border-color: #f59e0b; color: #f59e0b; }
+  .ifw-cta-ghost:hover { border-color: #f59e0b; color: #f59e0b; }
 
-  /* ══ HERO ══ */
-  .ifw-hero { min-height: 100vh; background: #0a192f; position: relative; display: flex; align-items: center; overflow: hidden; }
-  .ifw-hero-bg { position: absolute; inset: 0; pointer-events: none; }
-  .ifw-hero-glow { position: absolute; top: -15%; right: -8%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(37,99,235,0.22) 0%, transparent 65%); border-radius: 50%; }
-  .ifw-hero-glow2 { position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(5,150,105,0.1) 0%, transparent 65%); border-radius: 50%; }
-  .ifw-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 5rem 5%; display: grid; grid-template-columns: 54% 46%; gap: 3rem; align-items: center; width: 100%; }
-  .ifw-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(37,99,235,0.18); border: 1px solid rgba(37,99,235,0.38); color: #93c5fd; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.38rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; }
-  .ifw-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #2563eb; animation: ifwpulse 2s infinite; }
-  @keyframes ifwpulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(1.5);} }
-  .ifw-h1 { font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 700; line-height: 1.06; color: #fff; letter-spacing: -0.025em; margin-bottom: 1.5rem; }
+  /* ══ HERO ══════════════════════════════════════════════ */
+  .ifw-hero {
+    min-height: 100vh; background: #040d1f;
+    position: relative; display: flex; align-items: center; overflow: hidden;
+  }
+  .ifw-hero::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .ifw-glow { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(80px); }
+  .ifw-glow-1 {
+    top: -10%; right: -5%; width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
+  }
+  .ifw-glow-2 {
+    bottom: -15%; left: -8%; width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(5,150,105,0.12) 0%, transparent 70%);
+  }
+  .ifw-hero-inner {
+    position: relative; z-index: 2; max-width: 1180px; margin: 0 auto;
+    padding: 5rem 5%; display: grid; grid-template-columns: 52% 48%;
+    gap: 3rem; align-items: center; width: 100%;
+  }
+  .ifw-hero-left  { animation: heroUp 0.9s cubic-bezier(.16,1,.3,1) both; }
+  .ifw-hero-right { animation: heroUp 0.9s cubic-bezier(.16,1,.3,1) 0.18s both; }
+  @keyframes heroUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Badge */
+  .ifw-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.35);
+    color: #93c5fd; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.38rem 1rem; border-radius: 100px; margin-bottom: 1.6rem;
+  }
+  .ifw-badge-pulse {
+    width: 7px; height: 7px; border-radius: 50%; background: #60a5fa;
+    animation: bp 2.5s ease infinite; flex-shrink: 0;
+  }
+  @keyframes bp { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(1.6);} }
+
+  /* H1 */
+  .ifw-h1 {
+    font-size: clamp(2.8rem, 5.5vw, 4.8rem); font-weight: 800; line-height: 1.04;
+    color: #fff; letter-spacing: -0.03em; margin-bottom: 1.4rem;
+  }
   .ifw-h1 em { color: #f59e0b; font-style: normal; display: block; }
-  .ifw-hero-lead { font-size: 1.08rem; line-height: 1.82; color: rgba(255,255,255,0.62); font-weight: 400; max-width: 520px; margin-bottom: 2.2rem; }
-  .ifw-hero-lead strong { color: rgba(255,255,255,0.92); font-weight: 600; }
-  .ifw-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.8rem; }
-  .ifw-hero-proof { display: flex; gap: 0; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; max-width: 480px; }
-  .ifw-proof-item { flex: 1; padding: 1rem 0.8rem; text-align: center; }
-  .ifw-proof-item strong { display: block; font-size: 1.8rem; font-weight: 700; color: #f59e0b; line-height: 1; }
-  .ifw-proof-item span { font-size: 0.68rem; color: rgba(255,255,255,0.42); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-top: 3px; }
-  .ifw-proof-divider { width: 1px; background: rgba(255,255,255,0.07); align-self: stretch; }
 
-  /* Hero right */
-  .ifw-hero-right { position: relative; }
-  .ifw-live-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 22px; padding: 2rem; position: relative; overflow: hidden; }
-  .ifw-live-card::before { content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 65%); }
-  .ifw-live-tag { display: inline-flex; align-items: center; gap: 7px; background: rgba(37,99,235,0.18); color: #93c5fd; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 100px; margin-bottom: 1.2rem; }
-  .ifw-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #2563eb; display: inline-block; animation: ifwpulse 2s infinite; }
-  .ifw-live-quote { font-size: 1.18rem; font-weight: 600; font-style: italic; color: #fff; line-height: 1.5; margin-bottom: 1.5rem; }
-  .ifw-live-steps { display: flex; flex-direction: column; gap: 1rem; }
-  .ifw-live-step { display: flex; align-items: flex-start; gap: 12px; }
-  .ifw-live-step > div:last-child strong { display: block; color: #fff; font-size: 0.86rem; font-weight: 600; }
-  .ifw-live-step > div:last-child span { font-size: 0.76rem; color: rgba(255,255,255,0.4); line-height: 1.4; }
-  .ifw-live-check { width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: rgba(255,255,255,0.7); flex-shrink: 0; }
-  .ifw-done .ifw-live-check { background: rgba(5,150,105,0.22); border-color: rgba(5,150,105,0.4); color: #34d399; }
-  .ifw-check-orange { background: rgba(37,99,235,0.2) !important; border-color: rgba(37,99,235,0.4) !important; color: #93c5fd !important; }
-  .ifw-float-badge { position: absolute; bottom: -16px; right: -12px; background: #f8fafc; border-radius: 16px; padding: 1.1rem 1.4rem; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.18); min-width: 120px; }
-  .ifw-float-num { font-size: 1.7rem; color: #2563eb; font-weight: 700; line-height: 1; }
-  .ifw-float-label { font-size: 0.7rem; color: #64748b; margin-top: 4px; line-height: 1.4; }
+  .ifw-hero-lead {
+    font-size: 1.06rem; line-height: 1.85; color: rgba(255,255,255,0.58); max-width: 480px; margin-bottom: 2rem;
+  }
+  .ifw-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 
-  /* ── Trust Bar ── */
-  .ifw-trust-bar { background: #f1f5f9; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 1.1rem 5%; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-  .ifw-trust-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; font-weight: 600; }
-  .ifw-trust-flags { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
-  .ifw-flag { font-size: 0.84rem; color: #0a192f; font-weight: 500; }
-  .ifw-trust-certs { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-  .ifw-cert { font-size: 0.72rem; font-weight: 600; color: #059669; background: rgba(5,150,105,0.1); padding: 0.2rem 0.7rem; border-radius: 100px; }
+  /* Stats strip */
+  .ifw-hero-stats {
+    display: flex; align-items: stretch;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; overflow: hidden; max-width: 480px;
+  }
+  .ifw-hstat { flex: 1; padding: 0.9rem 0.6rem; text-align: center; }
+  .ifw-hstat-num { display: block; font-size: 1.55rem; font-weight: 700; color: #f59e0b; line-height: 1; }
+  .ifw-hstat span { font-size: 0.6rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-top: 3px; line-height: 1.3; }
+  .ifw-hstat-sep { width: 1px; background: rgba(255,255,255,0.07); flex-shrink: 0; }
 
-  /* ── Promise ── */
-  .ifw-promise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-  .ifw-blockquote { font-size: clamp(1.2rem, 2vw, 1.6rem); font-style: italic; line-height: 1.5; color: #0a192f; margin: 1.5rem 0 1.8rem; padding-left: 1.4rem; border-left: 3px solid #2563eb; }
-  .ifw-promise-cards { display: flex; flex-direction: column; gap: 1rem; }
-  .ifw-pcard { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.4rem; display: flex; gap: 1.1rem; align-items: flex-start; transition: all 0.28s; }
-  .ifw-pcard:hover { border-color: #2563eb; box-shadow: 0 8px 28px rgba(37,99,235,0.08); transform: translateX(4px); }
-  .ifw-pcard-icon { width: 42px; height: 42px; border-radius: 12px; background: #eff6ff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
-  .ifw-pcard h4 { font-size: 0.94rem; font-weight: 600; color: #0a192f; margin-bottom: 0.3rem; }
-  .ifw-pcard p { font-size: 0.84rem; color: #64748b; line-height: 1.65; }
+  /* Photo mosaic */
+  .ifw-mosaic {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; height: 440px; position: relative;
+  }
+  .ifw-mp-main {
+    grid-row: 1; border-radius: 18px;
+    width: 100%; height: 440px; object-fit: cover; display: block;
+  }
+  .ifw-mosaic-col { display: flex; flex-direction: column; gap: 10px; }
+  .ifw-mosaic-col .ifw-mp { flex: 1; border-radius: 18px; width: 100%; object-fit: cover; display: block; min-height: 0; }
+  .ifw-mosaic-float {
+    position: absolute; bottom: -14px; right: -14px;
+    background: #fff; border-radius: 14px; padding: 1rem 1.3rem;
+    text-align: center; box-shadow: 0 16px 48px rgba(0,0,0,0.22); min-width: 110px; z-index: 10;
+  }
+  .ifw-mf-num   { font-size: 1.6rem; font-weight: 700; color: #2563eb; line-height: 1; }
+  .ifw-mf-label { font-size: 0.65rem; color: #64748b; margin-top: 4px; line-height: 1.4; }
 
-  /* ── Category Panels ── */
-  .ifw-cat-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1.5rem; }
-  .ifw-cat-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-  .ifw-cat-panel { background: #fff; border-radius: 22px; border: 1px solid #e2e8f0; overflow: hidden; padding: 1.8rem; display: flex; flex-direction: column; gap: 1.2rem; }
-  .ifw-panel-pet { border-top: 4px solid #2563eb; }
-  .ifw-panel-ayur { border-top: 4px solid #059669; }
-  .ifw-panel-header { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .ifw-panel-icon { width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
-  .ifw-panel-ayur .ifw-panel-icon { background: #ecfdf5; }
-  .ifw-panel-header h3 { font-size: 1.4rem; font-weight: 700; color: #0a192f; }
-  .ifw-panel-header p { font-size: 0.8rem; color: #64748b; }
-  .ifw-panel-badge { margin-left: auto; background: #2563eb; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 0.22rem 0.7rem; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase; }
-  .ifw-panel-products { display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
-  .ifw-pprod { display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 0.8rem; border-radius: 10px; background: #f8fafc; border: 1px solid #e2e8f0; transition: border-color 0.2s; }
-  .ifw-pprod:hover { border-color: rgba(37,99,235,0.35); }
-  .ifw-pprod-icon { font-size: 1.3rem; flex-shrink: 0; width: 32px; text-align: center; }
-  .ifw-pprod strong { display: block; font-size: 0.86rem; font-weight: 600; color: #0a192f; }
-  .ifw-pprod span { font-size: 0.75rem; color: #64748b; }
-  .ifw-pprod-tag { margin-left: auto; flex-shrink: 0; font-size: 0.62rem; font-weight: 700; padding: 0.18rem 0.55rem; border-radius: 100px; background: #f1f5f9; color: #64748b; white-space: nowrap; }
-  .ifw-tag-hot { background: rgba(37,99,235,0.1); color: #2563eb; }
-  .ifw-tag-new { background: rgba(5,150,105,0.1); color: #059669; }
-  .ifw-panel-cta { display: inline-flex; align-items: center; justify-content: center; background: #2563eb; color: #fff; padding: 0.8rem 1.5rem; border-radius: 100px; font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: all 0.25s; }
-  .ifw-panel-cta:hover { background: #1d4ed8; }
-  .ifw-panel-cta-green { background: #059669; }
-  .ifw-panel-cta-green:hover { background: #047857; }
-  .ifw-cat-footer { text-align: center; font-size: 0.9rem; color: #64748b; }
+  /* ══ MARQUEE ═══════════════════════════════════════════ */
+  .ifw-marquee {
+    background: #fff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;
+    padding: 0.85rem 0; overflow: hidden; white-space: nowrap;
+  }
+  .ifw-marquee-track {
+    display: inline-flex; gap: 2rem; align-items: center;
+    animation: mq 32s linear infinite; padding-left: 2rem;
+  }
+  .ifw-marquee-track span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b; white-space: nowrap; }
+  .ifw-mx { color: #cbd5e1 !important; font-weight: 400 !important; }
+  @keyframes mq { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+  @media (prefers-reduced-motion: reduce) { .ifw-marquee-track { animation: none; } }
+
+  /* ══ 3 PILLARS ══════════════════════════════════════════ */
+  .ifw-pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+  .ifw-pillar {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px;
+    padding: 2.2rem 1.8rem; transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .ifw-pillar::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: #2563eb; transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s cubic-bezier(.16,1,.3,1);
+  }
+  .ifw-pillar:hover::before { transform: scaleX(1); }
+  .ifw-pillar:hover { border-color: transparent; box-shadow: 0 12px 40px rgba(37,99,235,0.1); transform: translateY(-4px); }
+  .ifw-pillar-icon {
+    width: 52px; height: 52px; background: #eff6ff; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem; color: #2563eb;
+  }
+  .ifw-pillar-icon svg { width: 26px; height: 26px; }
+  .ifw-pillar h3 { font-size: 1.05rem; font-weight: 700; color: #040d1f; margin-bottom: 0.6rem; }
+  .ifw-pillar p  { font-size: 0.88rem; line-height: 1.75; color: #64748b; }
+  .ifw-pillars-cta { text-align: center; }
+
+  /* ══ PRODUCTS ═══════════════════════════════════════════ */
+  .ifw-cat-sub {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin-bottom: 1.8rem; padding-bottom: 1.2rem; border-bottom: 1px solid #e2e8f0;
+  }
+  .ifw-cat-pill  { font-size: 0.78rem; font-weight: 700; padding: 0.35rem 1rem; border-radius: 100px; }
+  .ifw-pill-blue  { background: #dbeafe; color: #1d4ed8; }
+  .ifw-pill-green { background: #d1fae5; color: #065f46; }
+  .ifw-cat-note { font-size: 0.84rem; color: #64748b; }
+  .ifw-cat-link { margin-left: auto; font-size: 0.84rem; font-weight: 600; color: #2563eb; text-decoration: none; }
+  .ifw-cat-link:hover { text-decoration: underline; }
+  .ifw-cat-footer { text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 2rem; }
   .ifw-cat-footer a { color: #2563eb; font-weight: 600; text-decoration: none; }
   .ifw-cat-footer a:hover { text-decoration: underline; }
 
-  /* ── Why India ── */
-  .ifw-why-india-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-  .ifw-why-pts { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
-  .ifw-why-pt { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: border-color 0.2s; }
-  .ifw-why-pt:hover { border-color: rgba(37,99,235,0.5); }
-  .ifw-why-pt-icon { font-size: 1.3rem; width: 36px; text-align: center; flex-shrink: 0; }
-  .ifw-why-pt h5 { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
-  .ifw-why-pt p { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.65; }
+  .ifw-prod-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+  .ifw-prod-card {
+    background: #fff; border-radius: 18px; overflow: hidden;
+    border: 1px solid #e2e8f0; transition: all 0.3s cubic-bezier(.16,1,.3,1);
+  }
+  .ifw-prod-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); border-color: transparent; }
+  .ifw-prod-img { position: relative; height: 200px; overflow: hidden; }
+  .ifw-prod-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(.16,1,.3,1); }
+  .ifw-prod-card:hover .ifw-prod-img img { transform: scale(1.06); }
+  .ifw-prod-badge {
+    position: absolute; top: 10px; left: 10px;
+    font-size: 0.6rem; font-weight: 700; padding: 0.2rem 0.6rem;
+    border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .ifw-badge-hot    { background: #eff6ff; color: #1d4ed8; }
+  .ifw-badge-demand { background: #fef3c7; color: #92400e; }
+  .ifw-badge-pl     { background: #d1fae5; color: #065f46; }
+  .ifw-badge-new    { background: #f3e8ff; color: #6b21a8; }
+  .ifw-prod-pl {
+    position: absolute; bottom: 10px; right: 10px;
+    font-size: 0.6rem; font-weight: 600; background: rgba(4,9,20,0.75); color: #fff;
+    padding: 0.2rem 0.55rem; border-radius: 100px; backdrop-filter: blur(4px);
+  }
+  .ifw-prod-body { padding: 1.4rem; }
+  .ifw-prod-body h4 { font-size: 0.96rem; font-weight: 700; color: #040d1f; margin-bottom: 0.4rem; }
+  .ifw-prod-body p  { font-size: 0.8rem; line-height: 1.65; color: #64748b; margin-bottom: 0.8rem; }
+  .ifw-prod-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 1rem; }
+  .ifw-prod-tags span { font-size: 0.62rem; font-weight: 600; background: #f1f5f9; color: #475569; padding: 0.18rem 0.5rem; border-radius: 100px; }
+  .ifw-prod-cta { font-size: 0.82rem; font-weight: 700; color: #2563eb; text-decoration: none; }
+  .ifw-prod-cta:hover { text-decoration: underline; }
 
-  /* Stats mosaic */
-  .ifw-stats-mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
-  .ifw-stat-tile { border-radius: 18px; padding: 1.8rem 1.4rem; text-align: center; }
-  .ifw-stat-terra { background: #2563eb; }
-  .ifw-stat-sage  { background: #059669; }
-  .ifw-stat-parch { background: rgba(255,255,255,0.08); }
-  .ifw-stat-deep  { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
-  .ifw-stat-tile strong { display: block; font-size: 2.4rem; font-weight: 700; line-height: 1; margin-bottom: 0.4rem; }
-  .ifw-stat-terra strong, .ifw-stat-sage strong, .ifw-stat-deep strong { color: #fff; }
-  .ifw-stat-parch strong { color: #f59e0b; }
-  .ifw-stat-tile span { font-size: 0.78rem; line-height: 1.5; }
-  .ifw-stat-terra span, .ifw-stat-sage span, .ifw-stat-deep span { color: rgba(255,255,255,0.65); }
-  .ifw-stat-parch span { color: rgba(255,255,255,0.55); }
+  /* Ayurvedic */
+  .ifw-ayur-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-top: 1.5rem; }
+  .ifw-ayur-visual { position: relative; border-radius: 20px; overflow: hidden; height: 360px; }
+  .ifw-ayur-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ifw-ayur-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(0deg, rgba(4,9,20,0.85) 0%, transparent 100%);
+    color: rgba(255,255,255,0.8); font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 1.5rem 1.2rem 1rem;
+  }
+  .ifw-ayur-items { display: flex; flex-direction: column; gap: 0.7rem; }
+  .ifw-ayur-item {
+    display: flex; align-items: center; gap: 1rem; padding: 0.85rem 1rem;
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; transition: all 0.22s;
+  }
+  .ifw-ayur-item:hover { border-color: rgba(5,150,105,0.4); transform: translateX(4px); }
+  .ifw-ayur-icon { font-size: 1.2rem; flex-shrink: 0; width: 28px; text-align: center; }
+  .ifw-ayur-item div { flex: 1; min-width: 0; }
+  .ifw-ayur-item strong { display: block; font-size: 0.88rem; font-weight: 600; color: #040d1f; }
+  .ifw-ayur-item span  { font-size: 0.76rem; color: #64748b; line-height: 1.4; }
+  .ifw-ayur-tag { flex-shrink: 0; font-size: 0.6rem; font-weight: 700; padding: 0.16rem 0.5rem; border-radius: 100px; background: #f1f5f9; color: #64748b; white-space: nowrap; }
+  .ifw-tag-premium { background: #eff6ff; color: #1d4ed8; }
+  .ifw-tag-hot     { background: rgba(245,158,11,0.12); color: #92400e; }
+  .ifw-tag-organic { background: #d1fae5; color: #065f46; }
 
-  /* Comparison table */
-  .ifw-compare-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; }
-  .ifw-compare-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 1rem; }
-  .ifw-compare-scroll { overflow-x: auto; }
-  .ifw-compare-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-  .ifw-compare-table thead th { padding: 0.5rem 0.8rem; text-align: left; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .ifw-compare-table td { padding: 0.6rem 0.8rem; color: rgba(255,255,255,0.65); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
-  .ifw-compare-table tr:last-child td { border-bottom: none; }
-  .ifw-col-no { color: rgba(255,100,100,0.85) !important; }
-  .ifw-col-yes { color: #34d399 !important; font-weight: 600; }
-  .ifw-compare-table thead .ifw-col-no { color: rgba(255,100,100,0.45) !important; }
-  .ifw-compare-table thead .ifw-col-yes { color: rgba(52,211,153,0.55) !important; }
+  /* ══ WHY INDIA ══════════════════════════════════════════ */
+  .ifw-india-stats {
+    display: flex; align-items: stretch;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; overflow: hidden; margin-bottom: 2.5rem;
+  }
+  .ifw-istat { flex: 1; padding: 2.5rem 1.5rem; text-align: center; }
+  .ifw-istat-num {
+    display: block; font-size: clamp(2.2rem,4vw,3.5rem); font-weight: 800;
+    color: #f59e0b; line-height: 1; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+  }
+  .ifw-istat-label { font-size: 0.8rem; color: rgba(255,255,255,0.42); line-height: 1.4; display: block; }
+  .ifw-istat-sep { width: 1px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+  .ifw-india-pts { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+  .ifw-india-pt {
+    display: flex; gap: 1rem; align-items: flex-start; padding: 1.4rem;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; transition: border-color 0.2s;
+  }
+  .ifw-india-pt:hover { border-color: rgba(37,99,235,0.4); }
+  .ifw-india-pt-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .ifw-india-pt h5 { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem; }
+  .ifw-india-pt p  { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.65; }
 
-  /* ── Process ── */
-  .ifw-process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
-  .ifw-proc-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 1.8rem; transition: all 0.3s; position: relative; overflow: hidden; }
-  .ifw-proc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #2563eb, #f59e0b); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .ifw-proc-card:hover::before { transform: scaleX(1); }
-  .ifw-proc-card:hover { box-shadow: 0 12px 36px rgba(37,99,235,0.1); }
-  .ifw-proc-num { font-size: 3.5rem; font-weight: 700; color: rgba(37,99,235,0.1); line-height: 1; margin-bottom: 0.4rem; }
-  .ifw-proc-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
-  .ifw-proc-card h3 { font-size: 0.96rem; font-weight: 700; color: #0a192f; margin-bottom: 0.5rem; }
-  .ifw-proc-card p { font-size: 0.84rem; color: #64748b; line-height: 1.7; }
-  .ifw-proc-time { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid #e2e8f0; font-size: 0.75rem; color: #2563eb; font-weight: 600; }
-  .ifw-process-cta { display: flex; align-items: center; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-  .ifw-process-note { font-size: 0.84rem; color: #64748b; }
+  /* ══ FACTORY STRIP ══════════════════════════════════════ */
+  .ifw-factory { position: relative; height: 520px; overflow: hidden; }
+  .ifw-factory > img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: brightness(0.52); transition: transform 8s ease; transform: scale(1.04);
+  }
+  .ifw-factory:hover > img { transform: scale(1); }
+  .ifw-factory-overlay {
+    position: absolute; inset: 0; display: flex; align-items: center; padding: 0 8%;
+    background: linear-gradient(90deg, rgba(4,9,20,0.72) 0%, transparent 70%);
+  }
+  .ifw-factory-overlay h3 {
+    font-size: clamp(2rem,4vw,3.5rem); font-weight: 800; color: #fff;
+    line-height: 1.1; letter-spacing: -0.025em;
+  }
+  .ifw-factory-cta {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 1.5rem;
+    background: transparent; color: #fff; padding: 0.75rem 1.6rem; border-radius: 100px;
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.45); transition: all 0.25s;
+  }
+  .ifw-factory-cta:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+  .ifw-factory-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+  .ifw-factory-chips span {
+    font-size: 0.7rem; font-weight: 600; color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.3rem 0.85rem; border-radius: 100px; backdrop-filter: blur(4px);
+  }
 
-  /* ── Why Indofolk ── */
-  .ifw-why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-  .ifw-why-rows { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.5rem; }
-  .ifw-why-row { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; transition: all 0.25s; }
-  .ifw-why-row:hover { border-color: #2563eb; }
-  .ifw-why-check { width: 24px; height: 24px; border-radius: 50%; background: rgba(37,99,235,0.1); color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 0.76rem; flex-shrink: 0; font-weight: 700; margin-top: 1px; }
-  .ifw-why-row h5 { font-size: 0.92rem; font-weight: 600; color: #0a192f; margin-bottom: 0.2rem; }
-  .ifw-why-row p { font-size: 0.82rem; color: #64748b; line-height: 1.65; }
+  /* ══ PROCESS TIMELINE ═══════════════════════════════════ */
+  .ifw-timeline { position: relative; margin-bottom: 3rem; padding-top: 0; }
+  .ifw-tl-track {
+    position: absolute; top: 24px;
+    left: 12.5%; right: 12.5%;
+    height: 2px; background: #e2e8f0; border-radius: 1px;
+  }
+  .ifw-tl-progress {
+    height: 100%; background: #2563eb; width: 0%;
+    transition: width 1.4s cubic-bezier(.16,1,.3,1); border-radius: 1px;
+  }
+  .ifw-tl-steps {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 2rem; position: relative; z-index: 2;
+  }
+  .ifw-tl-step { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .ifw-tl-node {
+    width: 48px; height: 48px; border-radius: 50%; background: #2563eb; color: #fff;
+    font-size: 0.78rem; font-weight: 800; display: flex; align-items: center; justify-content: center;
+    letter-spacing: 0.04em; margin-bottom: 1.2rem; box-shadow: 0 4px 16px rgba(37,99,235,0.4); flex-shrink: 0;
+  }
+  .ifw-tl-step h4 { font-size: 1rem; font-weight: 700; color: #040d1f; margin-bottom: 0.5rem; }
+  .ifw-tl-step p  { font-size: 0.82rem; line-height: 1.65; color: #64748b; }
+  .ifw-tl-time {
+    display: inline-block; margin-top: 0.8rem; font-size: 0.68rem; font-weight: 600;
+    color: #2563eb; background: #eff6ff; padding: 0.2rem 0.7rem; border-radius: 100px;
+  }
+  .ifw-process-cta { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+  .ifw-process-cta span { font-size: 0.82rem; color: #94a3b8; }
 
-  /* Stats 2x2 */
-  .ifw-stats-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-  .ifw-stat2 { border-radius: 18px; padding: 1.6rem 1.3rem; text-align: center; }
-  .ifw-s2-terra { background: #2563eb; }
-  .ifw-s2-sage  { background: #059669; }
-  .ifw-s2-light { background: #f1f5f9; }
-  .ifw-s2-dark  { background: #0a192f; }
-  .ifw-stat2 strong { display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.4rem; }
-  .ifw-s2-terra strong, .ifw-s2-sage strong, .ifw-s2-dark strong { color: #fff; }
-  .ifw-s2-light strong { color: #2563eb; }
-  .ifw-stat2 span { font-size: 0.76rem; line-height: 1.5; }
-  .ifw-s2-terra span, .ifw-s2-sage span, .ifw-s2-dark span { color: rgba(255,255,255,0.65); }
-  .ifw-s2-light span { color: #64748b; }
+  /* ══ CERTIFICATIONS ══════════════════════════════════════ */
+  .ifw-cert-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-bottom: 1.8rem; }
+  .ifw-cert-pill {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 100px;
+    padding: 0.55rem 1.2rem; font-size: 0.82rem; font-weight: 600; color: #040d1f;
+    transition: all 0.22s;
+  }
+  .ifw-cert-pill:hover { border-color: #2563eb; color: #2563eb; transform: translateY(-2px); }
+  .ifw-cp-icon { font-size: 1rem; }
+  .ifw-cert-note { text-align: center; font-size: 0.9rem; color: #64748b; max-width: 480px; margin: 0 auto; line-height: 1.75; }
 
-  /* Cert grid */
-  .ifw-cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-  .ifw-cert-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.2rem; text-align: center; }
-  .ifw-cert-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-  .ifw-cert-card h4 { font-size: 0.84rem; font-weight: 700; color: #0a192f; margin-bottom: 0.25rem; }
-  .ifw-cert-card p { font-size: 0.74rem; color: #64748b; line-height: 1.55; }
+  /* ══ TESTIMONIALS ════════════════════════════════════════ */
+  .ifw-testi-featured {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px; padding: 2.5rem 3rem; margin-bottom: 1.5rem; position: relative; overflow: hidden;
+  }
+  .ifw-testi-qmark {
+    font-size: 8rem; line-height: 1; color: rgba(255,255,255,0.06);
+    font-family: Georgia, serif; position: absolute; top: 0.5rem; left: 1.5rem;
+    font-style: italic; pointer-events: none; user-select: none;
+  }
+  .ifw-testi-quote {
+    font-size: clamp(1.05rem, 2vw, 1.28rem); line-height: 1.7;
+    color: rgba(255,255,255,0.85); font-style: italic;
+    position: relative; z-index: 1; margin-bottom: 1.8rem;
+  }
+  .ifw-testi-attr { display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1; }
+  .ifw-testi-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #fff; font-size: 1rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .ifw-testi-attr strong { display: block; font-size: 0.9rem; color: #fff; }
+  .ifw-testi-attr span  { font-size: 0.78rem; color: rgba(255,255,255,0.42); }
+  .ifw-testi-stars { margin-left: auto; color: #f59e0b; font-size: 0.95rem; letter-spacing: 2px; flex-shrink: 0; }
+  .ifw-testi-secondary { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .ifw-testi-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px; padding: 1.8rem; transition: border-color 0.22s;
+  }
+  .ifw-testi-card:hover { border-color: rgba(255,255,255,0.18); }
+  .ifw-testi-card p {
+    font-size: 0.9rem; line-height: 1.72; color: rgba(255,255,255,0.65);
+    font-style: italic; margin-bottom: 1.4rem;
+  }
 
-  /* ── Testimonials ── */
-  .ifw-testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-  .ifw-testi-card { background: #fff; border-radius: 20px; padding: 2rem; border: 1px solid #e2e8f0; transition: all 0.3s; }
-  .ifw-testi-card:hover { box-shadow: 0 14px 44px rgba(37,99,235,0.1); transform: translateY(-5px); }
-  .ifw-testi-quote { display: block; font-size: 5rem; color: rgba(37,99,235,0.1); line-height: 0.8; margin-bottom: 0.5rem; }
-  .ifw-testi-stars { color: #f59e0b; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; }
-  .ifw-testi-text { font-size: 0.92rem; line-height: 1.8; color: #64748b; font-style: italic; margin-bottom: 1.5rem; font-weight: 400; }
-  .ifw-testi-author { display: flex; align-items: center; gap: 0.8rem; }
-  .ifw-testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
-  .ifw-testi-author strong { display: block; font-size: 0.88rem; color: #0a192f; }
-  .ifw-testi-author span { font-size: 0.76rem; color: #64748b; }
-
-  /* ── FAQ ── */
-  .ifw-faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; }
-  .ifw-faq-left p { font-size: 0.95rem; line-height: 1.8; color: #64748b; font-weight: 400; margin-top: 1rem; margin-bottom: 1.5rem; }
-  .ifw-faq-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; color: #2563eb; font-weight: 600; text-decoration: none; transition: gap 0.2s; }
-  .ifw-faq-link:hover { gap: 12px; }
-  .ifw-faq-list { display: flex; flex-direction: column; }
+  /* ══ FAQ ════════════════════════════════════════════════ */
+  .ifw-faq-layout { display: grid; grid-template-columns: 260px 1fr; gap: 5rem; align-items: start; }
+  .ifw-faq-link { display: inline-flex; align-items: center; gap: 6px; color: #2563eb; font-weight: 600; font-size: 0.88rem; text-decoration: none; margin-top: 1rem; }
+  .ifw-faq-link:hover { text-decoration: underline; }
+  .ifw-faq-list { display: flex; flex-direction: column; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; }
   .ifw-faq-item { border-bottom: 1px solid #e2e8f0; }
-  .ifw-faq-q { width: 100%; padding: 1.3rem 0; background: none; border: none; font-size: 0.94rem; font-weight: 600; color: #0a192f; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 1rem; text-align: left; }
-  .ifw-faq-q:hover { color: #2563eb; }
-  .ifw-faq-icon { color: #2563eb; font-size: 1.2rem; flex-shrink: 0; transition: transform 0.25s; }
-  .ifw-faq-q[aria-expanded="true"] .ifw-faq-icon { transform: rotate(45deg); }
-  .ifw-faq-a { font-size: 0.88rem; color: #64748b; line-height: 1.8; font-weight: 400; padding-bottom: 1.2rem; display: none; }
-  .ifw-faq-a.open { display: block; }
+  .ifw-faq-item:last-child { border-bottom: none; }
+  .ifw-faq-q {
+    width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem; padding: 1.2rem 1.4rem; font-size: 0.92rem; font-weight: 600; color: #040d1f;
+    background: transparent; border: none; cursor: pointer; font-family: inherit; transition: background 0.2s;
+  }
+  .ifw-faq-q:hover { background: #f8fafc; }
+  .ifw-faq-icon {
+    width: 24px; height: 24px; border-radius: 50%; background: #f1f5f9; border: 1px solid #e2e8f0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; color: #64748b; flex-shrink: 0; transition: all 0.25s;
+  }
+  .ifw-faq-q[aria-expanded="true"] .ifw-faq-icon { background: #eff6ff; border-color: #2563eb; color: #2563eb; transform: rotate(45deg); }
+  .ifw-faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease;
+    font-size: 0.88rem; color: #64748b; line-height: 1.8; padding: 0 1.4rem;
+  }
+  .ifw-faq-a.open { max-height: 300px; padding: 0.2rem 1.4rem 1.2rem; }
 
-  /* ── Contact ── */
-  .ifw-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; position: relative; z-index: 2; }
+  /* ══ CONTACT ════════════════════════════════════════════ */
+  .ifw-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .ifw-contact-lead { color: rgba(255,255,255,0.58); font-size: 0.96rem; line-height: 1.85; margin-bottom: 2rem; }
   .ifw-contact-checks { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
-  .ifw-ccheck { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-  .ifw-ccheck::before { content: '✓'; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
-  .ifw-calendly-block { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
-  .ifw-calendly-title { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 0.8rem; }
-  .ifw-calendly-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #2563eb; padding: 0.9rem 1.8rem; border-radius: 100px; font-weight: 700; font-size: 0.92rem; text-decoration: none; transition: all 0.25s; width: 100%; }
-  .ifw-calendly-btn:hover { background: #f59e0b; color: #0a192f; }
-  .ifw-calendly-sub { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 0.6rem; }
-  .ifw-contact-or { display: flex; align-items: center; gap: 1rem; margin: 0.8rem 0 0.5rem; }
-  .ifw-contact-or::before, .ifw-contact-or::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.15); }
-  .ifw-contact-or span { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
-  .ifw-contact-direct { display: flex; flex-direction: column; gap: 0.6rem; }
-  .ifw-wa-btn, .ifw-email-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0.75rem 1.2rem; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-  .ifw-wa-btn { background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.3); color: #5de89a; }
-  .ifw-wa-btn:hover { background: rgba(37,211,102,0.25); }
-  .ifw-email-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); }
-  .ifw-email-btn:hover { background: rgba(255,255,255,0.18); }
+  .ifw-ccheck { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: rgba(255,255,255,0.7); }
+  .ifw-ccheck::before { content: '✓'; color: #34d399; font-weight: 700; flex-shrink: 0; }
+  .ifw-calendly-block {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;
+  }
+  .ifw-cal-title { font-size: 0.72rem; color: rgba(255,255,255,0.45); font-weight: 600; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .ifw-cal-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: #fff; color: #040d1f; padding: 0.9rem 1.5rem; border-radius: 100px;
+    font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.25s; margin-bottom: 0.6rem;
+  }
+  .ifw-cal-btn:hover { background: #f59e0b; }
+  .ifw-cal-sub { font-size: 0.74rem; color: rgba(255,255,255,0.3); text-align: center; }
+  .ifw-contact-direct { display: flex; flex-direction: column; gap: 0.7rem; }
+  .ifw-wa-btn, .ifw-email-btn {
+    display: flex; align-items: center; gap: 8px; padding: 0.7rem 1.2rem;
+    border-radius: 10px; font-size: 0.86rem; font-weight: 500; text-decoration: none;
+    color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.1); transition: all 0.22s;
+  }
+  .ifw-wa-btn:hover    { border-color: #25d366; color: #25d366; }
+  .ifw-email-btn:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
 
   /* Form */
-  .ifw-form-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 22px; padding: 2.2rem; backdrop-filter: blur(10px); }
-  .ifw-form-title { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
-  .ifw-form-sub { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
-  .ifw-form { display: flex; flex-direction: column; gap: 0.9rem; }
-  .ifw-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
-  .ifw-form-group { display: flex; flex-direction: column; gap: 0.3rem; }
-  .ifw-form-group label { font-size: 0.76rem; font-weight: 600; color: rgba(255,255,255,0.7); }
-  .ifw-req { color: rgba(255,200,150,0.8); }
-  .ifw-input { width: 100%; padding: 0.82rem 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: #fff; font-size: 0.88rem; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
-  .ifw-input::placeholder { color: rgba(255,255,255,0.3); }
-  .ifw-input:focus { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.15); }
-  .ifw-input option { background: #0a192f; color: #fff; }
-  .ifw-textarea { resize: vertical; min-height: 100px; }
-  .ifw-submit-btn { width: 100%; padding: 1rem 1.5rem; background: #fff; color: #2563eb; border: none; border-radius: 10px; font-size: 0.96rem; font-weight: 700; cursor: pointer; transition: all 0.25s; letter-spacing: 0.02em; margin-top: 0.4rem; }
-  .ifw-submit-btn:hover { background: #f59e0b; color: #0a192f; transform: translateY(-1px); }
+  .ifw-form-card { background: #fff; border-radius: 22px; padding: 2.2rem; box-shadow: 0 24px 80px rgba(0,0,0,0.3); }
+  .ifw-form-title { font-size: 1.2rem; font-weight: 700; color: #040d1f; margin-bottom: 0.3rem; }
+  .ifw-form-sub   { font-size: 0.84rem; color: #64748b; margin-bottom: 1.8rem; }
+  .ifw-form { display: flex; flex-direction: column; gap: 0.8rem; }
+  .ifw-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .ifw-form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+  .ifw-form-group label { font-size: 0.78rem; font-weight: 600; color: #475569; }
+  .ifw-req { color: #ef4444; }
+  .ifw-input {
+    width: 100%; padding: 0.7rem 0.9rem; border-radius: 10px;
+    border: 1.5px solid #e2e8f0; font-size: 0.88rem; color: #040d1f;
+    background: #f8fafc; font-family: inherit; outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s; box-sizing: border-box; appearance: none;
+  }
+  .ifw-input:focus { border-color: #2563eb; background: #fff; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+  .ifw-textarea { resize: vertical; min-height: 90px; }
+  .ifw-submit-btn {
+    width: 100%; padding: 1rem; background: #2563eb; color: #fff;
+    border: none; border-radius: 12px; font-size: 0.95rem; font-weight: 700;
+    font-family: inherit; cursor: pointer; transition: all 0.25s; margin-top: 0.4rem;
+  }
+  .ifw-submit-btn:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
 
-  /* ── Product Image Cards ── */
-  .ifw-cat-sub-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
-  .ifw-cat-sub-label { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-  .ifw-cat-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 1rem; border-radius: 100px; }
-  .ifw-cat-pill-orange { background: rgba(37,99,235,0.1); color: #2563eb; border: 1.5px solid rgba(37,99,235,0.25); }
-  .ifw-cat-pill-green { background: rgba(5,150,105,0.1); color: #059669; border: 1.5px solid rgba(5,150,105,0.25); }
-  .ifw-cat-note { font-size: 0.85rem; color: #64748b; }
-  .ifw-cat-sub-cta { font-size: 0.85rem; font-weight: 600; color: #2563eb; text-decoration: none; white-space: nowrap; }
-  .ifw-cat-sub-cta:hover { text-decoration: underline; }
-
-  .ifw-prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; margin-bottom: 1.5rem; }
-  .ifw-prod-card { background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; transition: all 0.35s; display: flex; flex-direction: column; }
-  .ifw-prod-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(37,99,235,0.1); border-color: rgba(37,99,235,0.3); }
-
-  .ifw-prod-img-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; flex-shrink: 0; }
-  .ifw-prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s; display: block; }
-  .ifw-prod-card:hover .ifw-prod-img-wrap img { transform: scale(1.06); }
-  .ifw-prod-overlay-badge { position: absolute; top: 12px; left: 12px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.22rem 0.65rem; border-radius: 100px; }
-  .ifw-badge-hot { background: rgba(220,50,20,0.88); color: #fff; }
-  .ifw-badge-demand { background: rgba(37,99,235,0.9); color: #fff; }
-  .ifw-badge-new { background: rgba(5,150,105,0.88); color: #fff; }
-  .ifw-badge-pl { background: rgba(10,25,47,0.85); color: #fff; }
-  .ifw-prod-pl-tag { position: absolute; bottom: 10px; right: 10px; font-size: 0.61rem; font-weight: 600; background: rgba(255,255,255,0.93); color: #2563eb; padding: 0.2rem 0.6rem; border-radius: 100px; }
-
-  .ifw-prod-body { padding: 1.1rem 1.2rem 1.2rem; display: flex; flex-direction: column; flex: 1; }
-  .ifw-prod-title { font-size: 0.95rem; font-weight: 700; color: #0a192f; margin-bottom: 0.35rem; }
-  .ifw-prod-desc { font-size: 0.8rem; color: #64748b; line-height: 1.65; margin-bottom: 0.75rem; flex: 1; }
-  .ifw-prod-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.8rem; }
-  .ifw-prod-tags span { font-size: 0.62rem; background: #f1f5f9; color: #64748b; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 500; }
-  .ifw-prod-cta { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; color: #2563eb; font-weight: 600; text-decoration: none; padding-top: 0.65rem; border-top: 1px solid #e2e8f0; margin-top: auto; }
-  .ifw-prod-cta:hover { color: #1d4ed8; }
-
-  /* ── Ayurvedic Grid ── */
-  .ifw-ayur-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; }
-  .ifw-ayur-products { display: flex; flex-direction: column; gap: 0.55rem; }
-  .ifw-ayur-item { display: flex; align-items: center; gap: 0.8rem; padding: 0.75rem 1rem; border-radius: 12px; background: #fff; border: 1px solid #e2e8f0; transition: border-color 0.2s; }
-  .ifw-ayur-item:hover { border-color: rgba(5,150,105,0.35); }
-  .ifw-ayur-icon { font-size: 1.2rem; width: 30px; text-align: center; flex-shrink: 0; }
-  .ifw-ayur-item > div { flex: 1; }
-  .ifw-ayur-item strong { display: block; font-size: 0.87rem; font-weight: 600; color: #0a192f; }
-  .ifw-ayur-item > div > span { font-size: 0.74rem; color: #64748b; }
-  .ifw-ayur-visual { position: relative; border-radius: 18px; overflow: hidden; min-height: 320px; }
-  .ifw-ayur-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .ifw-ayur-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(10,25,47,0.85) 0%, transparent 100%); padding: 1.5rem 1.2rem 1rem; }
-  .ifw-ayur-overlay span { font-size: 0.72rem; color: rgba(255,255,255,0.72); font-weight: 500; letter-spacing: 0.05em; }
-
-  /* ── Factory Strip ── */
-  .ifw-factory-strip { position: relative; overflow: hidden; }
-  .ifw-factory-strip > img { width: 100%; height: 460px; object-fit: cover; object-position: center 40%; display: block; }
-  .ifw-factory-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,25,47,0.92) 0%, rgba(10,25,47,0.55) 100%); display: flex; align-items: center; gap: 4rem; padding: 0 8%; flex-wrap: wrap; }
-  .ifw-factory-content { flex: 1; min-width: 280px; }
-  .ifw-factory-content h3 { font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 700; color: #fff; line-height: 1.22; margin: 0.8rem 0 1rem; }
-  .ifw-factory-content p { font-size: 0.92rem; color: rgba(255,255,255,0.62); line-height: 1.8; font-weight: 400; margin-bottom: 1.5rem; max-width: 500px; }
-  .ifw-factory-badges { display: flex; gap: 0.8rem; flex-wrap: wrap; align-self: center; }
-  .ifw-factory-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); padding: 0.6rem 1.1rem; border-radius: 10px; font-size: 0.82rem; font-weight: 600; }
-
-  /* ── Responsive ── */
-  @media (max-width: 1024px) {
-    .ifw-hero-inner, .ifw-promise-grid, .ifw-why-india-grid,
-    .ifw-why-layout, .ifw-contact-grid { grid-template-columns: 1fr; }
+  /* ══ RESPONSIVE ═════════════════════════════════════════ */
+  @media (max-width: 900px) {
+    .ifw-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 5%; }
     .ifw-hero-right { display: none; }
-    .ifw-cat-panels { grid-template-columns: 1fr; }
+    .ifw-pillars { grid-template-columns: 1fr; }
     .ifw-prod-grid { grid-template-columns: 1fr 1fr; }
     .ifw-ayur-grid { grid-template-columns: 1fr; }
-    .ifw-ayur-visual { min-height: 260px; }
-    .ifw-factory-overlay { gap: 2rem; padding: 2.5rem 6%; }
-    .ifw-factory-badges { flex-direction: row; }
-    .ifw-testi-grid { grid-template-columns: 1fr 1fr; }
-    .ifw-faq-layout { grid-template-columns: 1fr; }
-    .ifw-process-grid { grid-template-columns: 1fr 1fr; }
+    .ifw-india-stats { flex-direction: column; }
+    .ifw-istat-sep { width: auto; height: 1px; }
+    .ifw-india-pts { grid-template-columns: 1fr; }
+    .ifw-tl-track { display: none; }
+    .ifw-tl-steps { grid-template-columns: 1fr 1fr; }
+    .ifw-faq-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .ifw-contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .ifw-testi-secondary { grid-template-columns: 1fr; }
   }
-  @media (max-width: 680px) {
-    .ifw-process-grid, .ifw-stats-mosaic, .ifw-stats-2x2,
-    .ifw-cert-grid, .ifw-testi-grid, .ifw-form-row { grid-template-columns: 1fr; }
-    .ifw-prod-grid { grid-template-columns: 1fr; }
-    .ifw-cat-sub-head { flex-direction: column; align-items: flex-start; }
-    .ifw-factory-strip > img { height: 520px; object-position: center; }
-    .ifw-factory-overlay { flex-direction: column; gap: 1.5rem; padding: 2rem 5%; align-items: flex-start; }
-    .ifw-trust-bar { gap: 0.8rem; }
-    .ifw-trust-flags { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  @media (max-width: 600px) {
     .ifw-section { padding: 4rem 5%; }
-    .ifw-hero-proof { flex-wrap: wrap; max-width: 100%; }
-    .ifw-proof-divider { display: none; }
-    .ifw-proof-item { min-width: 45%; }
+    .ifw-prod-grid { grid-template-columns: 1fr; }
+    .ifw-form-row { grid-template-columns: 1fr; }
+    .ifw-tl-steps { grid-template-columns: 1fr; }
+    .ifw-testi-featured { padding: 2rem 1.5rem; }
+    .ifw-testi-stars { display: none; }
+    .ifw-ifw-india-stats { border-radius: 14px; }
+    .ifw-istat { padding: 1.5rem 1rem; }
   }
 </style>
 
 <script>
+  // Scroll reveal
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
+
+  // Process timeline animated line
+  const tlProg = document.getElementById('tlProgress');
+  if (tlProg) {
+    const tlObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { setTimeout(() => { tlProg.style.width = '100%'; }, 300); tlObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    const track = tlProg.closest('.ifw-tl-track') as HTMLElement | null;
+    if (track) tlObs.observe(track);
+  }
+
   // FAQ accordion
-  document.querySelectorAll<HTMLButtonElement>('.ifw-faq-q').forEach((btn) => {
+  document.querySelectorAll<HTMLButtonElement>('.ifw-faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      document.querySelectorAll<HTMLButtonElement>('.ifw-faq-q').forEach((b) => {
+      document.querySelectorAll<HTMLButtonElement>('.ifw-faq-q').forEach(b => {
         b.setAttribute('aria-expanded', 'false');
         const a = b.nextElementSibling as HTMLElement | null;
         if (a) a.classList.remove('open');
       });
       if (!isOpen) {
         btn.setAttribute('aria-expanded', 'true');
-        const answer = btn.nextElementSibling as HTMLElement | null;
-        if (answer) answer.classList.add('open');
+        const ans = btn.nextElementSibling as HTMLElement | null;
+        if (ans) ans.classList.add('open');
       }
     });
   });
 
-  // Form submit loading state
+  // Form loading state
   const form = document.getElementById('sourcingForm') as HTMLFormElement | null;
   if (form) {
     form.addEventListener('submit', () => {
