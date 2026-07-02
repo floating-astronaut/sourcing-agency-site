@@ -1,38 +1,426 @@
 ---
 import Base from '~/layouts/Base.astro';
-import Icon from '~/components/Icon.astro';
-import ContactForm from '~/components/ContactForm.astro';
 import { site } from '~/lib/site';
 ---
 
-<Base title="Contact" description="Book a sourcing consultation or send an inquiry to IndoFolk Wellness.">
-  <section class="pt-16 pb-16 md:pt-24 md:pb-20">
-    <div class="container-app grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <p class="eyebrow"><Icon name="send" size={14} /> Contact</p>
-        <h1 class="mt-4">Tell us what you&rsquo;re sourcing.</h1>
-        <p class="mt-5 text-fluid-lg text-muted">
-          A member of our team replies within one business day. If it&rsquo;s urgent, email
-          <a href={`mailto:${site.contactEmail}`} class="text-copper underline decoration-copper/40 hover:decoration-copper">{site.contactEmail}</a>
-          {' '}or call <a href={`tel:${site.phone.replace(/\s+/g, '')}`} class="text-copper underline decoration-copper/40 hover:decoration-copper">{site.phone}</a>.
-        </p>
+<Base
+  title="Contact — IndoFolk Wellness"
+  description="Book a sourcing consultation or send an enquiry to IndoFolk Wellness. We respond within 24 hours."
+>
 
-        <div class="mt-8 card p-6">
-          <p class="font-medium">Prefer to talk first?</p>
-          <p class="mt-2 text-fluid-sm text-muted">Book a sourcing consultation directly on our calendar.</p>
-          <a href={site.calendlyUrl} target="_blank" rel="noreferrer" class="btn btn-secondary mt-4">
-            Book on Calendly <Icon name="arrow-up-right" size={16} />
-          </a>
-        </div>
-
-        <p class="mt-8 text-fluid-sm text-muted">
-          {site.address.line1}<br />{site.address.line2}<br />
-          {site.locations.join(' · ')}
+  <!-- ══ PAGE HEADER ════════════════════════════════════════ -->
+  <section class="ct-header ds-bg-dark">
+    <div class="ds-container ct-header-inner">
+      <div class="ct-header-text">
+        <p class="ct-header-eyebrow" data-reveal>Contact</p>
+        <h1 class="ct-header-h1" data-reveal data-delay="1">
+          Tell us about<br>your project.
+        </h1>
+        <p class="ct-header-desc" data-reveal data-delay="2">
+          A 15-minute conversation is often all it takes to understand
+          whether we're the right fit — and to turn your idea into
+          a sourcing plan. We respond to all enquiries within 24 hours.
         </p>
       </div>
-      <div class="md:col-span-7">
-        <ContactForm />
+      <div class="ct-header-img" data-reveal data-delay="1">
+        <img
+          src="/images/ifw/founder-divyanshu.png"
+          alt="Divyanshu, Founder of IndoFolk Wellness"
+          class="ct-header-photo"
+          loading="eager"
+        />
       </div>
     </div>
   </section>
+
+  <!-- ══ MAIN CONTACT SECTION ══════════════════════════════ -->
+  <section class="ds-section ds-bg-cream">
+    <div class="ds-container">
+      <div class="ct-main-grid">
+
+        <!-- Left: Contact options -->
+        <div class="ct-options">
+
+          <div class="ct-option-block" data-reveal>
+            <p class="ct-option-label">Prefer to talk first?</p>
+            <h2 class="ct-option-heading">Book a 30-minute<br>call with Divyanshu.</h2>
+            <p class="ct-option-body">
+              No sales team. No hand-offs. A direct conversation about
+              what you're trying to source and whether we can help.
+              Same-day follow-up guaranteed.
+            </p>
+            <a
+              href={site.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Book on Calendly
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+
+          <div class="ct-divider" aria-hidden="true"></div>
+
+          <div class="ct-contact-details" data-reveal data-delay="2">
+            <p class="ct-option-label">Direct contact</p>
+            <div class="ct-detail-rows">
+              <div class="ct-detail-row">
+                <span class="ct-detail-key">Email</span>
+                <a href={`mailto:${site.contactEmail}`} class="ct-detail-val">
+                  {site.contactEmail}
+                </a>
+              </div>
+              <div class="ct-detail-row">
+                <span class="ct-detail-key">Phone / WhatsApp</span>
+                <a href={`tel:${site.phone.replace(/\s+/g,'')}`} class="ct-detail-val">
+                  {site.phone}
+                </a>
+              </div>
+              <div class="ct-detail-row">
+                <span class="ct-detail-key">Response time</span>
+                <span class="ct-detail-val">Within 24 hours</span>
+              </div>
+              <div class="ct-detail-row">
+                <span class="ct-detail-key">Office</span>
+                <address class="ct-detail-val ct-address">
+                  {site.address.line1}<br>{site.address.line2}
+                </address>
+              </div>
+              <div class="ct-detail-row">
+                <span class="ct-detail-key">Operating from</span>
+                <span class="ct-detail-val">{site.locations.join(' & ')}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-what-happens" data-reveal data-delay="3">
+            <p class="ct-option-label">What happens next</p>
+            <ol class="ct-what-list">
+              <li>
+                <span class="ct-what-num">1</span>
+                <span>We review your message and reply within 24 hours with initial questions or a calendar invite.</span>
+              </li>
+              <li>
+                <span class="ct-what-num">2</span>
+                <span>A 15–30 minute call where we learn your product requirements, target market, and timeline.</span>
+              </li>
+              <li>
+                <span class="ct-what-num">3</span>
+                <span>Within 48 hours, we send a shortlist of 3–5 pre-vetted manufacturers with our recommendation.</span>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+
+        <!-- Right: Form -->
+        <div class="ct-form-wrap" data-reveal data-delay="2">
+          <span class="ds-eyebrow" style="margin-bottom:0.6rem">Send a message</span>
+          <h2 class="ds-h3" style="margin-bottom:2rem">We'll reply within<br>24 hours.</h2>
+
+          <form
+            class="ct-form"
+            method="POST"
+            action={`mailto:${site.contactEmail}`}
+            enctype="text/plain"
+          >
+            <div class="ct-form-row">
+              <div class="ds-form-field">
+                <label for="ct-name" class="ds-form-label">Full name *</label>
+                <input id="ct-name" name="name" type="text" class="ds-form-input" placeholder="Jane Smith" required />
+              </div>
+              <div class="ds-form-field">
+                <label for="ct-company" class="ds-form-label">Company / Brand *</label>
+                <input id="ct-company" name="company" type="text" class="ds-form-input" placeholder="Acme Pet Co." required />
+              </div>
+            </div>
+
+            <div class="ct-form-row">
+              <div class="ds-form-field">
+                <label for="ct-email" class="ds-form-label">Email address *</label>
+                <input id="ct-email" name="email" type="email" class="ds-form-input" placeholder="jane@brand.com" required />
+              </div>
+              <div class="ds-form-field">
+                <label for="ct-phone" class="ds-form-label">Phone / WhatsApp</label>
+                <input id="ct-phone" name="phone" type="tel" class="ds-form-input" placeholder="+1 555 000 0000" />
+              </div>
+            </div>
+
+            <div class="ct-form-row">
+              <div class="ds-form-field">
+                <label for="ct-country" class="ds-form-label">Country</label>
+                <input id="ct-country" name="country" type="text" class="ds-form-input" placeholder="United States" />
+              </div>
+              <div class="ds-form-field">
+                <label for="ct-category" class="ds-form-label">Product category</label>
+                <select id="ct-category" name="category" class="ds-form-input">
+                  <option value="">Select…</option>
+                  <option>Pet Care</option>
+                  <option>Ayurveda / Wellness</option>
+                  <option>Both</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ds-form-field">
+              <label for="ct-moq" class="ds-form-label">Approximate monthly order volume</label>
+              <select id="ct-moq" name="volume" class="ds-form-input">
+                <option value="">Select…</option>
+                <option>Just sampling / exploring</option>
+                <option>Under 1,000 units / 500 kg</option>
+                <option>1,000–10,000 units / 500–2,000 kg</option>
+                <option>10,000+ units / 2,000+ kg</option>
+              </select>
+            </div>
+
+            <div class="ds-form-field">
+              <label for="ct-message" class="ds-form-label">Tell us about your project *</label>
+              <textarea
+                id="ct-message"
+                name="message"
+                class="ds-form-input ds-form-textarea"
+                placeholder="Product category, key specifications, target market, certifications needed, desired timeline…"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="ds-submit">
+              Send message
+            </button>
+
+            <p class="ct-form-note">
+              Or book directly:
+              <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="ct-form-calendly">
+                Calendly →
+              </a>
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOUNDER QUOTE ══════════════════════════════════════ -->
+  <section class="ct-quote-section ds-bg-white">
+    <div class="ds-container">
+      <div class="ct-quote-inner" data-reveal>
+        <div class="ct-quote-img-wrap">
+          <img
+            src="/images/ifw/team-ayurveda-congress.jpg"
+            alt="IndoFolk Wellness team at an Ayurveda industry congress"
+            class="ct-quote-img"
+            loading="lazy"
+          />
+        </div>
+        <blockquote class="ct-quote-text">
+          <p>
+            "We built this agency because the India-to-global supply chain
+            should feel like having someone trustworthy on the ground —
+            not like navigating it blind. That's what we are for every
+            client we work with."
+          </p>
+          <footer>
+            <strong>Divyanshu</strong>
+            <span>Founder, IndoFolk Wellness</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
 </Base>
+
+<style is:global>
+
+/* ══ Contact — ct- scoped ══════════════════════════════════ */
+
+.ct-header {
+  padding: 6rem 5%;
+}
+.ct-header-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 5rem; align-items: center;
+}
+.ct-header-eyebrow {
+  font-size: 0.67rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(250,248,244,0.35); margin: 0 0 1.6rem;
+}
+.ct-header-h1 {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 800; line-height: 1.04;
+  letter-spacing: -0.032em; color: #FAF8F4;
+  margin: 0 0 1.5rem;
+}
+.ct-header-desc {
+  font-size: 1rem; line-height: 1.9;
+  color: rgba(250,248,244,0.52); max-width: 460px;
+}
+.ct-header-photo {
+  width: 100%; border-radius: 10px;
+  aspect-ratio: 3/4; object-fit: cover; display: block;
+}
+
+/* Main grid */
+.ct-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+
+/* Options column */
+.ct-options { display: flex; flex-direction: column; gap: 2.5rem; }
+.ct-option-label {
+  font-size: 0.67rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #A0978A; margin-bottom: 0.7rem;
+  display: block;
+}
+.ct-option-heading {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800; line-height: 1.1;
+  letter-spacing: -0.025em; color: #1C1814;
+  margin: 0 0 0.9rem;
+}
+.ct-option-body {
+  font-size: 0.9rem; line-height: 1.85;
+  color: #6B6358; margin-bottom: 1.5rem; max-width: 380px;
+}
+.ct-divider {
+  height: 1px; background: #DCD5C9;
+}
+
+/* Contact details */
+.ct-detail-rows {
+  display: flex; flex-direction: column; gap: 0;
+}
+.ct-detail-row {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(220,213,201,0.60);
+  font-size: 0.84rem;
+}
+.ct-detail-key {
+  color: #A0978A; flex-shrink: 0;
+  width: 120px; font-weight: 500;
+}
+.ct-detail-val {
+  color: #1C1814; text-decoration: none;
+  font-weight: 600; text-align: right;
+  transition: color 0.2s;
+}
+a.ct-detail-val:hover { color: #2D5A3D; }
+.ct-address {
+  font-style: normal; text-align: right;
+}
+
+/* What happens */
+.ct-what-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.ct-what-list li {
+  display: flex; gap: 0.85rem; align-items: flex-start;
+  font-size: 0.85rem; line-height: 1.8; color: #6B6358;
+}
+.ct-what-num {
+  flex-shrink: 0; width: 24px; height: 24px;
+  border-radius: 50%; background: #2D5A3D;
+  color: #fff; font-size: 0.70rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 2px;
+}
+
+/* Form */
+.ct-form-wrap {
+  background: #fff;
+  border: 1px solid #DCD5C9;
+  border-radius: 14px; padding: 2.5rem;
+}
+.ct-form {
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+.ct-form-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+}
+.ct-form-note {
+  font-size: 0.80rem; color: #A0978A;
+  text-align: center; margin-top: 0.4rem;
+}
+.ct-form-calendly {
+  color: #2D5A3D; font-weight: 600; text-decoration: none;
+}
+.ct-form-calendly:hover { color: #B8960C; }
+
+/* Founder quote */
+.ct-quote-section { padding: 5rem 5%; border-top: 1px solid #DCD5C9; }
+.ct-quote-inner {
+  display: grid; grid-template-columns: 300px 1fr;
+  gap: 4rem; align-items: center;
+  max-width: 900px; margin: 0 auto;
+}
+.ct-quote-img-wrap {
+  border-radius: 10px; overflow: hidden; aspect-ratio: 4/3;
+}
+.ct-quote-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.ct-quote-text {
+  display: flex; flex-direction: column; gap: 1.5rem; margin: 0;
+}
+.ct-quote-text p {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-style: italic; line-height: 1.75;
+  color: #1C1814; margin: 0;
+  position: relative; padding-left: 1.5rem;
+}
+.ct-quote-text p::before {
+  content: '"';
+  position: absolute; left: 0; top: -0.2em;
+  font-size: 3rem; font-style: normal;
+  color: #2D5A3D; line-height: 1;
+  font-weight: 800; opacity: 0.3;
+}
+.ct-quote-text footer {
+  display: flex; flex-direction: column; gap: 0.2rem;
+  padding-left: 1.5rem;
+}
+.ct-quote-text footer strong {
+  font-size: 0.92rem; font-weight: 800;
+  color: #1C1814; letter-spacing: -0.01em;
+}
+.ct-quote-text footer span {
+  font-size: 0.78rem; color: #6B6358;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .ct-header-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ct-header-photo { aspect-ratio: 16/9; max-width: 480px; }
+}
+@media (max-width: 860px) {
+  .ct-main-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .ct-quote-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .ct-quote-img-wrap { aspect-ratio: 16/9; }
+}
+@media (max-width: 540px) {
+  .ct-form-row { grid-template-columns: 1fr; }
+  .ct-form-wrap { padding: 1.5rem; }
+  .ct-detail-key { width: 100px; }
+}
+
+</style>
+
+<script>
+  const io = new IntersectionObserver(
+    (entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } }); },
+    { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+</script>

@@ -3,84 +3,91 @@ import Base from '~/layouts/Base.astro';
 import { site } from '~/lib/site';
 ---
 
-<Base title="About — IndoFolk Wellness" description="IndoFolk Wellness is a B2B sourcing agency connecting global pet care and Ayurvedic wellness brands to GMP-certified Indian manufacturers. Meet the team and learn how we work.">
+<Base
+  title="About — IndoFolk Wellness"
+  description="IndoFolk Wellness is a B2B sourcing agency connecting global pet care and Ayurvedic wellness brands to GMP-certified Indian manufacturers. Meet the founder and learn how we work."
+>
 
-  <!-- Hero -->
-  <section style="background:#0a192f;padding:5rem 5% 4rem;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;pointer-events:none;">
-      <div style="position:absolute;top:-15%;right:-5%;width:550px;height:550px;background:radial-gradient(circle,rgba(37,99,235,0.18) 0%,transparent 65%);border-radius:50%;"></div>
-    </div>
-    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
-      <div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.18);border:1px solid rgba(37,99,235,0.38);color:#93c5fd;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
-          About IndoFolk Wellness
-        </div>
-        <h1 style="font-size:clamp(2.4rem,4.5vw,4rem);font-weight:700;color:#fff;line-height:1.08;letter-spacing:-0.025em;margin-bottom:1.2rem;">
-          A strategic sourcing partner.<br/><em style="color:#f59e0b;font-style:normal;">Not a faceless exporter.</em>
-        </h1>
-        <p style="font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.85;max-width:520px;margin-bottom:2rem;">
-          IndoFolk Wellness exists to make India's manufacturing depth accessible to global pet care and wellness brands — without the sourcing headaches of finding, vetting, and managing an overseas factory relationship alone.
-        </p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:100px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.35);">
-            Book a Consultation ↗
-          </a>
-          <a href="/contact" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:0.9rem 1.8rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
-            Contact us
-          </a>
-        </div>
-      </div>
-      <!-- Stats -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#2563eb;">
-          <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">200+</strong>
-          <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">Vetted manufacturers in network</span>
-        </div>
-        <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#059669;">
-          <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">15+</strong>
-          <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">Export markets served</span>
-        </div>
-        <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);">
-          <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#f59e0b;">24 hr</strong>
-          <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.55);">Response time on all enquiries</span>
-        </div>
-        <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-          <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">2</strong>
-          <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.55);">Categories: pet care + Ayurveda</span>
-        </div>
+  <!-- ══ HERO ═══════════════════════════════════════════════ -->
+  <section class="ab-hero">
+    <img
+      src="/images/ifw/team-quality-check.png"
+      alt="IndoFolk Wellness team conducting quality checks at a GMP-certified Indian factory"
+      class="ab-hero-bg"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="ab-hero-grad" aria-hidden="true"></div>
+    <div class="ab-hero-inner">
+      <p class="ab-hero-eyebrow">About IndoFolk Wellness</p>
+      <h1 class="ab-hero-h1">
+        A strategic partner.<br>Not a faceless exporter.
+      </h1>
+      <p class="ab-hero-desc">
+        IndoFolk Wellness exists to make India's manufacturing depth
+        accessible to global pet care and wellness brands — without the
+        sourcing headaches of finding, vetting, and managing an overseas
+        factory relationship alone.
+      </p>
+      <div class="ab-hero-ctas">
+        <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Book a consultation
+        </a>
+        <a href="/contact" class="btn btn-ghost-light">
+          Contact us
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- What we do -->
-  <section style="padding:5rem 5%;background:#ffffff;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
-        <div>
-          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
-            <span style="width:22px;height:2px;background:#2563eb;display:inline-block;flex-shrink:0;"></span>
-            What We Do
-          </div>
-          <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#0a192f;margin-bottom:1rem;letter-spacing:-0.015em;">We manage the hard parts of sourcing from India</h2>
-          <p style="font-size:0.95rem;color:#64748b;line-height:1.85;margin-bottom:1.5rem;">We're a sourcing agency, not a manufacturer. That distinction matters: our job is to find the right factory for you, not to push you toward one we own. We earn when you source — so our incentives are fully aligned with getting you a great product at the right price.</p>
-          <p style="font-size:0.95rem;color:#64748b;line-height:1.85;margin-bottom:2rem;">From the first enquiry to delivery at your warehouse, we manage every step — factory matching, sampling coordination, quality control, compliance documentation, and logistics. You get the supplier relationship advantages of a 200+ factory network, without hiring a team in India to manage it.</p>
-          <blockquote style="font-size:clamp(1.1rem,1.8vw,1.4rem);font-style:italic;line-height:1.5;color:#0a192f;margin:0 0 1.5rem;padding-left:1.4rem;border-left:3px solid #2563eb;">
-            "IndoFolk exists so that your supply chain advantage comes from relationships and knowledge — not luck."
-          </blockquote>
+  <!-- ══ STATEMENT ══════════════════════════════════════════ -->
+  <section class="ab-stmt ds-bg-white">
+    <div class="ab-stmt-inner">
+      <p class="ab-stmt-text" data-reveal>
+        We are the India office<br>our clients wish they<br>already had.
+      </p>
+      <p class="ab-stmt-sub" data-reveal data-delay="2">
+        Not a vendor. Not a directory. A partner who thinks like your team —
+        from inside the factories you cannot visit.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ WHAT WE DO ═════════════════════════════════════════ -->
+  <section class="ds-section ds-bg-cream">
+    <div class="ds-container">
+      <div class="ab-services-grid">
+        <div class="ab-services-left">
+          <span class="ds-eyebrow" data-reveal>What we do</span>
+          <h2 class="ds-h2" data-reveal data-delay="1">We manage the hard<br>parts of sourcing<br>from India.</h2>
+          <p class="ds-body" data-reveal data-delay="2">
+            We're a sourcing agency, not a manufacturer. That distinction
+            matters: our job is to find the right factory for you, not to
+            push you toward one we own. We earn when you source — so our
+            incentives are fully aligned with getting you a great product
+            at the right price.
+          </p>
+          <p class="ds-body" data-reveal data-delay="3" style="margin-top:1rem">
+            From first enquiry to delivery at your warehouse, we manage
+            every step — factory matching, sampling coordination, quality
+            control, compliance documentation, and logistics. You get the
+            supplier relationship advantages of a 200+ factory network,
+            without hiring a team in India to manage it.
+          </p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="ab-services-right" data-reveal data-delay="2">
           {[
-            { icon: '🔍', title: 'Factory matching', desc: 'We shortlist the right manufacturers from our vetted network based on your product, volume, certification, and market requirements.' },
-            { icon: '🧪', title: 'Sampling coordination', desc: 'Multi-factory sampling rounds so you can compare quality side by side before committing. Pre-screened by our team before it ships to you.' },
-            { icon: '✅', title: 'Quality control', desc: 'Pre-shipment QC inspection (AQL standard) on every bulk order. Third-party lab testing arranged on request for any category.' },
-            { icon: '📄', title: 'Export documentation', desc: 'Phytosanitary certificates, COO, FSSAI export health certificates, FDA Prior Notice, and full customs documentation for your market.' },
-            { icon: '🚢', title: 'Logistics management', desc: 'We coordinate sea freight, courier, and air cargo — and track every shipment through to delivery at your warehouse.' },
-          ].map(row => (
-            <div style="display:flex;align-items:flex-start;gap:1rem;padding:1.2rem 1.4rem;background:#fff;border-radius:14px;border:1px solid #e2e8f0;">
-              <span style="font-size:1.3rem;width:36px;text-align:center;flex-shrink:0;padding-top:2px;">{row.icon}</span>
+            { n: '01', title: 'Factory matching',        desc: 'We shortlist the right manufacturers from our vetted network based on your product, volume, certification, and market requirements.' },
+            { n: '02', title: 'Sampling coordination',   desc: 'Multi-factory sampling rounds so you can compare quality side by side before committing. Pre-screened by our team before it ships to you.' },
+            { n: '03', title: 'Quality control',         desc: 'Pre-shipment QC inspection (AQL standard) on every bulk order. Third-party lab testing arranged on request for any category.' },
+            { n: '04', title: 'Export documentation',    desc: 'Phytosanitary certificates, COO, FSSAI export health certificates, FDA Prior Notice, and full customs documentation for your market.' },
+            { n: '05', title: 'Logistics management',    desc: 'We coordinate sea freight, courier, and air cargo — and track every shipment through to delivery at your warehouse.' },
+          ].map((item) => (
+            <div class="ab-service-row">
+              <span class="ab-service-num">{item.n}</span>
               <div>
-                <h5 style="font-size:0.92rem;font-weight:600;color:#0a192f;margin-bottom:0.2rem;">{row.title}</h5>
-                <p style="font-size:0.82rem;color:#64748b;line-height:1.65;">{row.desc}</p>
+                <h3 class="ab-service-title">{item.title}</h3>
+                <p class="ab-service-desc">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -89,145 +96,410 @@ import { site } from '~/lib/site';
     </div>
   </section>
 
-  <!-- Founder -->
-  <section style="padding:5rem 5%;background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:3rem;">
-        <span style="width:22px;height:2px;background:#2563eb;display:inline-block;flex-shrink:0;"></span>
-        The Founder
-      </div>
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:start;max-width:900px;">
-        <div style="text-align:center;flex-shrink:0;">
-          <div style="width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#059669);display:flex;align-items:center;justify-content:center;font-size:3.5rem;font-weight:700;color:#fff;margin:0 auto 1.2rem;">D</div>
-          <strong style="display:block;font-size:1rem;font-weight:700;color:#0a192f;">Divyanshu</strong>
-          <span style="font-size:0.8rem;color:#64748b;">Founder, IndoFolk Wellness</span>
-          <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-            <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#2563eb;color:#fff;padding:0.6rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;text-decoration:none;">Book a call ↗</a>
-            <a href={`mailto:${site.contactEmail}`} style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#f1f5f9;color:#0a192f;padding:0.6rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;text-decoration:none;">{site.contactEmail}</a>
+  <!-- ══ FOUNDER ════════════════════════════════════════════ -->
+  <section class="ds-section ds-bg-white">
+    <div class="ds-container">
+      <div class="ab-founder-grid">
+
+        <div class="ab-founder-img-col" data-reveal>
+          <div class="ab-founder-img-wrap">
+            <img
+              src="/images/ifw/founder-divyanshu.png"
+              alt="Divyanshu, Founder of IndoFolk Wellness, with his dogs"
+              class="ab-founder-img"
+              loading="lazy"
+            />
           </div>
-        </div>
-        <div>
-          <h2 style="font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#0a192f;margin-bottom:1.2rem;letter-spacing:-0.015em;">Why I built IndoFolk</h2>
-          <p style="font-size:0.97rem;color:#64748b;line-height:1.9;margin-bottom:1.2rem;">India has one of the world's most sophisticated manufacturing ecosystems — particularly in pet products and Ayurvedic supplements. But navigating it from the outside, without local contacts and without knowing which factories are genuinely GMP-compliant and which ones just say they are, is extremely difficult for international brands.</p>
-          <p style="font-size:0.97rem;color:#64748b;line-height:1.9;margin-bottom:1.2rem;">IndoFolk was built to bridge that gap. We've done the groundwork — building relationships with 200+ vetted manufacturers, understanding which factories can actually deliver for US and EU markets, and developing a process that gives buyers confidence at every stage.</p>
-          <p style="font-size:0.97rem;color:#64748b;line-height:1.9;margin-bottom:2rem;">Our direct line of contact means you speak to the same person throughout your sourcing project. No account managers, no hand-offs, no lost context.</p>
-          <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-            <div style="display:flex;align-items:center;gap:0.6rem;">
-              <span style="font-size:1rem;">📍</span>
-              <span style="font-size:0.85rem;color:#64748b;">{site.address.line1}, {site.address.line2}</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:0.6rem;">
-              <span style="font-size:1rem;">📞</span>
-              <a href={`tel:${site.phone}`} style="font-size:0.85rem;color:#2563eb;font-weight:600;text-decoration:none;">{site.phone}</a>
+          <div class="ab-founder-card">
+            <p class="ab-founder-name">Divyanshu</p>
+            <p class="ab-founder-role">Founder, IndoFolk Wellness</p>
+            <div class="ab-founder-links">
+              <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.82rem;padding:0.6rem 1.1rem">
+                Book a call
+              </a>
+              <a href={`mailto:${site.contactEmail}`} class="ds-text-cta">
+                {site.contactEmail}
+              </a>
             </div>
           </div>
         </div>
+
+        <div class="ab-founder-text">
+          <span class="ds-eyebrow" data-reveal>The Founder</span>
+          <h2 class="ds-h2" data-reveal data-delay="1">Why I built<br>IndoFolk.</h2>
+          <div class="ab-founder-story" data-reveal data-delay="2">
+            <p>
+              India has one of the world's most sophisticated manufacturing
+              ecosystems — particularly in pet products and Ayurvedic
+              supplements. But navigating it from the outside, without
+              local contacts and without knowing which factories are
+              genuinely GMP-compliant and which ones just say they are,
+              is extremely difficult for international brands.
+            </p>
+            <p>
+              IndoFolk was built to bridge that gap. We've done the
+              groundwork — building relationships with 200+ vetted
+              manufacturers, understanding which factories can actually
+              deliver for US and EU markets, and developing a process
+              that gives buyers confidence at every stage.
+            </p>
+            <p>
+              Our direct line of contact means you speak to the same person
+              throughout your sourcing project. No account managers,
+              no hand-offs, no lost context.
+            </p>
+          </div>
+          <div class="ab-founder-meta" data-reveal data-delay="3">
+            <div class="ab-meta-row">
+              <span class="ab-meta-label">Location</span>
+              <span class="ab-meta-value">{site.address.line1}, {site.address.line2}</span>
+            </div>
+            <div class="ab-meta-row">
+              <span class="ab-meta-label">Phone</span>
+              <a href={`tel:${site.phone.replace(/\s+/g,'')}`} class="ab-meta-value">{site.phone}</a>
+            </div>
+            <div class="ab-meta-row">
+              <span class="ab-meta-label">Operating from</span>
+              <span class="ab-meta-value">{site.locations.join(' & ')}</span>
+            </div>
+            <div class="ab-meta-row">
+              <span class="ab-meta-label">Serving</span>
+              <span class="ab-meta-value">US, UK, EU, Canada, Australia</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Values -->
-  <section style="padding:5rem 5%;background:#0a192f;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:3rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.8rem;">
-          <span style="width:22px;height:2px;background:rgba(255,255,255,0.3);display:inline-block;"></span>
-          Core Values
-          <span style="width:22px;height:2px;background:rgba(255,255,255,0.3);display:inline-block;"></span>
-        </div>
-        <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#fff;margin-bottom:0.6rem;letter-spacing:-0.015em;">What we hold ourselves to</h2>
-        <p style="font-size:0.95rem;color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto;">These aren't brand copy — they're the actual operating principles behind how we work with clients.</p>
+  <!-- ══ TEAM PHOTO STRIP ═══════════════════════════════════ -->
+  <div class="ab-strip">
+    <img
+      src="/images/ifw/team-factory-floor.png"
+      alt="IndoFolk Wellness team at work on the factory floor"
+      class="ab-strip-img"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ══ VALUES (DARK) ══════════════════════════════════════ -->
+  <section class="ds-section-lg ds-bg-dark">
+    <div class="ds-container">
+      <div class="ab-values-header">
+        <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Core Principles</span>
+        <h2 class="ds-h2 ds-h2-light" data-reveal data-delay="1">What we hold<br>ourselves to.</h2>
+        <p class="ds-body ds-body-light" data-reveal data-delay="2">
+          These aren't brand copy — they're the actual operating
+          principles behind how we work with clients.
+        </p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div class="ab-values-grid">
         {[
-          { icon: '🔍', title: 'Radical transparency', desc: 'We\'re upfront about how we earn on every order, what we can and can\'t do, and when we\'re not the right fit. Our incentives stay aligned with yours because we don\'t hide them.' },
-          { icon: '🏆', title: 'Quality before speed', desc: 'Every order moves through sampling and quality control before it ships — no exceptions. If a factory doesn\'t pass QC, the shipment doesn\'t go. Full stop.' },
-          { icon: '🤝', title: 'Long-term relationships', desc: 'We\'re built for reorders and growing supplier relationships, not one-off transactions. The more volume you move, the better the factory terms we can negotiate for you.' },
-          { icon: '📋', title: 'Documentation first', desc: 'Export documentation and compliance are not afterthoughts — they\'re built into every order from day one. No last-minute scrambles at customs.' },
-          { icon: '⚡', title: '24-hour responsiveness', desc: 'We respond to all client enquiries within 24 hours. You\'re not waiting on us — ever.' },
-          { icon: '🌱', title: 'Ethical sourcing', desc: 'We work exclusively with factories that meet our audit criteria for labour practices, environmental compliance, and animal welfare where applicable.' },
-        ].map(v => (
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:1.8rem;">
-            <div style="font-size:1.8rem;margin-bottom:0.8rem;">{v.icon}</div>
-            <h3 style="font-size:0.96rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">{v.title}</h3>
-            <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);line-height:1.7;">{v.desc}</p>
+          { title: 'Radical transparency',     desc: "We're upfront about how we earn on every order, what we can and can't do, and when we're not the right fit. Our incentives stay aligned with yours because we don't hide them." },
+          { title: 'Quality before speed',     desc: "Every order moves through sampling and quality control before it ships — no exceptions. If a factory doesn't pass QC, the shipment doesn't go. Full stop." },
+          { title: 'Long-term relationships',  desc: "We're built for reorders and growing supplier relationships, not one-off transactions. The more volume you move, the better the factory terms we can negotiate for you." },
+          { title: 'Documentation first',      desc: 'Export documentation and compliance are not afterthoughts — they're built into every order from day one. No last-minute scrambles at customs.' },
+          { title: '24-hour responsiveness',   desc: "We respond to all client enquiries within 24 hours. You're not waiting on us — ever." },
+          { title: 'Ethical sourcing',         desc: 'We work exclusively with factories that meet our audit criteria for labour practices, environmental compliance, and animal welfare where applicable.' },
+        ].map((v, i) => (
+          <div class="ab-value-card" data-reveal data-delay={String((i % 3) + 1)}>
+            <h3 class="ab-value-title">{v.title}</h3>
+            <p class="ab-value-desc">{v.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- How we vet factories -->
-  <section style="padding:5rem 5%;background:#ffffff;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-        <div>
-          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
-            <span style="width:22px;height:2px;background:#2563eb;display:inline-block;flex-shrink:0;"></span>
-            Our Vetting Process
-          </div>
-          <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#0a192f;margin-bottom:1rem;letter-spacing:-0.015em;">How we build a network you can trust</h2>
-          <p style="font-size:0.95rem;color:#64748b;line-height:1.85;margin-bottom:2rem;">Not every factory that says "GMP certified" actually is. Our vetting process cuts through the noise — so only manufacturers who can actually deliver for international markets make it into our network.</p>
-          <div style="display:flex;flex-direction:column;gap:0.8rem;">
-            {[
-              { step: '01', title: 'Document verification', desc: 'We verify all certification claims — GMP, FSSAI, AYUSH, ISO — directly with the issuing bodies, not just from factory documents.' },
-              { step: '02', title: 'Sample quality audit', desc: 'We order blind samples and test against specification before introducing any factory to a client. Substandard factories don\'t make the cut.' },
-              { step: '03', title: 'On-site assessment', desc: 'For high-volume partnerships, we conduct or commission on-site factory audits covering production standards, labour practices, and export readiness.' },
-              { step: '04', title: 'Ongoing performance tracking', desc: 'Factories that deliver consistently earn more referrals. Those that don\'t are removed from the network. This keeps quality standards high over time.' },
-            ].map(row => (
-              <div style="display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.2rem;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;">
-                <span style="font-size:0.7rem;font-weight:800;color:#2563eb;background:rgba(37,99,235,0.1);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:0;">{row.step}</span>
-                <div>
-                  <h5 style="font-size:0.92rem;font-weight:600;color:#0a192f;margin-bottom:0.2rem;">{row.title}</h5>
-                  <p style="font-size:0.82rem;color:#64748b;line-height:1.65;">{row.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+  <!-- ══ VETTING PROCESS ════════════════════════════════════ -->
+  <section class="ds-section ds-bg-cream">
+    <div class="ds-container">
+      <div class="ab-vet-grid">
+        <div class="ab-vet-text">
+          <span class="ds-eyebrow" data-reveal>Our Vetting Process</span>
+          <h2 class="ds-h2" data-reveal data-delay="1">How we build<br>a network you<br>can trust.</h2>
+          <p class="ds-body" data-reveal data-delay="2">
+            Not every factory that says "GMP certified" actually is.
+            Our vetting process cuts through the noise — so only
+            manufacturers who can actually deliver for international
+            markets make it into our network.
+          </p>
         </div>
-        <div>
-          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:2.5rem;">
-            <h3 style="font-size:1.1rem;font-weight:700;color:#0a192f;margin-bottom:0.5rem;">Startup India Certified</h3>
-            <p style="font-size:0.85rem;color:#64748b;line-height:1.7;margin-bottom:2rem;">IndoFolk Wellness is recognized by the Government of India's Startup India initiative — a formal acknowledgement of our role in strengthening India's export manufacturing ecosystem.</p>
-            <div style="display:flex;flex-direction:column;gap:0.8rem;">
-              {[
-                ['Registered in:', 'India (New Delhi)'],
-                ['Operating from:', site.locations.join(' & ')],
-                ['Serving markets:', site.markets.join(', ')],
-                ['Response time:', 'Within 24 hours'],
-                ['Primary categories:', 'Pet Care & Ayurveda'],
-              ].map(([label, value]) => (
-                <div style="display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid #e2e8f0;">
-                  <span style="font-size:0.8rem;color:#64748b;">{label}</span>
-                  <span style="font-size:0.8rem;font-weight:600;color:#0a192f;">{value}</span>
-                </div>
-              ))}
+        <div class="ab-vet-steps">
+          {[
+            { n: '01', title: 'Document verification',    desc: "We verify all certification claims — GMP, FSSAI, AYUSH, ISO — directly with the issuing bodies, not just from factory documents." },
+            { n: '02', title: 'Sample quality audit',      desc: "We order blind samples and test against specification before introducing any factory to a client. Substandard factories don't make the cut." },
+            { n: '03', title: 'On-site assessment',        desc: 'For high-volume partnerships, we conduct or commission on-site factory audits covering production standards, labour practices, and export readiness.' },
+            { n: '04', title: 'Ongoing performance track', desc: 'Factories that deliver consistently earn more referrals. Those that don\'t are removed from the network. Quality standards stay high over time.' },
+          ].map((step, i) => (
+            <div class="ab-vet-step" data-reveal data-delay={String(i + 1)}>
+              <span class="ab-vet-num">{step.n}</span>
+              <div>
+                <h3 class="ab-vet-title">{step.title}</h3>
+                <p class="ab-vet-desc">{step.desc}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section style="padding:5rem 5%;background:#0a192f;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;pointer-events:none;">
-      <div style="position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,0.2) 0%,transparent 65%);border-radius:50%;"></div>
-    </div>
-    <div style="max-width:680px;margin:0 auto;position:relative;z-index:2;">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.18);border:1px solid rgba(37,99,235,0.38);color:#93c5fd;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
-        Work with us
-      </div>
-      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.02em;">Let's talk about your sourcing project</h2>
-      <p style="font-size:1.02rem;color:rgba(255,255,255,0.62);line-height:1.8;margin-bottom:2.5rem;">Book a 30-minute call with Divyanshu directly. No sales team, no back-and-forth over email to get started. Just a direct conversation about what you're trying to source and how we can help.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:1rem 2.2rem;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.4);">
-          Book a Free Call ↗
-        </a>
-        <a href={`mailto:${site.contactEmail}`} style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:1rem 1.8rem;border-radius:100px;font-weight:500;font-size:1rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
-          {site.contactEmail}
-        </a>
+  <!-- ══ CLOSING CTA ════════════════════════════════════════ -->
+  <section class="ab-cta ds-bg-dark">
+    <div class="ds-container">
+      <div class="ab-cta-inner">
+        <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Work with us</span>
+        <h2 class="ds-h2 ds-h2-light" data-reveal data-delay="1">
+          Let's talk about<br>your sourcing project.
+        </h2>
+        <p class="ds-body ds-body-light" data-reveal data-delay="2">
+          Book a 30-minute call with Divyanshu directly. No sales team,
+          no back-and-forth to get started. Just a direct conversation
+          about what you're trying to source and how we can help.
+        </p>
+        <div class="ab-cta-buttons" data-reveal data-delay="3">
+          <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Book a free call
+          </a>
+          <a href={`mailto:${site.contactEmail}`} class="btn btn-ghost-light">
+            {site.contactEmail}
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
 </Base>
+
+<style is:global>
+
+/* ══ About — ab- scoped ════════════════════════════════════ */
+
+.ab-hero {
+  position: relative; min-height: 80vh;
+  display: flex; align-items: center;
+  background: #141E16; overflow: hidden;
+}
+.ab-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+}
+.ab-hero-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    108deg,
+    rgba(20,30,22,0.94) 0%,
+    rgba(20,30,22,0.70) 50%,
+    rgba(20,30,22,0.30) 100%
+  );
+}
+.ab-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1180px; margin: 0 auto;
+  padding: 8rem 5% 6rem; width: 100%;
+}
+.ab-hero-eyebrow {
+  font-size: 0.67rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(250,248,244,0.38); margin: 0 0 1.8rem;
+}
+.ab-hero-h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-weight: 800; line-height: 1.04;
+  letter-spacing: -0.032em; color: #FAF8F4;
+  margin: 0 0 1.5rem; max-width: 680px;
+}
+.ab-hero-desc {
+  font-size: 1rem; line-height: 1.9;
+  color: rgba(250,248,244,0.55);
+  max-width: 460px; margin: 0 0 2.4rem;
+}
+.ab-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Statement */
+.ab-stmt {
+  padding: 8rem 5%;
+  border-bottom: 1px solid #DCD5C9;
+}
+.ab-stmt-inner {
+  max-width: 1180px; margin: 0 auto;
+}
+.ab-stmt-text {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 800; line-height: 1.07;
+  letter-spacing: -0.033em; color: #1C1814;
+  max-width: 720px; margin: 0 0 2rem;
+}
+.ab-stmt-sub {
+  font-size: 1.05rem; line-height: 1.85;
+  color: #6B6358; max-width: 520px;
+}
+
+/* Services */
+.ab-services-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.ab-services-left .ds-h2 { margin: 0 0 1.4rem; }
+.ab-services-right {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.ab-service-row {
+  display: grid; grid-template-columns: 2.6rem 1fr;
+  gap: 0.5rem; align-items: start;
+  border-top: 1px solid #DCD5C9; padding-top: 1.2rem;
+}
+.ab-service-num {
+  font-size: 0.67rem; font-weight: 700;
+  letter-spacing: 0.06em; color: #B8960C;
+  padding-top: 0.25rem;
+}
+.ab-service-title {
+  font-size: 0.95rem; font-weight: 700;
+  color: #1C1814; margin: 0 0 0.3rem;
+}
+.ab-service-desc {
+  font-size: 0.83rem; line-height: 1.8;
+  color: #6B6358; margin: 0;
+}
+
+/* Founder */
+.ab-founder-grid {
+  display: grid; grid-template-columns: 380px 1fr;
+  gap: 5rem; align-items: start;
+}
+.ab-founder-img-wrap {
+  border-radius: 10px; overflow: hidden;
+  aspect-ratio: 3/4; margin-bottom: 1.5rem;
+}
+.ab-founder-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.ab-founder-card { display: flex; flex-direction: column; gap: 0.4rem; }
+.ab-founder-name {
+  font-size: 1.1rem; font-weight: 800;
+  color: #1C1814; letter-spacing: -0.02em;
+}
+.ab-founder-role { font-size: 0.80rem; color: #6B6358; }
+.ab-founder-links {
+  display: flex; align-items: center; gap: 1.2rem;
+  flex-wrap: wrap; margin-top: 0.8rem;
+}
+.ab-founder-text .ds-h2 { margin: 0 0 1.6rem; }
+.ab-founder-story {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.ab-founder-story p {
+  font-size: 0.97rem; line-height: 1.9;
+  color: #6B6358; margin: 0;
+}
+.ab-founder-meta {
+  border-top: 1px solid #DCD5C9; padding-top: 1.6rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+.ab-meta-row {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem;
+  font-size: 0.84rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(220,213,201,0.50);
+}
+.ab-meta-label { color: #A0978A; }
+.ab-meta-value { color: #1C1814; font-weight: 500; text-decoration: none; }
+a.ab-meta-value:hover { color: #2D5A3D; }
+
+/* Team strip */
+.ab-strip {
+  height: 55vh; min-height: 300px; overflow: hidden;
+}
+.ab-strip-img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 35%; display: block;
+}
+
+/* Values */
+.ab-values-header { max-width: 560px; margin-bottom: 3.5rem; }
+.ab-values-header .ds-h2 { margin: 0 0 1rem; }
+.ab-values-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.ab-value-card {
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; padding: 1.8rem;
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.2s;
+}
+.ab-value-card:hover { border-color: rgba(45,90,61,0.5); }
+.ab-value-title {
+  font-size: 0.96rem; font-weight: 700;
+  color: #FAF8F4; margin: 0 0 0.7rem;
+  letter-spacing: -0.01em;
+}
+.ab-value-desc {
+  font-size: 0.83rem; line-height: 1.8;
+  color: rgba(250,248,244,0.45);
+}
+
+/* Vetting process */
+.ab-vet-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.ab-vet-text .ds-h2 { margin: 0 0 1.4rem; }
+.ab-vet-steps {
+  display: flex; flex-direction: column; gap: 0;
+}
+.ab-vet-step {
+  display: grid; grid-template-columns: 2.6rem 1fr;
+  gap: 0.5rem; align-items: start;
+  border-top: 1px solid #DCD5C9; padding: 1.4rem 0;
+}
+.ab-vet-num {
+  font-size: 0.67rem; font-weight: 700;
+  letter-spacing: 0.06em; color: #B8960C;
+  padding-top: 0.25rem;
+}
+.ab-vet-title {
+  font-size: 0.95rem; font-weight: 700;
+  color: #1C1814; margin: 0 0 0.3rem;
+}
+.ab-vet-desc {
+  font-size: 0.83rem; line-height: 1.8;
+  color: #6B6358; margin: 0;
+}
+
+/* CTA */
+.ab-cta { padding: 7rem 5%; }
+.ab-cta-inner { max-width: 600px; }
+.ab-cta-inner .ds-h2 { margin: 0 0 1.2rem; }
+.ab-cta-inner .ds-body { margin-bottom: 2.2rem; }
+.ab-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ab-services-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .ab-founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .ab-founder-img-wrap { aspect-ratio: 16/9; }
+  .ab-values-grid { grid-template-columns: repeat(2, 1fr); }
+  .ab-vet-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media (max-width: 560px) {
+  .ab-stmt { padding: 5rem 5%; }
+  .ab-stmt-text { font-size: clamp(2rem, 9vw, 3rem); }
+  .ab-values-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+
+<script>
+  const io = new IntersectionObserver(
+    (entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } }); },
+    { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+</script>

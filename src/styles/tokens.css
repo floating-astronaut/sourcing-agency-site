@@ -1,24 +1,25 @@
 /* Design tokens — IndoFolk Wellness
-   Premium B2B palette: deep navy + cobalt blue + amber accent.
+   Editorial B2B palette: forest green + warm amber + natural cream.
    RGB triplets so Tailwind can compose alpha via <alpha-value>. */
 
 :root {
   /* ---- Color (RGB channels) ---- */
-  --color-bg:         248 250 252;   /* #F8FAFC clean off-white */
+  --color-bg:         250 248 244;   /* #FAF8F4 warm natural cream */
   --color-surface:    255 255 255;   /* #FFFFFF card surface */
-  --color-surface-2:  241 245 249;   /* #F1F5F9 subtle alt section */
-  --color-border:     226 232 240;   /* #E2E8F0 cool gray border */
-  --color-fg:          10  25  47;   /* #0A192F deep navy text */
-  --color-muted:       71  85 105;   /* #475569 slate-600 */
-  --color-subtle:     148 163 184;   /* #94A3B8 slate-400 */
+  --color-surface-2:  245 242 237;   /* #F5F2ED warm subtle alt */
+  --color-border:     220 213 201;   /* #DCD5C9 warm natural border */
+  --color-fg:          28  24  20;   /* #1C1814 warm near-black */
+  --color-muted:      107  99  88;   /* warm mid-grey */
+  --color-subtle:     160 151 138;   /* warm light-grey */
 
-  --color-brand:       37  99 235;   /* #2563EB cobalt blue — CTAs */
+  --color-brand:       45  90  61;   /* #2D5A3D deep forest green */
   --color-brand-ink:  255 255 255;   /* white text on brand bg */
-  --color-copper:     245 158  11;   /* #F59E0B amber — accents & hover */
-  --color-copper-light: 251 191  36; /* #FBB724 lighter amber */
-  --color-danger:     220  38  38;
-  --color-warn:       245 158  11;
-  --color-ok:          16 185 129;
+  --color-copper:     184 150  12;   /* #B8960C warm amber gold */
+  --color-copper-light: 212 178  40; /* #D4B228 lighter amber */
+  --color-dark:        20  30  22;   /* #141E16 deep green-black (dark sections) */
+  --color-danger:     185  28  28;
+  --color-warn:       184 150  12;
+  --color-ok:          21 128  61;
 
   /* ---- Radii ---- */
   --radius-sm: 6px;

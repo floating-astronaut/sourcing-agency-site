@@ -7,364 +7,523 @@ const faqs = [
   { q: 'What are the minimum order quantities (MOQ)?', a: 'MOQs vary by product category: Himalayan Yak Chews start at 500 kg per SKU, soft chews from 1,000 units per formula, freeze-dried treats from 300 kg, and supplements from 2,000 units. For custom private label with new formulations, minimum trial runs start at 500–1,000 units. We can often negotiate lower MOQs for first sampling orders.' },
   { q: 'How long does a typical order take from enquiry to delivery?', a: 'Sampling takes 3–4 weeks. After sample approval, bulk production typically runs 6–10 weeks depending on category, followed by 3–5 weeks for ocean freight to US/UK/EU ports. Total lead time from first contact to delivery at your warehouse is typically 14–20 weeks for a first order, and 10–14 weeks for repeat orders.' },
   { q: 'How does the sample process work?', a: 'We coordinate sampling across our vetted manufacturer network — you receive multiple factory samples side by side. Our team handles sample sourcing, quality checks, and international courier delivery to your door. Sample costs are typically $150–400 per product category and are fully deductible from your first bulk order.' },
-  { q: 'What certifications can your manufacturers provide?', a: 'Our network holds GMP, FSSAI (India\'s FDA equivalent), HACCP, ISO 22000, and APEDA export certifications. For US market products, we source from facilities with USDA-audited processes. Organic-certified (India Organic / USDA Organic) sourcing is available for select ingredients. We can provide full documentation packages for customs and regulatory submissions.' },
+  { q: 'What certifications can your manufacturers provide?', a: "Our network holds GMP, FSSAI (India's FDA equivalent), HACCP, ISO 22000, and APEDA export certifications. For US market products, we source from facilities with USDA-audited processes. Organic-certified (India Organic / USDA Organic) sourcing is available for select ingredients. We can provide full documentation packages for customs and regulatory submissions." },
   { q: 'Can you handle custom formulations and private label packaging?', a: 'Yes — custom formulation (new recipes, ingredient swaps, functional additives) and full private label packaging design and production are core services. We work with your R&D team or can recommend formulation partners. Packaging options include stand-up pouches, kraft bags, jars, cans, and blister packs — all with your brand identity.' },
   { q: 'Which markets do you export to?', a: 'We primarily serve brands selling into the US, UK, EU, Canada, and Australia. Our team handles all export documentation (phytosanitary certificates, certificates of origin, lab test reports) required for customs clearance in each market.' },
   { q: 'Do you handle quality control and inspections?', a: 'Yes — every bulk order includes a pre-shipment quality inspection (AQL standard) conducted either by our team in India or a third-party inspection firm. Lab testing for contaminants, nutritional labelling compliance, and shelf-life validation are arranged on request.' },
 ] as const;
+
+const products = [
+  { img: 'product-yak-cheese.png',       name: 'Himalayan Yak Chews',    moq: '500 kg',    desc: 'Long-lasting hard chews sourced directly from Himalayan-region manufacturers. Small to XL sizes, smoked, plain, and flavored variants. Custom branded bags and boxes.' },
+  { img: 'product-meat-fish.png',         name: 'Dried Meat & Fish Treats', moq: 'Per PO',  desc: 'Chicken strips, fish skins, lamb jerky, and mixed protein pouches. Air-dried and dehydrated formats. Full private label design from dieline to delivery.' },
+  { img: 'product-supplements.png',       name: 'Pet Supplements',        moq: '2,000 units', desc: 'Hip & Joint, Omega-3, Probiotic, Multivitamin, and custom functional formulas for dogs and cats. Tablet, capsule, powder, and liquid formats.' },
+  { img: 'product-functional-treats.png', name: 'Functional Soft Chews',  moq: '1,000 units', desc: 'Custom-formulated soft chews for joint support, skin & coat, digestive health, calming, and immunity. Biscuit, jerky, and soft chew textures with your branding.' },
+  { img: 'product-freeze-dried.png',      name: 'Freeze-Dried Treats',    moq: '300 kg',    desc: 'Single-ingredient and blended freeze-dried formats: chicken, beef, fish, and mixed protein. Raw nutrition retained. Resealable pouches, tins, and bulk formats.' },
+  { img: 'product-private-label.png',     name: 'Custom Private Label',   moq: 'Flexible',  desc: 'Your brand on any product in our network. Full print management from dieline to delivery. Low minimum runs available for brand testing and market validation.' },
+] as const;
 ---
 
-<Base title="Pet Care Sourcing — IndoFolk Wellness" description="Source premium pet products from India — Himalayan Yak Chews, private label treats, functional supplements, and freeze-dried formats. GMP-certified manufacturers, full export documentation.">
+<Base
+  title="Pet Care Sourcing — IndoFolk Wellness"
+  description="Source premium pet products from India — Himalayan Yak Chews, private label treats, functional supplements, and freeze-dried formats. GMP-certified manufacturers, full export documentation."
+>
   <FAQSchema faqs={faqs} />
 
-  <!-- Hero -->
-  <section style="background:#0a192f; min-height:72vh; display:flex; align-items:center; position:relative; overflow:hidden; padding:5rem 5% 4rem;">
-    <div style="position:absolute;inset:0;pointer-events:none;">
-      <div style="position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.2) 0%,transparent 65%);border-radius:50%;"></div>
-      <div style="position:absolute;bottom:-15%;left:-8%;width:400px;height:400px;background:radial-gradient(circle,rgba(5,150,105,0.1) 0%,transparent 65%);border-radius:50%;"></div>
-    </div>
-    <div style="max-width:1180px;margin:0 auto;width:100%;position:relative;z-index:2;">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.18);border:1px solid rgba(37,99,235,0.38);color:#93c5fd;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
-        <span style="width:7px;height:7px;border-radius:50%;background:#2563eb;display:inline-block;"></span>
-        Pet Care Sourcing
-      </div>
-      <h1 style="font-size:clamp(2.6rem,5vw,4.5rem);font-weight:700;color:#fff;line-height:1.06;letter-spacing:-0.025em;margin-bottom:1.2rem;max-width:800px;">
-        Private label pet products<br/><em style="color:#f59e0b;font-style:normal;">from India's best factories</em>
-      </h1>
-      <p style="font-size:1.08rem;color:rgba(255,255,255,0.65);line-height:1.8;max-width:580px;margin-bottom:2.5rem;font-weight:400;">
-        IndoFolk Wellness connects pet brands in {site.markets.join(', ')} with GMP-certified Indian manufacturers — handling sampling, QC, labelling compliance, and export documentation end to end.
+  <!-- ══ HERO ═══════════════════════════════════════════════ -->
+  <section class="pc-hero">
+    <img
+      src="/images/ifw/hero-factory-wide.png"
+      alt="Wide view of a GMP-certified Indian factory manufacturing facility"
+      class="pc-hero-bg"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="pc-hero-grad" aria-hidden="true"></div>
+    <div class="pc-hero-inner">
+      <p class="pc-hero-eyebrow">Pet Care Sourcing &nbsp;·&nbsp; IndoFolk Wellness</p>
+      <h1 class="pc-hero-h1">Private label pet products<br>from India's best factories.</h1>
+      <p class="pc-hero-desc">
+        GMP-certified manufacturers. Personal quality inspection.
+        Full export documentation for the US, UK, and EU.
+        End to end — from first sample to your warehouse.
       </p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
-        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:100px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.35);">
-          Book a Free Consultation ↗
+      <div class="pc-hero-ctas">
+        <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Book a free consultation
         </a>
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:0.9rem 1.8rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
-          Request Samples
+        <a href="#contact" class="btn btn-ghost-light">
+          Request samples
         </a>
-      </div>
-      <!-- Stats strip -->
-      <div style="display:flex;gap:0;align-items:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;max-width:560px;flex-wrap:wrap;">
-        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
-          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">200+</strong>
-          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">Vetted factories</span>
-        </div>
-        <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
-        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
-          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">24 hr</strong>
-          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">First response</span>
-        </div>
-        <div style="width:1px;background:rgba(255,255,255,0.07);align-self:stretch;"></div>
-        <div style="flex:1;padding:1rem;text-align:center;min-width:120px;">
-          <strong style="display:block;font-size:1.7rem;font-weight:700;color:#f59e0b;line-height:1;">15+</strong>
-          <span style="font-size:0.65rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-top:3px;">Export markets</span>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Product showcase -->
-  <section style="padding:5rem 5%;background:#f8fafc;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
-        <span style="width:22px;height:2px;background:#2563eb;display:inline-block;flex-shrink:0;"></span>
-        Product Categories
+  <!-- ══ PRODUCT GRID ═══════════════════════════════════════ -->
+  <section class="ds-section ds-bg-white">
+    <div class="ds-container">
+      <div class="pc-grid-header">
+        <div>
+          <span class="ds-eyebrow" data-reveal>Product Categories</span>
+          <h2 class="ds-h2" data-reveal data-delay="1">
+            Everything your brand needs.<br>Private label ready.
+          </h2>
+        </div>
+        <p class="ds-body" data-reveal data-delay="2" style="max-width:420px">
+          Six product categories, hundreds of SKU options,
+          full custom formulation and packaging across each.
+        </p>
       </div>
-      <h2 style="font-size:clamp(2rem,3vw,2.8rem);font-weight:700;color:#0a192f;margin-bottom:0.6rem;letter-spacing:-0.02em;">Everything your brand needs — private label ready</h2>
-      <p style="font-size:1rem;color:#64748b;max-width:600px;margin-bottom:3rem;line-height:1.8;">Six product categories, hundreds of SKU options, full custom formulation and packaging across each.</p>
 
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.5rem;">
-
-        <!-- Yak Chews -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;transition:all 0.35s;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/yak-cheese-branded.jpg" alt="Himalayan Yak Cheese branded packaging" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(220,50,20,0.88);color:#fff;">Best Seller</div>
-            <div style="position:absolute;bottom:10px;right:10px;font-size:0.61rem;font-weight:600;background:rgba(255,255,255,0.93);color:#2563eb;padding:0.2rem 0.6rem;border-radius:100px;">Private Label Ready</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Himalayan Yak Chews</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Long-lasting hard chews sourced directly from Himalayan-region manufacturers. Small, medium, large, and XL sizes. Smoked, plain, and flavored variants. Custom branded bags and boxes.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">MOQ: 500 kg</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">GMP Certified</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">US/EU Export</span>
+      <div class="pc-product-grid">
+        {products.map((p, i) => (
+          <div class="pc-product-card" data-reveal data-delay={String((i % 3) + 1)}>
+            <div class="pc-product-img-wrap">
+              <img src={`/images/ifw/${p.img}`} alt={p.name} class="pc-product-img" loading="lazy" />
             </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-        <!-- Functional Soft Chews -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/functional-treats.jpg" alt="Functional dog treats and packaging" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(37,99,235,0.9);color:#fff;">High Demand</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Functional Soft Chews</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Custom-formulated soft chews for joint support, skin & coat, digestive health, calming, and immunity. Available as biscuit, jerky, and soft chew textures with your branding.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">MOQ: 1,000 units</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">Custom Formula</span>
-            </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-        <!-- Freeze-Dried Treats -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/freeze-dried.jpg" alt="Freeze-dried treat varieties" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(5,150,105,0.88);color:#fff;">Growing</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Freeze-Dried Treats</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Single-ingredient and blended freeze-dried formats: chicken, beef, fish, and mixed protein. Raw nutrition retained. Available in resealable pouches, tins, and bulk formats.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">MOQ: 300 kg</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">HACCP</span>
-            </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-        <!-- Private Label Pouches -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/treats-pouches.jpg" alt="Chicken and fish treats in private label pouches" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(10,25,47,0.85);color:#fff;">Private Label</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Dried Meat Treats & Jerky</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Chicken strips, fish skins, lamb jerky, and mixed protein treat pouches with full private label packaging. Air-dried and dehydrated formats available with your brand's artwork.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">APEDA Certified</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">Full PL Design</span>
-            </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-        <!-- Pet Supplements -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/pet-supplements.jpg" alt="Pet supplement lineup" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(37,99,235,0.9);color:#fff;">High Margin</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Pet Supplements</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Hip & Joint, Omega-3, Probiotic, Multivitamin, and custom functional supplement formulas for dogs and cats. Tablet, capsule, powder, and liquid formats — white label or full custom.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">GMP Certified</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">MOQ: 2,000 units</span>
-            </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-        <!-- Private Label Packaging -->
-        <div style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e2e8f0;display:flex;flex-direction:column;">
-          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;flex-shrink:0;">
-            <img src="/images/products/private-label.jpg" alt="Private label packaging variety" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
-            <div style="position:absolute;top:12px;left:12px;font-size:0.63rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.22rem 0.65rem;border-radius:100px;background:rgba(10,25,47,0.85);color:#fff;">Full Service</div>
-          </div>
-          <div style="padding:1.2rem;display:flex;flex-direction:column;flex:1;">
-            <h3 style="font-size:1rem;font-weight:700;color:#0a192f;margin-bottom:0.4rem;">Custom Private Label</h3>
-            <p style="font-size:0.82rem;color:#64748b;line-height:1.65;margin-bottom:0.8rem;flex:1;">Your brand on any product in our network. Pouches, kraft bags, jars, cans, boxes — full print management from dieline to delivery. Low minimum runs available for brand testing.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">Design Included</span>
-              <span style="font-size:0.62rem;background:#f1f5f9;color:#64748b;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500;">Low MOQ</span>
-            </div>
-            <a href="/contact" style="display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:#2563eb;font-weight:600;text-decoration:none;padding-top:0.65rem;border-top:1px solid #e2e8f0;margin-top:auto;">Request samples →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Why India for pet products -->
-  <section style="padding:5rem 5%;background:#0a192f;">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
-      <div>
-        <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.8rem;">
-          <span style="width:22px;height:2px;background:rgba(255,255,255,0.3);display:inline-block;"></span>
-          Why India
-        </div>
-        <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#fff;margin-bottom:0.8rem;letter-spacing:-0.015em;">India is the world's largest pet product sourcing hub</h2>
-        <p style="font-size:0.95rem;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:2rem;">India exports over $800M in pet products annually — combining traditional knowledge (like Himalayan yak chews) with modern GMP manufacturing at 30–50% lower cost than US or European alternatives.</p>
-        <div style="display:flex;flex-direction:column;gap:1rem;">
-          {[
-            { icon: '🏔️', title: 'Authentic Himalayan sourcing', desc: 'Yak cheese and Himalayan ingredients sourced from heritage supply chains — the real thing, not substitutes.' },
-            { icon: '🏭', title: '200+ GMP-certified factories', desc: 'Our vetted network covers every pet product category with verifiable certifications for your target market.' },
-            { icon: '📉', title: '30–50% cost advantage', desc: 'Comparable quality to US and EU manufacturing at a fraction of the cost — without compromising on compliance.' },
-            { icon: '🚢', title: 'End-to-end export support', desc: 'Phytosanitary certificates, COO, FDA Prior Notice, and full customs documentation handled for every shipment.' },
-          ].map(pt => (
-            <div style="display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.2rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
-              <span style="font-size:1.3rem;width:36px;text-align:center;flex-shrink:0;">{pt.icon}</span>
-              <div>
-                <h5 style="font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:0.25rem;">{pt.title}</h5>
-                <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.65;">{pt.desc}</p>
+            <div class="pc-product-body">
+              <h3 class="pc-product-name">{p.name}</h3>
+              <p class="pc-product-desc">{p.desc}</p>
+              <div class="pc-product-meta">
+                <span class="pc-product-moq">MOQ: {p.moq}</span>
+                <a href="#contact" class="ds-text-cta">
+                  Request samples
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-      <div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
-          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#2563eb;">
-            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">$800M+</strong>
-            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">India pet product exports annually</span>
-          </div>
-          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:#059669;">
-            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">200+</strong>
-            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.65);">GMP-certified factories in our network</span>
-          </div>
-          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);">
-            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#f59e0b;">50%</strong>
-            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.55);">Lower COGS vs US/EU manufacturing</span>
-          </div>
-          <div style="border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-            <strong style="display:block;font-size:2.4rem;font-weight:700;line-height:1;margin-bottom:0.4rem;color:#fff;">15+</strong>
-            <span style="font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.55);">Export markets served</span>
-          </div>
-        </div>
-        <!-- Certifications -->
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.5rem;">
-          <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Factory certifications available</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;">
-            {['GMP (Good Manufacturing Practice)', 'FSSAI (India Food Safety)', 'HACCP & ISO 22000', 'APEDA Export Certified', 'USDA Organic (select factories)', 'Startup India Certified'].map(cert => (
-              <div style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.7);">
-                <span style="color:#34d399;font-weight:700;flex-shrink:0;">✓</span> {cert}
+    </div>
+  </section>
+
+  <!-- ══ WHY INDIA (DARK) ══════════════════════════════════ -->
+  <section class="ds-section-lg ds-bg-dark">
+    <div class="ds-container">
+      <div class="pc-why-grid">
+        <div class="pc-why-text">
+          <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Why India</span>
+          <h2 class="ds-h2 ds-h2-light" data-reveal data-delay="1">India is the world's<br>leading pet product<br>sourcing hub.</h2>
+          <p class="ds-body ds-body-light" data-reveal data-delay="2">
+            India exports over $800M in pet products annually — combining
+            traditional knowledge (like Himalayan yak chews) with modern
+            GMP manufacturing at 30–50% lower cost than US or European
+            alternatives.
+          </p>
+          <div class="pc-why-points" data-reveal data-delay="3">
+            {[
+              { title: 'Authentic Himalayan sourcing', desc: 'Yak cheese and Himalayan ingredients sourced from heritage supply chains — the real thing, not substitutes.' },
+              { title: '200+ GMP-certified factories', desc: 'Our vetted network covers every pet product category with verifiable certifications for your target market.' },
+              { title: '30–50% cost advantage', desc: 'Comparable quality to US and EU manufacturing at a fraction of the cost — without compromising on compliance.' },
+              { title: 'End-to-end export support', desc: 'Phytosanitary certificates, COO, FDA Prior Notice, and full customs documentation handled for every shipment.' },
+            ].map((pt) => (
+              <div class="pc-why-point">
+                <h4 class="pc-why-point-title">{pt.title}</h4>
+                <p class="pc-why-point-desc">{pt.desc}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Factory strip -->
-  <section style="position:relative;overflow:hidden;">
-    <img src="/images/products/factory.jpg" alt="GMP certified manufacturing facility" loading="lazy" style="width:100%;height:440px;object-fit:cover;object-position:center 40%;display:block;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,25,47,0.92) 0%,rgba(10,25,47,0.55) 100%);display:flex;align-items:center;gap:4rem;padding:0 8%;flex-wrap:wrap;">
-      <div style="flex:1;min-width:280px;">
-        <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.6rem;">GMP Certified Manufacturing</p>
-        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:#fff;line-height:1.22;margin:0 0 1rem;">Factory-grade quality. Compliant for every market.</h2>
-        <p style="font-size:0.92rem;color:rgba(255,255,255,0.62);line-height:1.8;max-width:480px;margin-bottom:1.5rem;">Every factory in our network is pre-audited against GMP, HACCP, and export standards before we introduce them to clients. You get documented quality — not promises.</p>
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.85rem 1.8rem;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;">Request a factory audit report →</a>
-      </div>
-      <div style="display:flex;gap:0.8rem;flex-wrap:wrap;align-self:center;">
-        {['GMP Certified', 'HACCP', 'FSSAI', 'APEDA', 'ISO 22000'].map(b => (
-          <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);padding:0.6rem 1.1rem;border-radius:10px;font-size:0.82rem;font-weight:600;">{b}</span>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section style="padding:5rem 5%;background:#ffffff;">
-    <div style="max-width:1180px;margin:0 auto;">
-      <div style="text-align:center;margin-bottom:3rem;">
-        <div style="display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
-          <span style="width:22px;height:2px;background:#2563eb;display:inline-block;"></span>
-          How It Works
-          <span style="width:22px;height:2px;background:#2563eb;display:inline-block;"></span>
+        <div class="pc-why-certs" data-reveal data-delay="2">
+          <p class="pc-certs-label">Factory certifications available</p>
+          <div class="pc-certs-grid">
+            {['GMP (Good Manufacturing Practice)', 'FSSAI (India Food Safety)', 'HACCP & ISO 22000', 'APEDA Export Certified', 'USDA Organic (select factories)', 'Startup India Certified'].map(cert => (
+              <div class="pc-cert-item">
+                <span class="pc-cert-check">✓</span>
+                <span>{cert}</span>
+              </div>
+            ))}
+          </div>
+          <div class="pc-stat-strip">
+            <div class="pc-stat">
+              <span class="pc-stat-num">$800M+</span>
+              <span class="pc-stat-label">India pet exports annually</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num">200+</span>
+              <span class="pc-stat-label">Vetted factories</span>
+            </div>
+            <div class="pc-stat">
+              <span class="pc-stat-num">50%</span>
+              <span class="pc-stat-label">Lower COGS vs. US/EU</span>
+            </div>
+          </div>
         </div>
-        <h2 style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:#0a192f;margin-bottom:0.6rem;letter-spacing:-0.015em;">From enquiry to your warehouse in 4 steps</h2>
-        <p style="font-size:0.95rem;color:#64748b;max-width:520px;margin:0 auto;">A clear process — no hidden steps, no surprises. You know exactly where your order is at every stage.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;">
+    </div>
+  </section>
+
+  <!-- ══ FACTORY VERIFICATION STRIP ═══════════════════════ -->
+  <div class="pc-strip">
+    <img
+      src="/images/ifw/team-factory-floor.png"
+      alt="IndoFolk Wellness team on the factory floor conducting quality verification"
+      class="pc-strip-img"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ══ PROCESS ════════════════════════════════════════════ -->
+  <section class="ds-section ds-bg-cream">
+    <div class="ds-container">
+      <div class="pc-process-header">
+        <span class="ds-eyebrow" data-reveal>How It Works</span>
+        <h2 class="ds-h2" data-reveal data-delay="1">From enquiry to your<br>warehouse in 4 steps.</h2>
+        <p class="ds-body" data-reveal data-delay="2">
+          A clear process — no hidden steps, no surprises.
+          You know exactly where your order is at every stage.
+        </p>
+      </div>
+      <div class="pc-process-grid">
         {[
-          { num: '01', icon: '🤝', title: 'Discovery Call', time: 'Day 1–2', desc: 'We learn your product requirements, target market, price points, and volume expectations. Then we shortlist the best-fit factories from our vetted network.' },
-          { num: '02', icon: '🔬', title: 'Sampling Round', time: 'Week 2–4', desc: 'We coordinate samples from 2–4 factories so you can compare quality side by side. Our team pre-screens every sample before it ships to you.' },
-          { num: '03', icon: '✅', title: 'Factory Approval & PO', time: 'Week 5–6', desc: 'You approve your preferred factory and formulation. We handle supply agreements, payment terms, and compliance documentation for your market.' },
-          { num: '04', icon: '🚢', title: 'Production & Delivery', time: 'Week 7–20', desc: 'We manage production timelines, conduct pre-shipment QC inspection, arrange export documentation, and track delivery to your warehouse.' },
-        ].map(step => (
-          <div style="background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:1.8rem;position:relative;overflow:hidden;">
-            <div style="font-size:3.5rem;font-weight:700;color:rgba(37,99,235,0.08);line-height:1;margin-bottom:0.4rem;">{step.num}</div>
-            <div style="font-size:1.5rem;margin-bottom:0.8rem;">{step.icon}</div>
-            <h3 style="font-size:0.96rem;font-weight:700;color:#0a192f;margin-bottom:0.5rem;">{step.title}</h3>
-            <p style="font-size:0.84rem;color:#64748b;line-height:1.7;">{step.desc}</p>
-            <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid #e2e8f0;font-size:0.75rem;color:#2563eb;font-weight:600;">⏱ {step.time}</div>
+          { n: '01', title: 'Discovery Call',        time: 'Day 1–2',     desc: 'We learn your product requirements, target market, price points, and volume expectations. Then we shortlist the best-fit factories from our vetted network.' },
+          { n: '02', title: 'Sampling Round',        time: 'Week 2–4',    desc: 'We coordinate samples from 2–4 factories so you can compare quality side by side. Our team pre-screens every sample before it ships to you.' },
+          { n: '03', title: 'Factory Approval & PO', time: 'Week 5–6',    desc: 'You approve your preferred factory and formulation. We handle supply agreements, payment terms, and compliance documentation for your market.' },
+          { n: '04', title: 'Production & Delivery', time: 'Week 7–20',   desc: 'We manage production timelines, conduct pre-shipment QC inspection, arrange export documentation, and track delivery to your warehouse.' },
+        ].map((step, i) => (
+          <div class="pc-process-step" data-reveal data-delay={String(i + 1)}>
+            <span class="pc-process-num">{step.n}</span>
+            <h3 class="pc-process-title">{step.title}</h3>
+            <p class="pc-process-body">{step.body || step.desc}</p>
+            <span class="pc-process-note">{step.time}</span>
           </div>
         ))}
       </div>
-      <div style="text-align:center;margin-top:2.5rem;">
-        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:100px;font-weight:700;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.3);">
-          Start with a free discovery call ↗
+      <div class="pc-process-cta" data-reveal>
+        <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Start with a free discovery call
         </a>
-        <p style="font-size:0.84rem;color:#64748b;margin-top:0.8rem;">No commitment required. 30-minute call. Same-day follow-up.</p>
+        <p class="pc-process-sub">No commitment required. 30 minutes. Same-day follow-up.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" style="padding:5rem 5%;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:5rem;">
-      <div>
-        <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#2563eb;margin-bottom:0.8rem;">
-          <span style="width:22px;height:2px;background:#2563eb;display:inline-block;"></span>
-          FAQ
+  <!-- ══ FAQ ════════════════════════════════════════════════ -->
+  <section id="faq" class="ds-section ds-bg-white">
+    <div class="ds-container">
+      <div class="pc-faq-grid">
+        <div class="pc-faq-sidebar">
+          <span class="ds-eyebrow" data-reveal>FAQ</span>
+          <h2 class="ds-h3" data-reveal data-delay="1">Common questions<br>from buyers.</h2>
+          <p class="ds-body" data-reveal data-delay="2">
+            Still have questions? We respond to all enquiries within 24 hours.
+          </p>
+          <a href="#contact" class="ds-text-cta" data-reveal data-delay="3">
+            Ask us directly
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
-        <h2 style="font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:700;color:#0a192f;margin-bottom:1rem;letter-spacing:-0.015em;">Common questions from buyers</h2>
-        <p style="font-size:0.95rem;color:#64748b;line-height:1.8;margin-bottom:1.5rem;">Still have questions? We respond to all enquiries within 24 hours.</p>
-        <a href="/contact" style="display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;color:#2563eb;font-weight:600;text-decoration:none;">Ask us directly →</a>
-      </div>
-      <div>
-        {faqs.map((f, i) => (
-          <div style="border-bottom:1px solid #e2e8f0;">
-            <button class="pc-faq-q" aria-expanded="false" data-idx={i} style="width:100%;padding:1.3rem 0;background:none;border:none;font-size:0.94rem;font-weight:600;color:#0a192f;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1rem;text-align:left;">
-              {f.q}
-              <span style="color:#2563eb;font-size:1.2rem;flex-shrink:0;transition:transform 0.25s;" class="pc-faq-icon">+</span>
-            </button>
-            <div class="pc-faq-a" style="font-size:0.88rem;color:#64748b;line-height:1.8;padding-bottom:1.2rem;display:none;">{f.a}</div>
-          </div>
-        ))}
+        <div class="pc-faq-list">
+          {faqs.map((f, i) => (
+            <div class="pc-faq-item">
+              <button class="pc-faq-q" aria-expanded="false" data-idx={i}>
+                <span>{f.q}</span>
+                <span class="pc-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="pc-faq-a">{f.a}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section style="padding:5rem 5%;background:#0a192f;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;pointer-events:none;">
-      <div style="position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,0.2) 0%,transparent 65%);border-radius:50%;"></div>
-    </div>
-    <div style="max-width:680px;margin:0 auto;position:relative;z-index:2;">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.18);border:1px solid rgba(37,99,235,0.38);color:#93c5fd;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.38rem 1rem;border-radius:100px;margin-bottom:1.5rem;">
-        Ready to source?
-      </div>
-      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.02em;">Get your first sample kit within 4 weeks</h2>
-      <p style="font-size:1.02rem;color:rgba(255,255,255,0.62);line-height:1.8;margin-bottom:2.5rem;">Book a 30-minute discovery call. We'll match you with the right factories and coordinate your first sampling round — at no upfront cost.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-        <a href={site.calendlyUrl} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:#fff;padding:1rem 2.2rem;border-radius:100px;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,99,235,0.4);">
-          Book Free Consultation ↗
-        </a>
-        <a href={`mailto:${site.contactEmail}`} style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);padding:1rem 1.8rem;border-radius:100px;font-weight:500;font-size:1rem;text-decoration:none;border:1.5px solid rgba(255,255,255,0.22);">
-          Email us directly
-        </a>
+  <!-- ══ CONTACT CTA ════════════════════════════════════════ -->
+  <section id="contact" class="pc-cta-section ds-bg-dark">
+    <div class="ds-container">
+      <div class="pc-cta-inner">
+        <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Ready to source?</span>
+        <h2 class="ds-h2 ds-h2-light" data-reveal data-delay="1">
+          Get your first sample kit<br>within 4 weeks.
+        </h2>
+        <p class="ds-body ds-body-light" data-reveal data-delay="2">
+          Book a 30-minute discovery call. We'll match you with the right
+          factories and coordinate your first sampling round.
+        </p>
+        <div class="pc-cta-buttons" data-reveal data-delay="3">
+          <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Book free consultation
+          </a>
+          <a href={`mailto:${site.contactEmail}`} class="btn btn-ghost-light">
+            {site.contactEmail}
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
 </Base>
 
+<style is:global>
+
+/* ══ Pet Care Sourcing — pc- scoped ════════════════════════ */
+
+/* Hero */
+.pc-hero {
+  position: relative; min-height: 80vh;
+  display: flex; align-items: center;
+  background: #141E16; overflow: hidden;
+}
+.pc-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 35%;
+}
+.pc-hero-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    108deg,
+    rgba(20,30,22,0.94) 0%,
+    rgba(20,30,22,0.70) 50%,
+    rgba(20,30,22,0.30) 100%
+  );
+}
+.pc-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1180px; margin: 0 auto;
+  padding: 8rem 5% 6rem; width: 100%;
+}
+.pc-hero-eyebrow {
+  font-size: 0.67rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(250,248,244,0.38);
+  margin: 0 0 1.8rem;
+}
+.pc-hero-h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-weight: 800; line-height: 1.04;
+  letter-spacing: -0.032em;
+  color: #FAF8F4; margin: 0 0 1.5rem;
+  max-width: 700px;
+}
+.pc-hero-desc {
+  font-size: 1rem; line-height: 1.9;
+  color: rgba(250,248,244,0.55);
+  max-width: 480px; margin: 0 0 2.4rem;
+}
+.pc-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Product grid */
+.pc-grid-header {
+  display: flex; gap: 3rem; align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.pc-grid-header .ds-h2 { margin: 0; }
+.pc-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.pc-product-card {
+  background: #fff; border: 1px solid #DCD5C9;
+  border-radius: 10px; overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.pc-product-card:hover {
+  box-shadow: 0 8px 28px rgba(20,30,22,0.09);
+  transform: translateY(-3px);
+}
+.pc-product-img-wrap {
+  overflow: hidden; aspect-ratio: 4/3; flex-shrink: 0;
+}
+.pc-product-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
+}
+.pc-product-card:hover .pc-product-img { transform: scale(1.04); }
+.pc-product-body {
+  padding: 1.4rem; flex: 1;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.pc-product-name {
+  font-size: 0.96rem; font-weight: 700;
+  color: #1C1814; margin: 0; letter-spacing: -0.01em;
+}
+.pc-product-desc {
+  font-size: 0.82rem; line-height: 1.8;
+  color: #6B6358; flex: 1;
+}
+.pc-product-meta {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem;
+  border-top: 1px solid #DCD5C9;
+  padding-top: 0.85rem; margin-top: 0.4rem;
+}
+.pc-product-moq {
+  font-size: 0.70rem; font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #A0978A;
+}
+
+/* Why India */
+.pc-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.pc-why-text .ds-h2 { margin: 0 0 1.4rem; }
+.pc-why-points {
+  display: flex; flex-direction: column; gap: 1.4rem;
+  margin-top: 2rem;
+}
+.pc-why-point {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1.2rem;
+}
+.pc-why-point-title {
+  font-size: 0.9rem; font-weight: 700;
+  color: #FAF8F4; margin: 0 0 0.3rem;
+}
+.pc-why-point-desc {
+  font-size: 0.82rem; line-height: 1.75;
+  color: rgba(250,248,244,0.45);
+}
+.pc-why-certs {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 2rem;
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.pc-certs-label {
+  font-size: 0.67rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(250,248,244,0.28);
+}
+.pc-certs-grid {
+  display: flex; flex-direction: column; gap: 0.65rem;
+}
+.pc-cert-item {
+  display: flex; align-items: center; gap: 0.65rem;
+  font-size: 0.84rem; color: rgba(250,248,244,0.65);
+}
+.pc-cert-check {
+  color: #2D5A3D; font-weight: 700; flex-shrink: 0;
+}
+.pc-stat-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1.5rem;
+}
+.pc-stat { display: flex; flex-direction: column; gap: 0.3rem; }
+.pc-stat-num {
+  font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+  letter-spacing: -0.03em; color: #FAF8F4;
+}
+.pc-stat-label {
+  font-size: 0.70rem; color: rgba(250,248,244,0.35);
+  line-height: 1.4;
+}
+
+/* Factory strip */
+.pc-strip {
+  height: 50vh; min-height: 300px; overflow: hidden;
+}
+.pc-strip-img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 30%; display: block;
+}
+
+/* Process */
+.pc-process-header { max-width: 580px; margin-bottom: 3rem; }
+.pc-process-header .ds-h2 { margin: 0 0 1rem; }
+.pc-process-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; margin-bottom: 3rem;
+}
+.pc-process-step { border-top: 1.5px solid #DCD5C9; padding-top: 1.5rem; }
+.pc-process-num {
+  display: block; font-size: 2.2rem; font-weight: 800;
+  letter-spacing: -0.04em; color: #B8960C; margin-bottom: 0.7rem;
+}
+.pc-process-title {
+  font-size: 0.96rem; font-weight: 700;
+  color: #1C1814; margin: 0 0 0.5rem;
+}
+.pc-process-body {
+  font-size: 0.83rem; line-height: 1.85; color: #6B6358; margin: 0 0 0.7rem;
+}
+.pc-process-note {
+  display: inline-block; font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: #B8960C;
+}
+.pc-process-cta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.pc-process-sub { font-size: 0.82rem; color: #6B6358; }
+
+/* FAQ */
+.pc-faq-grid {
+  display: grid; grid-template-columns: 280px 1fr;
+  gap: 5rem; align-items: start;
+}
+.pc-faq-sidebar .ds-h3 { margin: 0 0 1rem; }
+.pc-faq-sidebar .ds-body { margin-bottom: 1.5rem; }
+.pc-faq-list { display: flex; flex-direction: column; }
+.pc-faq-item { border-bottom: 1px solid #DCD5C9; }
+.pc-faq-q {
+  width: 100%; padding: 1.3rem 0; background: none; border: none;
+  font-family: inherit; font-size: 0.92rem; font-weight: 600;
+  color: #1C1814; display: flex; justify-content: space-between;
+  align-items: center; gap: 1rem; text-align: left; cursor: pointer;
+  transition: color 0.2s;
+}
+.pc-faq-q:hover { color: #2D5A3D; }
+.pc-faq-icon {
+  font-size: 1.1rem; color: #2D5A3D;
+  flex-shrink: 0; transition: transform 0.25s;
+}
+.pc-faq-q[aria-expanded="true"] .pc-faq-icon { transform: rotate(45deg); }
+.pc-faq-a {
+  display: none; font-size: 0.88rem; line-height: 1.85;
+  color: #6B6358; padding-bottom: 1.2rem;
+}
+
+/* Closing CTA */
+.pc-cta-section { padding: 7rem 5%; }
+.pc-cta-inner { max-width: 640px; }
+.pc-cta-inner .ds-h2 { margin: 0 0 1.2rem; }
+.pc-cta-inner .ds-body { margin-bottom: 2.2rem; }
+.pc-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pc-grid-header { flex-direction: column; gap: 1.5rem; }
+  .pc-product-grid { grid-template-columns: repeat(2, 1fr); }
+  .pc-why-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .pc-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .pc-faq-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 580px) {
+  .pc-product-grid { grid-template-columns: 1fr; }
+  .pc-process-grid { grid-template-columns: 1fr; }
+  .pc-stat-strip { grid-template-columns: 1fr; }
+}
+
+</style>
+
 <script>
+  // FAQ accordion
   document.querySelectorAll<HTMLButtonElement>('.pc-faq-q').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      const open = btn.getAttribute('aria-expanded') === 'true';
       document.querySelectorAll<HTMLButtonElement>('.pc-faq-q').forEach((b) => {
         b.setAttribute('aria-expanded', 'false');
-        const icon = b.querySelector('.pc-faq-icon') as HTMLElement | null;
-        if (icon) icon.style.transform = 'rotate(0deg)';
         const a = b.nextElementSibling as HTMLElement | null;
         if (a) a.style.display = 'none';
       });
-      if (!isOpen) {
+      if (!open) {
         btn.setAttribute('aria-expanded', 'true');
-        const icon = btn.querySelector('.pc-faq-icon') as HTMLElement | null;
-        if (icon) icon.style.transform = 'rotate(45deg)';
         const a = btn.nextElementSibling as HTMLElement | null;
         if (a) a.style.display = 'block';
       }
     });
   });
+
+  // Scroll reveal
+  const io = new IntersectionObserver(
+    (entries) => { entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } }); },
+    { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
 </script>
