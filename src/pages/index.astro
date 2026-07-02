@@ -522,7 +522,7 @@ import { site } from '~/lib/site';
 
 /* ── §2 Statement ────────────────────────────────────────── */
 .ifw-stmt {
-  padding: 8rem 5%;
+  padding: 11rem 5%;
   border-bottom: 1px solid #DCD5C9;
 }
 .ifw-stmt-inner {
@@ -533,15 +533,17 @@ import { site } from '~/lib/site';
   font-weight: 800; line-height: 1.07;
   letter-spacing: -0.033em;
   color: #1C1814;
-  max-width: 720px; margin: 0 0 2rem;
+  max-width: 720px; margin: 0 0 3.5rem;
 }
 .ifw-stmt-sub {
   font-size: 1.05rem; line-height: 1.85;
-  color: #6B6358; max-width: 520px;
+  color: #6B6358; max-width: 500px;
+  margin-left: auto;
 }
 @media (max-width: 640px) {
-  .ifw-stmt { padding: 5rem 5%; }
+  .ifw-stmt { padding: 6rem 5%; }
   .ifw-stmt-text { font-size: clamp(2rem, 9vw, 3rem); }
+  .ifw-stmt-sub { margin-left: 0; }
 }
 
 /* ── §3 Services ─────────────────────────────────────────── */
@@ -581,7 +583,7 @@ import { site } from '~/lib/site';
 }
 .ifw-services-img { position: sticky; top: 5rem; }
 .ifw-services-photo {
-  width: 100%; border-radius: 10px;
+  width: 100%; border-radius: 4px;
   object-fit: cover;
   object-position: center center;
   aspect-ratio: 4/5;
@@ -610,10 +612,23 @@ import { site } from '~/lib/site';
 .ifw-pet-card {
   text-decoration: none; color: inherit;
   display: flex; flex-direction: column;
-  border-radius: 10px; overflow: hidden;
+  border-radius: 4px; overflow: hidden;
   border: 1px solid #DCD5C9;
   transition: box-shadow 0.25s, transform 0.25s;
   background: #fff;
+}
+/* Featured first card — breaks the uniform 3×2 grid */
+.ifw-pet-card:first-child {
+  grid-column: 1 / 3;
+}
+.ifw-pet-card:first-child .ifw-pet-card-img-wrap {
+  aspect-ratio: 16/7;
+}
+.ifw-pet-card:first-child .ifw-pet-card-name {
+  font-size: 1.05rem;
+}
+.ifw-pet-card:first-child .ifw-pet-card-body {
+  padding: 1.6rem 1.8rem 1.8rem;
 }
 .ifw-pet-card:hover {
   box-shadow: 0 8px 28px rgba(20,30,22,0.10);
@@ -646,20 +661,24 @@ import { site } from '~/lib/site';
 @media (max-width: 860px) {
   .ifw-pet-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .ifw-pet-grid { grid-template-columns: repeat(2, 1fr); }
+  .ifw-pet-card:first-child { grid-column: 1 / -1; }
+  .ifw-pet-card:first-child .ifw-pet-card-img-wrap { aspect-ratio: 16/9; }
 }
 @media (max-width: 520px) {
   .ifw-pet-grid { grid-template-columns: 1fr; }
+  .ifw-pet-card:first-child { grid-column: 1; }
+  .ifw-pet-card:first-child .ifw-pet-card-img-wrap { aspect-ratio: 4/3; }
 }
 
 /* ── §5 Ayurveda ─────────────────────────────────────────── */
 .ifw-ayur-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem; align-items: center;
+  grid-template-columns: 46% 54%;
+  gap: 6rem; align-items: center;
 }
 .ifw-ayur-img-wrap {
-  border-radius: 10px; overflow: hidden;
-  aspect-ratio: 3/4;
+  border-radius: 4px; overflow: hidden;
+  aspect-ratio: 4/5;
 }
 .ifw-ayur-img {
   width: 100%; height: 100%;
@@ -697,7 +716,7 @@ import { site } from '~/lib/site';
 }
 .ifw-india-header .ds-h2 { margin: 0 0 1.4rem; }
 .ifw-india-map {
-  border-radius: 12px; overflow: hidden;
+  border-radius: 4px; overflow: hidden;
   margin-bottom: 3.5rem;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
@@ -717,13 +736,14 @@ import { site } from '~/lib/site';
   display: flex; flex-direction: column; gap: 0.4rem;
 }
 .ifw-india-stat-num {
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  font-weight: 800; letter-spacing: -0.03em;
-  color: #FAF8F4;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 800; letter-spacing: -0.04em;
+  color: #FAF8F4; line-height: 1;
 }
 .ifw-india-stat-label {
   font-size: 0.78rem; line-height: 1.5;
   color: rgba(250,248,244,0.38);
+  margin-top: 0.5rem;
 }
 @media (max-width: 640px) {
   .ifw-india-stats { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -731,7 +751,7 @@ import { site } from '~/lib/site';
 
 /* ── §7 Factory Strip ────────────────────────────────────── */
 .ifw-strip {
-  height: 55vh; min-height: 340px;
+  height: 62vh; min-height: 380px;
   overflow: hidden; position: relative;
 }
 .ifw-strip-img {
@@ -758,10 +778,11 @@ import { site } from '~/lib/site';
 }
 .ifw-process-num {
   display: block;
-  font-size: 2.4rem; font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #B8960C;
-  margin-bottom: 0.75rem;
+  font-size: clamp(3.8rem, 8vw, 6rem); font-weight: 800;
+  letter-spacing: -0.05em;
+  color: rgba(184,150,12,0.55);
+  margin-bottom: 0.25rem;
+  line-height: 0.9;
 }
 .ifw-process-title {
   font-size: 1rem; font-weight: 700;
@@ -845,7 +866,7 @@ import { site } from '~/lib/site';
   gap: 5rem; align-items: start;
 }
 .ifw-founder-img-wrap {
-  border-radius: 10px; overflow: hidden;
+  border-radius: 4px; overflow: hidden;
   aspect-ratio: 3/4; margin-bottom: 1.8rem;
 }
 .ifw-founder-img {
@@ -881,7 +902,7 @@ import { site } from '~/lib/site';
 .ifw-contact-form-wrap {
   background: #fff;
   border: 1px solid #DCD5C9;
-  border-radius: 14px;
+  border-radius: 4px;
   padding: 2.4rem;
 }
 .ifw-contact-form-wrap .ds-eyebrow { margin-bottom: 0.6rem; }

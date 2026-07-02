@@ -318,9 +318,22 @@ const products = [
 }
 .pc-product-card {
   background: #fff; border: 1px solid #DCD5C9;
-  border-radius: 10px; overflow: hidden;
+  border-radius: 4px; overflow: hidden;
   display: flex; flex-direction: column;
   transition: box-shadow 0.25s, transform 0.25s;
+}
+/* Featured first card */
+.pc-product-card:first-child {
+  grid-column: 1 / 3;
+}
+.pc-product-card:first-child .pc-product-img-wrap {
+  aspect-ratio: 16/7;
+}
+.pc-product-card:first-child .pc-product-name {
+  font-size: 1.05rem;
+}
+.pc-product-card:first-child .pc-product-body {
+  padding: 1.6rem 1.8rem 1.8rem;
 }
 .pc-product-card:hover {
   box-shadow: 0 8px 28px rgba(20,30,22,0.09);
@@ -384,7 +397,7 @@ const products = [
 .pc-why-certs {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px; padding: 2rem;
+  border-radius: 4px; padding: 2rem;
   display: flex; flex-direction: column; gap: 1.5rem;
 }
 .pc-certs-label {
@@ -435,8 +448,9 @@ const products = [
 }
 .pc-process-step { border-top: 1.5px solid #DCD5C9; padding-top: 1.5rem; }
 .pc-process-num {
-  display: block; font-size: 2.2rem; font-weight: 800;
-  letter-spacing: -0.04em; color: #B8960C; margin-bottom: 0.7rem;
+  display: block; font-size: clamp(3.8rem, 8vw, 6rem); font-weight: 800;
+  letter-spacing: -0.05em; color: rgba(184,150,12,0.55);
+  margin-bottom: 0.25rem; line-height: 0.9;
 }
 .pc-process-title {
   font-size: 0.96rem; font-weight: 700;
@@ -490,6 +504,8 @@ const products = [
 @media (max-width: 900px) {
   .pc-grid-header { flex-direction: column; gap: 1.5rem; }
   .pc-product-grid { grid-template-columns: repeat(2, 1fr); }
+  .pc-product-card:first-child { grid-column: 1 / -1; }
+  .pc-product-card:first-child .pc-product-img-wrap { aspect-ratio: 16/9; }
   .pc-why-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pc-process-grid { grid-template-columns: repeat(2, 1fr); }
   .pc-faq-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -500,6 +516,8 @@ const products = [
 }
 @media (max-width: 580px) {
   .pc-product-grid { grid-template-columns: 1fr; }
+  .pc-product-card:first-child { grid-column: 1; }
+  .pc-product-card:first-child .pc-product-img-wrap { aspect-ratio: 4/3; }
   .pc-process-grid { grid-template-columns: 1fr; }
   .pc-stat-strip { grid-template-columns: 1fr; }
 }
