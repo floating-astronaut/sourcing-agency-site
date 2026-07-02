@@ -9,8 +9,7 @@ const year = new Date().getFullYear();
     <!-- Brand column -->
     <div class="footer-brand">
       <a href="/" class="footer-logo" aria-label="IndoFolk Wellness — home">
-        <img src="/images/logo/ifw-mark-white.png" alt="" width="28" height="28" />
-        <span class="footer-logo-text">IndoFolk <strong>Wellness</strong></span>
+        <img src="/images/logo/ifw-logo-white.png" alt="IndoFolk Wellness" class="footer-logo-img" />
       </a>
       <p class="footer-tagline">{site.tagline}</p>
 
@@ -106,23 +105,15 @@ const year = new Date().getFullYear();
   .footer-logo {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     text-decoration: none;
     margin-bottom: 1rem;
   }
-  .footer-logo img {
-    width: 28px;
+  .footer-logo-img {
     height: 28px;
+    width: auto;
+    display: block;
     object-fit: contain;
-    flex-shrink: 0;
   }
-  .footer-logo-text {
-    font-size: 0.88rem;
-    font-weight: 400;
-    color: rgba(250,248,244,0.70);
-    white-space: nowrap;
-  }
-  .footer-logo-text strong { font-weight: 700; }
 
   .footer-tagline {
     font-size: 0.80rem;

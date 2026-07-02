@@ -9,16 +9,13 @@ const { pathname } = Astro.url;
   <div class="nav-inner">
 
     <!-- Logo -->
-    <a href="/" class="nav-logo" aria-label={`${site.name} — home`}>
+    <a href="/" class="nav-logo" aria-label="IndoFolk Wellness — home">
       <img
-        src="/images/logo/ifw-mark-black.png"
-        alt=""
-        width="30"
-        height="30"
-        class="nav-mark"
+        src="/images/logo/ifw-logo-black.png"
+        alt="IndoFolk Wellness"
+        class="nav-logo-img"
         loading="eager"
       />
-      <span class="nav-wordmark">IndoFolk <strong>Wellness</strong></span>
     </a>
 
     <!-- Primary navigation -->
@@ -82,26 +79,15 @@ const { pathname } = Astro.url;
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 9px;
     text-decoration: none;
     flex-shrink: 0;
     min-height: 44px;
   }
-  .nav-mark {
-    width: 30px;
+  .nav-logo-img {
     height: 30px;
+    width: auto;
+    display: block;
     object-fit: contain;
-    flex-shrink: 0;
-  }
-  .nav-wordmark {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #1C1814;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-  }
-  .nav-wordmark strong {
-    font-weight: 700;
   }
 
   /* Primary links */

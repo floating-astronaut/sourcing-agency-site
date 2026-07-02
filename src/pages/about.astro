@@ -285,7 +285,7 @@ import { site } from '~/lib/site';
 .ab-hero-bg {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center 30%;
+  object-fit: cover; object-position: center top;
 }
 .ab-hero-grad {
   position: absolute; inset: 0;
@@ -376,7 +376,8 @@ import { site } from '~/lib/site';
   aspect-ratio: 3/4; margin-bottom: 1.5rem;
 }
 .ab-founder-img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center 10%; display: block;
 }
 .ab-founder-card { display: flex; flex-direction: column; gap: 0.4rem; }
 .ab-founder-name {
@@ -418,7 +419,7 @@ a.ab-meta-value:hover { color: #2D5A3D; }
 }
 .ab-strip-img {
   width: 100%; height: 100%; object-fit: cover;
-  object-position: center 35%; display: block;
+  object-position: center 15%; display: block;
 }
 
 /* Values */
@@ -484,9 +485,13 @@ a.ab-meta-value:hover { color: #2D5A3D; }
 @media (max-width: 900px) {
   .ab-services-grid { grid-template-columns: 1fr; gap: 3rem; }
   .ab-founder-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .ab-founder-img-wrap { aspect-ratio: 16/9; }
+  .ab-founder-img-wrap { aspect-ratio: 4/3; }
   .ab-values-grid { grid-template-columns: repeat(2, 1fr); }
   .ab-vet-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media (max-width: 640px) {
+  .ab-hero { min-height: 75vh; }
+  .ab-hero-bg { object-position: center top; }
 }
 @media (max-width: 560px) {
   .ab-stmt { padding: 5rem 5%; }

@@ -95,7 +95,7 @@ import { site } from '~/lib/site';
 
         <div class="ifw-services-img" data-reveal data-delay="1">
           <img
-            src="/images/ifw/factory-verification-2.png"
+            src="/images/ifw/factory-verification-1.png"
             alt="IndoFolk Wellness team members conducting quality inspection on the factory production line"
             class="ifw-services-photo"
             loading="lazy"
@@ -115,7 +115,7 @@ import { site } from '~/lib/site';
       <div class="ifw-pet-header">
         <div>
           <span class="ds-eyebrow" data-reveal>Pet Product Sourcing</span>
-          <h2 class="ds-h2" data-reveal data-delay="1">From the Himalayas<br>to your shelf.</h2>
+          <h2 class="ds-h2" data-reveal data-delay="1">From India's finest<br>factories to your shelf.</h2>
         </div>
         <a href="/pet-care-sourcing" class="ds-text-cta ifw-pet-header-cta" data-reveal data-delay="2" aria-label="Explore all pet products">
           Explore all products
@@ -130,7 +130,7 @@ import { site } from '~/lib/site';
           { img: 'product-supplements.png', name: 'Pet Supplements', desc: 'Joint, gut, skin & coat formulations' },
           { img: 'product-functional-treats.png', name: 'Functional Treats', desc: 'Calming, dental, hip & joint blends' },
           { img: 'product-freeze-dried.png', name: 'Freeze-Dried', desc: 'Complete meals & toppers, raw nutrition' },
-          { img: 'product-private-label.png', name: 'Private Label', desc: 'Custom formulations, your branding' },
+          { img: 'closing-brand-products.png', name: 'Private Label', desc: 'Custom formulations, your branding' },
         ].map((p, i) => (
           <a href="/pet-care-sourcing" class="ifw-pet-card" data-reveal data-delay={String((i % 3) + 1)} aria-label={`Learn more about ${p.name}`}>
             <div class="ifw-pet-card-img-wrap">
@@ -516,6 +516,8 @@ import { site } from '~/lib/site';
   .ifw-hero-h1 { font-size: clamp(3rem, 11vw, 4rem); }
   .ifw-hero-desc { max-width: 100%; }
   .ifw-hero-grad { background: linear-gradient(180deg,rgba(20,30,22,0.88) 0%,rgba(20,30,22,0.70) 100%); }
+  .ifw-hero-bg { object-position: 60% 28%; }
+  .ifw-closing-bg { object-position: center center; }
 }
 
 /* ── §2 Statement ────────────────────────────────────────── */
@@ -581,7 +583,8 @@ import { site } from '~/lib/site';
 .ifw-services-photo {
   width: 100%; border-radius: 10px;
   object-fit: cover;
-  aspect-ratio: 3/4;
+  object-position: center center;
+  aspect-ratio: 4/5;
   display: block;
 }
 @media (max-width: 900px) {
@@ -734,7 +737,7 @@ import { site } from '~/lib/site';
 .ifw-strip-img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 15%;
   display: block;
 }
 

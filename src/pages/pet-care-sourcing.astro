@@ -4,7 +4,7 @@ import FAQSchema from '~/components/schema/FAQSchema.astro';
 import { site } from '~/lib/site';
 
 const faqs = [
-  { q: 'What are the minimum order quantities (MOQ)?', a: 'MOQs vary by product category: Himalayan Yak Chews start at 500 kg per SKU, soft chews from 1,000 units per formula, freeze-dried treats from 300 kg, and supplements from 2,000 units. For custom private label with new formulations, minimum trial runs start at 500–1,000 units. We can often negotiate lower MOQs for first sampling orders.' },
+  { q: 'What are the minimum order quantities?', a: "We keep order quantities low and flexible — especially for first orders and sampling rounds. We work with suppliers who can accommodate brands at early stages of growth, so there's no fixed number that applies universally. Tell us your expected volume and we'll match you with factories whose minimums make sense for your business." },
   { q: 'How long does a typical order take from enquiry to delivery?', a: 'Sampling takes 3–4 weeks. After sample approval, bulk production typically runs 6–10 weeks depending on category, followed by 3–5 weeks for ocean freight to US/UK/EU ports. Total lead time from first contact to delivery at your warehouse is typically 14–20 weeks for a first order, and 10–14 weeks for repeat orders.' },
   { q: 'How does the sample process work?', a: 'We coordinate sampling across our vetted manufacturer network — you receive multiple factory samples side by side. Our team handles sample sourcing, quality checks, and international courier delivery to your door. Sample costs are typically $150–400 per product category and are fully deductible from your first bulk order.' },
   { q: 'What certifications can your manufacturers provide?', a: "Our network holds GMP, FSSAI (India's FDA equivalent), HACCP, ISO 22000, and APEDA export certifications. For US market products, we source from facilities with USDA-audited processes. Organic-certified (India Organic / USDA Organic) sourcing is available for select ingredients. We can provide full documentation packages for customs and regulatory submissions." },
@@ -14,12 +14,12 @@ const faqs = [
 ] as const;
 
 const products = [
-  { img: 'product-yak-cheese.png',       name: 'Himalayan Yak Chews',    moq: '500 kg',    desc: 'Long-lasting hard chews sourced directly from Himalayan-region manufacturers. Small to XL sizes, smoked, plain, and flavored variants. Custom branded bags and boxes.' },
-  { img: 'product-meat-fish.png',         name: 'Dried Meat & Fish Treats', moq: 'Per PO',  desc: 'Chicken strips, fish skins, lamb jerky, and mixed protein pouches. Air-dried and dehydrated formats. Full private label design from dieline to delivery.' },
-  { img: 'product-supplements.png',       name: 'Pet Supplements',        moq: '2,000 units', desc: 'Hip & Joint, Omega-3, Probiotic, Multivitamin, and custom functional formulas for dogs and cats. Tablet, capsule, powder, and liquid formats.' },
-  { img: 'product-functional-treats.png', name: 'Functional Soft Chews',  moq: '1,000 units', desc: 'Custom-formulated soft chews for joint support, skin & coat, digestive health, calming, and immunity. Biscuit, jerky, and soft chew textures with your branding.' },
-  { img: 'product-freeze-dried.png',      name: 'Freeze-Dried Treats',    moq: '300 kg',    desc: 'Single-ingredient and blended freeze-dried formats: chicken, beef, fish, and mixed protein. Raw nutrition retained. Resealable pouches, tins, and bulk formats.' },
-  { img: 'product-private-label.png',     name: 'Custom Private Label',   moq: 'Flexible',  desc: 'Your brand on any product in our network. Full print management from dieline to delivery. Low minimum runs available for brand testing and market validation.' },
+  { img: 'product-yak-cheese.png',       name: 'Himalayan Yak Chews',    moq: 'Low or no MOQ', desc: 'Long-lasting hard chews sourced directly from Himalayan-region manufacturers. Small to XL sizes, smoked, plain, and flavored variants. Custom branded bags and boxes.' },
+  { img: 'product-meat-fish.png',         name: 'Dried Meat & Fish Treats', moq: 'Low or no MOQ', desc: 'Chicken strips, fish skins, lamb jerky, and mixed protein pouches. Air-dried and dehydrated formats. Full private label design from dieline to delivery.' },
+  { img: 'factory-gmp-verified.png',      name: 'Pet Supplements',        moq: 'Low or no MOQ', desc: 'Hip & Joint, Omega-3, Probiotic, Multivitamin, and custom functional formulas for dogs and cats. Tablet, capsule, powder, and liquid formats.' },
+  { img: 'product-functional-treats.png', name: 'Functional Soft Chews',  moq: 'Low or no MOQ', desc: 'Custom-formulated soft chews for joint support, skin & coat, digestive health, calming, and immunity. Biscuit, jerky, and soft chew textures with your branding.' },
+  { img: 'product-freeze-dried.png',      name: 'Freeze-Dried Treats',    moq: 'Low or no MOQ', desc: 'Single-ingredient and blended freeze-dried formats: chicken, beef, fish, and mixed protein. Raw nutrition retained. Resealable pouches, tins, and bulk formats.' },
+  { img: 'closing-brand-products.png',    name: 'Custom Private Label',   moq: 'Low or no MOQ', desc: 'Your brand on any product in our network. Full print management from dieline to delivery. Low minimum runs available for brand testing and market validation.' },
 ] as const;
 ---
 
@@ -69,7 +69,7 @@ const products = [
           </h2>
         </div>
         <p class="ds-body" data-reveal data-delay="2" style="max-width:420px">
-          Six product categories, hundreds of SKU options,
+          Multiple product categories, hundreds of SKU options,
           full custom formulation and packaging across each.
         </p>
       </div>
@@ -84,7 +84,7 @@ const products = [
               <h3 class="pc-product-name">{p.name}</h3>
               <p class="pc-product-desc">{p.desc}</p>
               <div class="pc-product-meta">
-                <span class="pc-product-moq">MOQ: {p.moq}</span>
+                <span class="pc-product-moq">{p.moq}</span>
                 <a href="#contact" class="ds-text-cta">
                   Request samples
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -423,7 +423,7 @@ const products = [
 }
 .pc-strip-img {
   width: 100%; height: 100%; object-fit: cover;
-  object-position: center 30%; display: block;
+  object-position: center 15%; display: block;
 }
 
 /* Process */
@@ -493,6 +493,10 @@ const products = [
   .pc-why-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pc-process-grid { grid-template-columns: repeat(2, 1fr); }
   .pc-faq-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 640px) {
+  .pc-hero { min-height: 75vh; }
+  .pc-hero-bg { object-position: 55% 35%; }
 }
 @media (max-width: 580px) {
   .pc-product-grid { grid-template-columns: 1fr; }
