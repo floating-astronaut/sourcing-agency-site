@@ -44,6 +44,13 @@
   a { color: inherit; }
 
   ::selection { background: rgb(var(--color-brand) / 0.18); }
+
+  /* Keyboard-only focus ring — visible, brand-tinted, never on mouse click */
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--ring);
+    border-radius: var(--radius-sm);
+  }
 }
 
 @layer components {
@@ -67,7 +74,25 @@
     border-radius: var(--radius-lg);
     border: 1px solid rgb(var(--color-border));
     background: rgb(var(--color-surface));
-    box-shadow: 0 1px 2px rgb(27 42 32 / 0.04);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--dur) var(--ease-out-expo),
+                transform var(--dur) var(--ease-out-expo),
+                border-color var(--dur) var(--ease-out-expo);
+  }
+
+  /* Elevated resting card — for feature/spotlight blocks */
+  .card-elevated { box-shadow: var(--shadow-md); }
+
+  /* Interactive card — lifts on hover/focus, use on clickable cards */
+  .card-interactive { cursor: pointer; }
+  .card-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgb(var(--color-brand) / 0.35);
+  }
+  .card-interactive:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
 
   .hairline {
@@ -109,10 +134,12 @@
   .btn-primary {
     background: rgb(var(--color-brand));
     color: #fff;
+    box-shadow: var(--shadow-sm);
   }
   .btn-primary:hover {
     background: rgb(var(--color-brand-dark, 28 55 38));
     transform: translateY(-1px);
+    box-shadow: var(--shadow-brand);
   }
 
   .btn-outline {
@@ -146,6 +173,23 @@
     font-size: theme('fontSize.fluid-xs');
     color: rgb(var(--color-muted));
   }
+
+  /* Trust stat — big number/label pair for proof bars */
+  .ds-stat-num {
+    font-size: clamp(2rem, 3.6vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: rgb(var(--color-brand));
+  }
+  .ds-stat-num-light { color: #FAF8F4; }
+  .ds-stat-label {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: rgb(var(--color-muted));
+  }
+  .ds-stat-label-light { color: rgba(250,248,244,0.60); }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -343,6 +387,47 @@
   object-fit: cover;
   display: block;
 }
+
+/* ── Density kit: head → sub → chips / data-boxes ─────────── */
+/* Chips — for enumerable attributes (markets, certs, capabilities) */
+.ds-chips { display: flex; flex-wrap: wrap; gap: 0.55rem 0.6rem; margin: 0; padding: 0; list-style: none; }
+.ds-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.01em;
+  color: rgb(var(--color-fg)); background: rgb(var(--color-surface));
+  border: 1px solid rgb(var(--color-border)); border-radius: 999px;
+  padding: 0.44rem 0.9rem; box-shadow: var(--shadow-xs);
+}
+.ds-chip svg { color: rgb(var(--color-brand)); flex-shrink: 0; }
+.ds-chip-light {
+  color: rgba(250,248,244,0.82); background: rgba(250,248,244,0.06);
+  border-color: rgba(250,248,244,0.16);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.ds-chip-light svg { color: rgb(var(--color-copper)); }
+
+/* Data boxes — a label + value (+ optional note), for details pulled out of prose */
+.ds-databox-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.ds-databox {
+  background: rgb(var(--color-surface));
+  border: 1px solid rgb(var(--color-border)); border-radius: var(--radius-lg);
+  padding: 1.35rem 1.4rem; box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--dur) var(--ease-out-expo), transform var(--dur) var(--ease-out-expo);
+}
+.ds-databox:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.ds-databox-label {
+  font-family: theme('fontFamily.mono'); font-size: 0.66rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.1em; color: rgb(var(--color-copper));
+  display: block; margin-bottom: 0.55rem;
+}
+.ds-databox-value { font-size: 1.02rem; font-weight: 700; line-height: 1.28; letter-spacing: -0.01em; color: rgb(var(--color-fg)); }
+.ds-databox-note { margin-top: 0.4rem; font-size: 0.82rem; line-height: 1.5; color: rgb(var(--color-muted)); }
+.ds-databox-light { background: rgba(250,248,244,0.05); border-color: rgba(250,248,244,0.14); }
+.ds-databox-light .ds-databox-value { color: #FAF8F4; }
+.ds-databox-light .ds-databox-note { color: rgba(250,248,244,0.60); }
 
 /* ── Responsive helpers ──────────────────────────────────── */
 @media (max-width: 900px) {

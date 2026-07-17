@@ -28,7 +28,7 @@ function fmtDate(d: Date): string {
       <ul role="list" class="grid gap-6 md:grid-cols-2">
         {entries.map((entry) => (
           <li>
-            <a href={`/blog/${entry.slug}`} class="card p-6 md:p-8 block h-full transition-transform hover:-translate-y-0.5">
+            <a href={`/blog/${entry.slug}`} class="card card-interactive overflow-hidden p-6 md:p-8 block h-full">
               {entry.data.cover && (
                 <Image
                   src={entry.data.cover}

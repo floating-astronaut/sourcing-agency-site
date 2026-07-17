@@ -4,12 +4,12 @@ import FAQSchema from '~/components/schema/FAQSchema.astro';
 import { site } from '~/lib/site';
 
 const faqs = [
-  { q: 'Do you support custom formulation?', a: 'Yes — custom formulation is a core service. We work with AYUSH-licensed and GMP-certified formulators who can develop new products to your specification, including adapting traditional Ayurvedic texts for modern supplement formats. We can involve your in-house R&D team or nutritionist advisors at any stage.' },
-  { q: 'What certifications are available for EU and US markets?', a: 'Our manufacturers hold GMP (Schedule M, India), AYUSH (Government of India Ayurveda certification), ISO 9001 and ISO 22000, HACCP, and FSSAI. For organic-certified ingredients, we source from USDA Organic and India Organic certified farms. Full documentation packages including Certificate of Analysis, Certificate of Origin, and Phytosanitary Certificates are provided with every shipment.' },
-  { q: 'What product formats are available?', a: 'We supply: capsules (vegetarian and gelatin), tablets, soft gels, powders (bulk and sachets), liquid extracts and tinctures, oils (infused and essential), pastes, and functional food formats. Specific format availability depends on the ingredient — we confirm this during the factory-matching stage.' },
-  { q: 'How is ingredient quality and purity verified?', a: 'All ingredients are sourced from farms and processors that provide Certificates of Analysis (CoA) with each batch. Third-party lab testing for active compound potency, heavy metals, pesticide residues, and microbial load is arranged through accredited Indian labs (NABL-certified) or your preferred international lab. We can provide historical batch reports during the sampling phase.' },
-  { q: 'Can you source organic-certified Ayurvedic ingredients?', a: 'Yes — organic-certified versions of most major Ayurvedic ingredients (Ashwagandha, Turmeric, Amla, Moringa, Triphala, and more) are available from USDA Organic and India Organic certified farms. Organic sourcing typically adds 20–35% to ingredient cost but unlocks premium retail positioning in US and EU markets.' },
-  { q: 'What are typical order quantities for Ayurvedic ingredients and finished products?', a: 'We keep order quantities low and flexible — many of our suppliers work with small initial orders to support brand development and market validation. Raw ingredients and finished products both have accessible entry quantities that we can discuss based on your scale. Contact us with your expected volumes and we will match you with suppliers who fit your stage of growth.' },
+  { q: 'Do you support custom formulation?', a: 'Yes — custom formulation is core to what we do. AYUSH-licensed, GMP-certified formulators develop new products to your spec, including adapting traditional Ayurvedic texts for modern formats. Your in-house R&D team or nutritionist advisors can be involved at any stage.' },
+  { q: 'What certifications are available for EU and US markets?', a: 'Our manufacturers hold GMP (Schedule M, India), AYUSH, ISO 9001, ISO 22000, HACCP, and FSSAI. Organic-certified ingredients are sourced from USDA Organic and India Organic certified farms. Every shipment includes full documentation — Certificate of Analysis, Certificate of Origin, and Phytosanitary Certificates.' },
+  { q: 'What product formats are available?', a: 'We supply capsules (vegetarian and gelatin), tablets, soft gels, powders (bulk and sachets), liquid extracts and tinctures, oils (infused and essential), pastes, and functional food formats. Availability depends on the ingredient — confirmed during factory-matching.' },
+  { q: 'How is ingredient quality and purity verified?', a: 'Every ingredient ships with a Certificate of Analysis (CoA). Third-party testing for potency, heavy metals, pesticide residues, and microbial load is arranged through NABL-certified Indian labs or your preferred international lab. Historical batch reports are available during sampling.' },
+  { q: 'Can you source organic-certified Ayurvedic ingredients?', a: 'Yes — organic-certified versions of most major ingredients (Ashwagandha, Turmeric, Amla, Moringa, Triphala, and more) are available from USDA Organic and India Organic certified farms. Organic sourcing typically adds 20–35% to ingredient cost but unlocks premium retail positioning in US and EU markets.' },
+  { q: 'What are typical order quantities for Ayurvedic ingredients and finished products?', a: 'We keep order quantities low and flexible — many suppliers support small initial orders for brand development and market validation. Tell us your expected volumes and we will match you with suppliers who fit your stage of growth.' },
 ] as const;
 
 const ingredients = [
@@ -50,9 +50,8 @@ const ingredients = [
         5,000 years of tradition.<br>Globally compliant<br>manufacturing.
       </h1>
       <p class="ay-hero-desc">
-        India is the world's leading source for Ayurvedic ingredients and
-        finished herbal supplements. AYUSH-certified, GMP-grade
-        manufacturers — with full export documentation for US, EU, and UK.
+        The world's leading source for Ayurvedic ingredients and finished
+        herbal supplements — certified, compliant, export-ready.
       </p>
       <div class="ay-hero-ctas">
         <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -62,30 +61,39 @@ const ingredients = [
           View ingredient list
         </a>
       </div>
+
+      <ul class="ay-hero-trust" aria-label="Certifications and export markets covered">
+        <li>AYUSH-certified</li>
+        <li>WHO-GMP manufacturing</li>
+        <li>US · EU · UK export documentation</li>
+      </ul>
     </div>
+
+    <a href="#intro" class="ay-hero-scroll" aria-label="Scroll to learn more">
+      <span class="ay-hero-scroll-line" aria-hidden="true"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
   </section>
 
   <!-- ══ EDITORIAL INTRO ════════════════════════════════════ -->
-  <section class="ds-section ds-bg-white">
+  <section id="intro" class="ds-section ds-bg-white">
     <div class="ds-container">
       <div class="ay-intro-grid">
         <div class="ay-intro-text">
           <span class="ds-eyebrow" data-reveal>Why Ayurveda from India</span>
           <h2 class="ds-h2" data-reveal data-delay="1">The origin matters.<br>We are at the source.</h2>
           <p class="ds-body" data-reveal data-delay="2">
-            No other country combines 5,000 years of botanical knowledge
-            with modern WHO-GMP infrastructure and direct access to raw
-            ingredients at their source. India's Ayurvedic manufacturers
-            are among the most regulated in the world — AYUSH licensing,
-            GMP certification, and international export credentials are
-            the baseline, not exceptions.
+            India's Ayurvedic manufacturers are among the most regulated in
+            the world — and we're personally embedded in that network, not
+            just a directory of suppliers.
           </p>
-          <p class="ds-body" data-reveal data-delay="3" style="margin-top:1rem">
-            We are embedded in India's manufacturing ecosystem, which means
-            you gain access not to a directory of suppliers — but to an
-            opinionated, personally verified network of factories that can
-            deliver for international markets.
-          </p>
+          <ul class="ds-chips" data-reveal data-delay="3" aria-label="What sourcing from India gives you">
+            <li class="ds-chip">5,000+ years of botanical knowledge</li>
+            <li class="ds-chip">WHO-GMP infrastructure</li>
+            <li class="ds-chip">AYUSH-licensed manufacturers</li>
+            <li class="ds-chip">Direct access at the source</li>
+            <li class="ds-chip">Personally verified factory network</li>
+          </ul>
         </div>
         <div class="ay-intro-img" data-reveal data-delay="1">
           <img
@@ -94,6 +102,9 @@ const ingredients = [
             class="ay-intro-photo"
             loading="lazy"
           />
+          <div class="ay-intro-badge" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7z"/><path d="M9.5 13.5 12 16l4-4"/></svg>
+          </div>
         </div>
       </div>
     </div>
@@ -106,14 +117,16 @@ const ingredients = [
         <span class="ds-eyebrow" data-reveal>Ingredient Catalogue</span>
         <h2 class="ds-h2" data-reveal data-delay="1">700+ herbs.<br>Every major format.</h2>
         <p class="ds-body" data-reveal data-delay="2">
-          A selection of our most-requested ingredients — each available in
-          multiple formats, grades, and certifications. Not on this list?
-          Ask us. If it grows in India, we can likely source it.
+          Our most-requested ingredients — every format, grade, and
+          certification available. Not listed? Ask us.
         </p>
       </div>
-      <div class="ay-ingredient-grid" data-reveal data-delay="2">
-        {ingredients.map((ing) => (
-          <div class="ay-ingredient-card">
+      <div class="ay-ingredient-grid">
+        {ingredients.map((ing, i) => (
+          <div class="ay-ingredient-card" data-reveal data-delay={String((i % 4) + 1)}>
+            <span class="ay-ingredient-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-11 5 3 8 7 8 11a7 7 0 0 1-7 7z"/><path d="M11 20v-7"/></svg>
+            </span>
             <h3 class="ay-ingredient-name">{ing.name}</h3>
             <p class="ay-ingredient-formats">{ing.formats}</p>
             <span class="ay-ingredient-moq">{ing.moq}</span>
@@ -122,7 +135,7 @@ const ingredients = [
       </div>
       <div class="ay-cat-cta" data-reveal>
         <p class="ay-cat-note">
-          Not seeing what you need? We source 700+ Ayurvedic herbs and botanical extracts.
+          Not seeing what you need? We source 700+ herbs and botanical extracts.
         </p>
         <a href="/contact" class="ds-text-cta">
           Send us your ingredient brief
@@ -140,6 +153,7 @@ const ingredients = [
       class="ay-strip-img"
       loading="lazy"
     />
+    <div class="ay-strip-grad" aria-hidden="true"></div>
   </div>
 
   <!-- ══ CERTIFICATIONS (DARK) ═════════════════════════════ -->
@@ -152,11 +166,8 @@ const ingredients = [
             Certified for every<br>international market.
           </h2>
           <p class="ds-body ds-body-light" data-reveal data-delay="2">
-            Our Ayurvedic manufacturers hold the most comprehensive
-            certification stack available — from government AYUSH
-            licensing to third-party ISO and HACCP certification.
-            Every documentation package you need for US FDA, EU,
-            or UK market entry is included as standard.
+            Full documentation for US FDA, EU, and UK market entry —
+            included as standard on every order.
           </p>
           <div class="ay-cert-list" data-reveal data-delay="3">
             {[
@@ -168,8 +179,13 @@ const ingredients = [
               { cert: 'Certificate of Analysis',      desc: 'NABL-accredited lab testing per batch — heavy metals, potency, microbial' },
             ].map((item) => (
               <div class="ay-cert-item">
-                <span class="ay-cert-name">{item.cert}</span>
-                <span class="ay-cert-desc">{item.desc}</span>
+                <span class="ay-cert-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <span class="ay-cert-item-text">
+                  <span class="ay-cert-name">{item.cert}</span>
+                  <span class="ay-cert-desc">{item.desc}</span>
+                </span>
               </div>
             ))}
           </div>
@@ -231,7 +247,14 @@ const ingredients = [
   </section>
 
   <!-- ══ CLOSING CTA ════════════════════════════════════════ -->
-  <section id="contact" class="ay-cta-section ds-bg-dark">
+  <section id="contact" class="ay-cta-section">
+    <img
+      src="/images/ifw/india-heritage-manufacturing.png"
+      alt="India's Ayurvedic manufacturing ecosystem — from botanical sourcing to export-ready formulation"
+      class="ay-cta-bg"
+      loading="lazy"
+    />
+    <div class="ay-cta-grad" aria-hidden="true"></div>
     <div class="ds-container">
       <div class="ay-cta-inner">
         <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Ready to source?</span>
@@ -239,9 +262,9 @@ const ingredients = [
           Start with a brief.<br>Receive samples in 3 weeks.
         </h2>
         <p class="ds-body ds-body-light" data-reveal data-delay="2">
-          Send us your ingredient brief or book a 30-minute call. We'll
-          match you with the right manufacturers and coordinate your
-          first sampling round.
+          Send your ingredient brief or book a 30-minute call — we'll
+          match you with manufacturers and coordinate your first
+          sampling round.
         </p>
         <div class="ay-cta-buttons" data-reveal data-delay="3">
           <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -270,7 +293,13 @@ const ingredients = [
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center 25%;
+  animation: ayHeroBreath 12s ease-out both;
 }
+@keyframes ayHeroBreath {
+  from { transform: scale(1.045); }
+  to   { transform: scale(1.0); }
+}
+@media (prefers-reduced-motion: reduce) { .ay-hero-bg { animation: none; } }
 .ay-hero-grad {
   position: absolute; inset: 0;
   background: linear-gradient(
@@ -303,17 +332,74 @@ const ingredients = [
 }
 .ay-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
+/* Hero trust chips — qualitative capability strip, echoes the hero copy */
+.ay-hero-trust {
+  list-style: none; margin: 2.4rem 0 0; padding: 1.4rem 0 0;
+  border-top: 1px solid rgba(250,248,244,0.14);
+  display: flex; flex-wrap: wrap; gap: 0.6rem 0.7rem;
+  max-width: 640px;
+}
+.ay-hero-trust li {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(250,248,244,0.72);
+  background: rgba(250,248,244,0.06);
+  border: 1px solid rgba(250,248,244,0.14);
+  border-radius: 999px;
+  padding: 0.42rem 0.9rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Scroll-down cue */
+.ay-hero-scroll {
+  position: absolute; z-index: 3;
+  left: 50%; bottom: 2rem;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  color: rgba(250,248,244,0.55);
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+}
+.ay-hero-scroll:hover { color: #B8960C; transform: translateX(-50%) translateY(3px); }
+.ay-hero-scroll-line {
+  width: 1px; height: 2rem;
+  background: linear-gradient(180deg, rgba(250,248,244,0.05), currentColor);
+}
+.ay-hero-scroll svg { animation: ayScrollBob 2.2s ease-in-out infinite; }
+@keyframes ayScrollBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) { .ay-hero-scroll svg { animation: none; } }
+@media (max-width: 640px) { .ay-hero-scroll { display: none; } }
+
 /* Intro */
 .ay-intro-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 5rem; align-items: center;
 }
 .ay-intro-text .ds-h2 { margin: 0 0 1.4rem; }
-.ay-intro-text .ds-body { margin-bottom: 0; }
+.ay-intro-text .ds-body { margin-bottom: 1.4rem; }
+.ay-intro-img {
+  position: relative;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
 .ay-intro-photo {
-  width: 100%; border-radius: 10px;
+  width: 100%; border-radius: var(--radius-xl);
   aspect-ratio: 4/3; object-fit: cover;
   object-position: center center; display: block;
+}
+.ay-intro-badge {
+  position: absolute; left: -1.1rem; bottom: -1.1rem;
+  width: 3.2rem; height: 3.2rem;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgb(var(--color-brand));
+  color: #FAF8F4;
+  border: 3px solid #FAF8F4;
+  box-shadow: var(--shadow-md);
 }
 
 /* Ingredient catalogue */
@@ -326,14 +412,26 @@ const ingredients = [
   gap: 1rem; margin-bottom: 2.5rem;
 }
 .ay-ingredient-card {
-  background: #fff; border: 1px solid #DCD5C9;
-  border-radius: 4px; padding: 1.2rem 1.4rem;
+  background: #fff; border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg); padding: 1.3rem 1.4rem;
   display: flex; flex-direction: column; gap: 0.4rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-xs);
+  transition: border-color var(--dur) var(--ease-out-expo),
+              box-shadow var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo);
 }
-.ay-ingredient-card:hover {
-  border-color: #2D5A3D;
-  box-shadow: 0 4px 16px rgba(45,90,61,0.08);
+.ay-ingredient-card:hover, .ay-ingredient-card:focus-within {
+  border-color: rgb(var(--color-brand) / 0.35);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.ay-ingredient-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 1.9rem; height: 1.9rem;
+  border-radius: 50%;
+  background: rgb(var(--color-brand) / 0.07);
+  color: rgb(var(--color-brand));
+  margin-bottom: 0.3rem;
 }
 .ay-ingredient-name {
   font-size: 0.92rem; font-weight: 700;
@@ -359,11 +457,15 @@ const ingredients = [
 
 /* Strip */
 .ay-strip {
-  height: 50vh; min-height: 280px; overflow: hidden;
+  height: 50vh; min-height: 280px; overflow: hidden; position: relative;
 }
 .ay-strip-img {
   width: 100%; height: 100%; object-fit: cover;
   object-position: center 20%; display: block;
+}
+.ay-strip-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(14,20,15,0.42) 0%, rgba(14,20,15,0.0) 30%, rgba(14,20,15,0.0) 75%, rgba(14,20,15,0.22) 100%);
 }
 
 /* Certifications */
@@ -373,13 +475,34 @@ const ingredients = [
 }
 .ay-cert-text .ds-h2 { margin: 0 0 1.4rem; }
 .ay-cert-list {
-  display: flex; flex-direction: column; gap: 1.2rem;
+  display: flex; flex-direction: column; gap: 0.9rem;
   margin-top: 2rem;
 }
 .ay-cert-item {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1rem;
+  display: flex; align-items: flex-start; gap: 0.9rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem;
+  transition: background var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo);
 }
+.ay-cert-item:hover {
+  background: rgba(255,255,255,0.055);
+  border-color: rgb(var(--color-copper) / 0.35);
+  transform: translateY(-2px);
+}
+.ay-cert-icon {
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  width: 1.6rem; height: 1.6rem;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  background: rgb(var(--color-copper) / 0.14);
+  color: rgb(var(--color-copper-light));
+}
+.ay-cert-item-text { display: flex; flex-direction: column; }
 .ay-cert-name {
   display: block; font-size: 0.9rem; font-weight: 700;
   color: #FAF8F4; margin-bottom: 0.25rem;
@@ -388,16 +511,26 @@ const ingredients = [
   font-size: 0.80rem; line-height: 1.65;
   color: rgba(250,248,244,0.40);
 }
+.ay-cert-img { position: relative; }
 .ay-cert-photo {
-  width: 100%; border-radius: 10px;
+  width: 100%; border-radius: var(--radius-xl);
   aspect-ratio: 4/3; object-fit: cover;
   object-position: center 30%;
   display: block; margin-bottom: 1.5rem;
+  box-shadow: 0 28px 60px -18px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.04) inset;
 }
 .ay-cert-stat-block {
+  position: relative;
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1.5rem;
+  gap: 1.2rem;
+  margin: -3.2rem 0.6rem 0;
+  padding: 1.6rem 1.6rem 1.4rem;
+  background: rgba(20,30,22,0.82);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .ay-stat { display: flex; flex-direction: column; gap: 0.3rem; }
 .ay-stat-num {
@@ -415,32 +548,84 @@ const ingredients = [
 }
 .ay-faq-sidebar .ds-h3 { margin: 0 0 1rem; }
 .ay-faq-sidebar .ds-body { margin-bottom: 1.5rem; }
-.ay-faq-list { display: flex; flex-direction: column; }
-.ay-faq-item { border-bottom: 1px solid #DCD5C9; }
+.ay-faq-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.ay-faq-item {
+  background: #fff;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo);
+}
+.ay-faq-item:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: rgb(var(--color-brand) / 0.22);
+}
+.ay-faq-item:has(.ay-faq-q[aria-expanded="true"]) {
+  box-shadow: var(--shadow-md);
+  border-color: rgb(var(--color-brand) / 0.32);
+}
 .ay-faq-q {
-  width: 100%; padding: 1.3rem 0; background: none; border: none;
+  width: 100%; padding: 1.15rem 1.4rem; background: none; border: none;
   font-family: inherit; font-size: 0.92rem; font-weight: 600;
   color: #1C1814; display: flex; justify-content: space-between;
   align-items: center; gap: 1rem; text-align: left; cursor: pointer;
+  border-radius: var(--radius-lg);
   transition: color 0.2s;
 }
 .ay-faq-q:hover { color: #2D5A3D; }
 .ay-faq-icon {
-  font-size: 1.1rem; color: #2D5A3D; flex-shrink: 0;
-  transition: transform 0.25s;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  width: 1.9rem; height: 1.9rem;
+  border-radius: 50%;
+  background: rgb(var(--color-brand) / 0.07);
+  font-size: 1.05rem; color: #2D5A3D;
+  transition: transform 0.25s, background 0.25s;
 }
-.ay-faq-q[aria-expanded="true"] .ay-faq-icon { transform: rotate(45deg); }
+.ay-faq-q[aria-expanded="true"] .ay-faq-icon {
+  transform: rotate(45deg);
+  background: rgb(var(--color-copper) / 0.16);
+  color: rgb(var(--color-copper));
+}
 .ay-faq-a {
   display: none; font-size: 0.88rem; line-height: 1.85;
-  color: #6B6358; padding-bottom: 1.2rem;
+  color: #6B6358; padding: 0 1.4rem 1.3rem;
 }
 
-/* CTA */
-.ay-cta-section { padding: 7rem 5%; }
+/* CTA — cinematic full-bleed close */
+.ay-cta-section {
+  position: relative; overflow: hidden;
+  background: #141E16;
+}
+.ay-cta-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%;
+}
+.ay-cta-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(14,20,15,0.96) 0%,
+    rgba(16,24,18,0.86) 42%,
+    rgba(18,27,20,0.55) 68%,
+    rgba(20,30,22,0.20) 100%
+  );
+}
+.ay-cta-section .ds-container {
+  position: relative; z-index: 2;
+  padding: 7.5rem 5%;
+}
 .ay-cta-inner { max-width: 640px; }
 .ay-cta-inner .ds-h2 { margin: 0 0 1.2rem; }
 .ay-cta-inner .ds-body { margin-bottom: 2.2rem; }
 .ay-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.ay-cta-buttons .btn-primary { box-shadow: var(--shadow-brand); }
+.ay-cta-buttons .btn-ghost-light { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+@media (max-width: 640px) {
+  .ay-cta-section .ds-container { padding: 5rem 5%; }
+}
 
 /* Responsive */
 @media (max-width: 1000px) {
@@ -458,6 +643,11 @@ const ingredients = [
 }
 @media (max-width: 640px) {
   .ay-ingredient-grid { grid-template-columns: repeat(2, 1fr); }
+  .ay-cert-stat-block {
+    grid-template-columns: 1fr;
+    gap: 0.9rem; margin: -2rem 0 0; padding: 1.3rem 1.4rem;
+  }
+  .ay-intro-badge { width: 2.6rem; height: 2.6rem; left: -0.7rem; bottom: -0.7rem; }
 }
 @media (max-width: 440px) {
   .ay-ingredient-grid { grid-template-columns: 1fr; }

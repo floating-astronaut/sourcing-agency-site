@@ -12,41 +12,66 @@ import { site } from '~/lib/site';
        §1  HERO — One image. One identity. One invitation.
        ══════════════════════════════════════════════════════════ -->
   <section class="ifw-hero" id="main">
-    <img
-      src="/images/ifw/hero-factory-team.png"
-      alt="IndoFolk Wellness team reviewing products with an international client inside a GMP-certified Indian factory"
-      class="ifw-hero-bg"
-      loading="eager"
-      fetchpriority="high"
-    />
+    <div class="ifw-hero-sea" aria-hidden="true">
+      <div class="ifw-hero-sky"></div>
+      <span class="ifw-hero-glow"></span>
+      <span class="ifw-hero-horizon"></span>
+      <div class="ifw-hero-ship-track">
+        <svg class="ifw-hero-ship" viewBox="0 0 260 84" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="24" width="3" height="30"/>
+          <rect x="44" y="34" width="46" height="20"/>
+          <rect x="94" y="29" width="44" height="25"/>
+          <rect x="142" y="37" width="46" height="17"/>
+          <rect x="196" y="22" width="30" height="32"/>
+          <rect x="206" y="12" width="10" height="12"/>
+          <path d="M8 54 L252 54 L232 78 L28 78 Z"/>
+        </svg>
+      </div>
+      <div class="ifw-hero-waves">
+        <svg class="ifw-hero-wave ifw-hero-wave--back" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C240 20 480 100 720 60 C960 20 1200 100 1440 60 L1440 120 L0 120 Z"/></svg>
+        <svg class="ifw-hero-wave ifw-hero-wave--mid" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 70 C240 40 480 112 720 74 C960 38 1200 112 1440 74 L1440 120 L0 120 Z"/></svg>
+        <svg class="ifw-hero-wave ifw-hero-wave--front" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 84 C240 60 480 120 720 88 C960 56 1200 120 1440 88 L1440 120 L0 120 Z"/></svg>
+      </div>
+    </div>
     <div class="ifw-hero-grad" aria-hidden="true"></div>
     <div class="ifw-hero-inner">
       <div class="ifw-hero-content">
         <p class="ifw-hero-eyebrow">B2B Sourcing Agency &nbsp;·&nbsp; New Delhi, India</p>
         <h1 class="ifw-hero-h1">We're your<br>India office.</h1>
         <p class="ifw-hero-desc">
-          We find the right manufacturers, inspect quality personally,
-          and handle everything from first sample to your door —
-          thinking like your team from inside the factories you can't visit.
+          Pet care &amp; Ayurvedic products, sourced from India — sampled,
+          inspected, and shipped by a team on the ground.
         </p>
         <a href="#contact" class="ifw-hero-cta">
           Begin the conversation
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
+
+        <ul class="ifw-hero-trust" aria-label="What working with us looks like">
+          <li>US · UK · EU importers</li>
+          <li>GMP-aligned factories</li>
+          <li>Personal on-site QC</li>
+          <li>Export &amp; logistics managed</li>
+        </ul>
       </div>
     </div>
+
+    <a href="#statement" class="ifw-hero-scroll" aria-label="Scroll to learn more">
+      <span class="ifw-hero-scroll-line" aria-hidden="true"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
        §2  STATEMENT — The identity, unadorned.
        ══════════════════════════════════════════════════════════ -->
-  <section class="ifw-stmt ds-bg-white">
+  <section class="ifw-stmt ds-bg-white" id="statement">
     <div class="ifw-stmt-inner">
       <p class="ifw-stmt-text" data-reveal>
         We are the India office<br>our clients wish they<br>already had.
       </p>
       <p class="ifw-stmt-sub" data-reveal data-delay="2">
-        Not a vendor. Not a directory. A partner who thinks like your team —
+        Not a vendor or a directory — a partner who thinks like your team,
         from inside the factories you cannot visit.
       </p>
     </div>
@@ -68,21 +93,37 @@ import { site } from '~/lib/site';
               <span class="ifw-svc-num">01</span>
               <div>
                 <h3 class="ifw-svc-name">Factory Matching</h3>
-                <p class="ifw-svc-desc">We shortlist 3–5 GMP-certified manufacturers within 48 hours of your brief — factories we have personally visited and trust with our own reputation.</p>
+                <p class="ifw-svc-desc">GMP-certified manufacturers, personally visited and shortlisted to your brief.</p>
+                <ul class="ds-chips">
+                  <li class="ds-chip">3–5 factory shortlist</li>
+                  <li class="ds-chip">48-hour turnaround</li>
+                  <li class="ds-chip">Personally vetted</li>
+                </ul>
               </div>
             </li>
             <li class="ifw-svc-item" data-reveal data-delay="3">
               <span class="ifw-svc-num">02</span>
               <div>
                 <h3 class="ifw-svc-name">Quality &amp; Compliance</h3>
-                <p class="ifw-svc-desc">We inspect on your behalf, verify every certification first-hand, manage sample rounds, and ensure products meet international export standards before anything leaves India.</p>
+                <p class="ifw-svc-desc">First-hand inspection and certification checks before anything leaves India.</p>
+                <ul class="ds-chips">
+                  <li class="ds-chip">On-site inspection</li>
+                  <li class="ds-chip">Certification verification</li>
+                  <li class="ds-chip">Sample rounds managed</li>
+                  <li class="ds-chip">Export-standard QC</li>
+                </ul>
               </div>
             </li>
             <li class="ifw-svc-item" data-reveal data-delay="4">
               <span class="ifw-svc-num">03</span>
               <div>
                 <h3 class="ifw-svc-name">Export &amp; Delivery</h3>
-                <p class="ifw-svc-desc">We manage freight documentation, customs clearance, and full logistics — coordinating with your forwarder or handling it end-to-end, depending on your preference.</p>
+                <p class="ifw-svc-desc">Freight, customs, and logistics — handled your way, end-to-end.</p>
+                <ul class="ds-chips">
+                  <li class="ds-chip">Freight documentation</li>
+                  <li class="ds-chip">Customs clearance</li>
+                  <li class="ds-chip">Your forwarder or ours</li>
+                </ul>
               </div>
             </li>
           </ol>
@@ -140,6 +181,7 @@ import { site } from '~/lib/site';
                 class="ifw-pet-card-img"
                 loading="lazy"
               />
+              <span class="ifw-pet-card-scrim" aria-hidden="true"></span>
             </div>
             <div class="ifw-pet-card-body">
               <h3 class="ifw-pet-card-name">{p.name}</h3>
@@ -172,19 +214,17 @@ import { site } from '~/lib/site';
           <span class="ds-eyebrow" data-reveal>Ayurvedic Products</span>
           <h2 class="ds-h2" data-reveal data-delay="1">Pure Ayurveda.<br>Global standards.</h2>
           <p class="ds-body" data-reveal data-delay="2">
-            India's Ayurvedic manufacturers are among the most regulated
-            in the world. We connect you to suppliers with WHO-GMP
-            certification, AYUSH licensing, and export credentials — for
-            products that clear customs and meet your customers' expectations.
+            India's Ayurvedic manufacturers are among the world's most
+            regulated — WHO-GMP certified, AYUSH-licensed, and export-ready.
           </p>
 
-          <ul class="ifw-ayur-list" data-reveal data-delay="3">
-            <li>Ashwagandha &amp; Adaptogens</li>
-            <li>Triphala &amp; Digestive Blends</li>
-            <li>Brahmi &amp; Cognitive Herbs</li>
-            <li>Turmeric Complex &amp; Anti-Inflammatories</li>
-            <li>Neem, Moringa &amp; Superfoods</li>
-            <li>Shilajit &amp; Mineral Extracts</li>
+          <ul class="ds-chips" data-reveal data-delay="3" style="margin-bottom:2.2rem">
+            <li class="ds-chip">Ashwagandha &amp; Adaptogens</li>
+            <li class="ds-chip">Triphala &amp; Digestive Blends</li>
+            <li class="ds-chip">Brahmi &amp; Cognitive Herbs</li>
+            <li class="ds-chip">Turmeric Complex &amp; Anti-Inflammatories</li>
+            <li class="ds-chip">Neem, Moringa &amp; Superfoods</li>
+            <li class="ds-chip">Shilajit &amp; Mineral Extracts</li>
           </ul>
 
           <a href="/ayurveda-sourcing" class="ds-text-cta" data-reveal data-delay="4">
@@ -209,10 +249,14 @@ import { site } from '~/lib/site';
           India. Naturally advanced.<br>Globally connected.
         </h2>
         <p class="ds-body ds-body-light" data-reveal data-delay="2">
-          No other country combines 5,000 years of botanical knowledge with
-          modern GMP infrastructure and direct access to raw ingredients
-          at their source. We are embedded here — so you don't have to be.
+          Deep botanical knowledge, modern GMP infrastructure, direct
+          access to source — all in one place, so you don't have to be.
         </p>
+        <ul class="ds-chips" data-reveal data-delay="2" style="margin-top:1.4rem">
+          <li class="ds-chip ds-chip-light">Modern GMP infrastructure</li>
+          <li class="ds-chip ds-chip-light">Direct-source ingredient access</li>
+          <li class="ds-chip ds-chip-light">Embedded on the ground</li>
+        </ul>
       </div>
 
       <div class="ifw-india-map" data-reveal data-delay="2">
@@ -226,16 +270,16 @@ import { site } from '~/lib/site';
 
       <div class="ifw-india-stats" data-reveal data-delay="3">
         <div class="ifw-india-stat">
-          <span class="ifw-india-stat-num">5,000+</span>
-          <span class="ifw-india-stat-label">Years of Ayurvedic knowledge</span>
+          <span class="ifw-india-stat-num ds-stat-num-light">5,000+</span>
+          <span class="ifw-india-stat-label ds-stat-label-light">Years of Ayurvedic knowledge</span>
         </div>
         <div class="ifw-india-stat">
-          <span class="ifw-india-stat-num">200+</span>
-          <span class="ifw-india-stat-label">Vetted manufacturers in our network</span>
+          <span class="ifw-india-stat-num ds-stat-num-light">200+</span>
+          <span class="ifw-india-stat-label ds-stat-label-light">Vetted manufacturers in our network</span>
         </div>
         <div class="ifw-india-stat">
-          <span class="ifw-india-stat-num">150+</span>
-          <span class="ifw-india-stat-label">Export destination countries</span>
+          <span class="ifw-india-stat-num ds-stat-num-light">150+</span>
+          <span class="ifw-india-stat-label ds-stat-label-light">Export destination countries</span>
         </div>
       </div>
 
@@ -252,6 +296,8 @@ import { site } from '~/lib/site';
       class="ifw-strip-img"
       loading="lazy"
     />
+    <div class="ifw-strip-grad" aria-hidden="true"></div>
+    <p class="ifw-strip-caption" data-reveal>GMP-verified &amp; personally inspected, on the factory floor.</p>
   </div>
 
   <!-- ══════════════════════════════════════════════════════════
@@ -270,33 +316,37 @@ import { site } from '~/lib/site';
           {
             n: '01',
             title: 'Brief us',
-            body: 'Send us your product brief — category, certifications required, target MOQ, and your timeline. A 15-minute call is often all we need to understand your vision.',
-            note: 'Typically: 15-min call',
+            body: 'Share your category, certifications, target MOQ, and timeline.',
+            note: '~15-min call',
           },
           {
             n: '02',
             title: 'Receive your shortlist',
-            body: 'Within 48 hours, we send you 3–5 pre-vetted manufacturers with factory profiles, certifications, pricing ranges, and our personal recommendation.',
-            note: 'Typically: 48 hours',
+            body: '3–5 pre-vetted manufacturers — profiles, certifications, pricing.',
+            note: '~48 hours',
           },
           {
             n: '03',
             title: 'Approve your sample',
-            body: 'We request samples, inspect them on your behalf, and manage any reformulation rounds until you are satisfied. Nothing proceeds without your sign-off.',
-            note: 'Typically: 2–4 weeks',
+            body: 'We source and inspect samples until you sign off. Nothing proceeds without it.',
+            note: '~2–4 weeks',
           },
           {
             n: '04',
             title: 'Receive your delivery',
-            body: 'We manage all production oversight, export documentation, and freight — delivering to your warehouse wherever you are in the world.',
-            note: 'Typically: 6–10 weeks',
+            body: 'Production oversight, export documentation, and freight — to your door.',
+            note: '~6–10 weeks',
           },
         ].map((step, i) => (
           <div class="ifw-process-step" data-reveal data-delay={String(i + 1)}>
-            <span class="ifw-process-num">{step.n}</span>
-            <h3 class="ifw-process-title">{step.title}</h3>
-            <p class="ifw-process-body">{step.body}</p>
-            <span class="ifw-process-note">{step.note}</span>
+            <div class="ifw-process-node">
+              <span class="ifw-process-num">{step.n}</span>
+            </div>
+            <div class="ifw-process-card">
+              <h3 class="ifw-process-title">{step.title}</h3>
+              <p class="ifw-process-body">{step.body}</p>
+              <ul class="ds-chips"><li class="ds-chip ifw-process-note">{step.note}</li></ul>
+            </div>
           </div>
         ))}
       </div>
@@ -331,8 +381,8 @@ import { site } from '~/lib/site';
         Begin the<br>conversation.
       </h2>
       <p class="ifw-closing-body" data-reveal data-delay="2">
-        Whether you have a detailed brief or just a category in mind —
-        we'll turn it into a sourcing plan within 24 hours.
+        Detailed brief or just a category — we'll have a sourcing plan
+        back to you within 24 hours.
       </p>
       <div class="ifw-closing-ctas" data-reveal data-delay="3">
         <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -366,9 +416,9 @@ import { site } from '~/lib/site';
             <p class="ifw-founder-name">Divyanshu</p>
             <p class="ifw-founder-role">Founder, IndoFolk Wellness</p>
             <p class="ifw-founder-note">
-              "We built this agency because the India-to-global supply chain
-              should feel like having someone trustworthy on the ground —
-              not like navigating it blind."
+              "We built this agency so the India-to-global supply chain feels
+              like having someone trustworthy on the ground — not like
+              navigating it blind."
             </p>
             <div class="ifw-founder-links">
               <a href={`mailto:${site.contactEmail}`} class="ds-text-cta">
@@ -455,29 +505,72 @@ import { site } from '~/lib/site';
   overflow: hidden;
   background: #141E16;
 }
-.ifw-hero-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 28%;
-  animation: heroBreath 12s ease-out both;
+/* Animated maritime scene — dusk sea + drifting cargo ship + waves */
+.ifw-hero-sea { position: absolute; inset: 0; overflow: hidden; }
+.ifw-hero-sky {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, #15271c 0%, #122019 40%, #0d1812 66%, #0a130e 100%);
 }
-@keyframes heroBreath {
-  from { transform: scale(1.04); }
-  to   { transform: scale(1.00); }
+.ifw-hero-glow {
+  position: absolute; top: 8%; right: 10%;
+  width: 54vw; height: 54vw; max-width: 660px; max-height: 660px;
+  background: radial-gradient(circle, rgba(184,150,12,0.24) 0%, rgba(184,150,12,0.07) 36%, transparent 62%);
+  filter: blur(4px); pointer-events: none;
 }
-@media (prefers-reduced-motion: reduce) { .ifw-hero-bg { animation: none; } }
+.ifw-hero-horizon {
+  position: absolute; left: 0; right: 0; top: 57%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,178,64,0.40) 46%, rgba(212,178,64,0.18) 62%, transparent);
+}
+.ifw-hero-ship-track {
+  position: absolute; top: 49%; left: 0;
+  width: clamp(150px, 19vw, 270px);
+  animation: heroShipDrift 64s linear infinite;
+  will-change: transform;
+}
+@keyframes heroShipDrift {
+  from { transform: translateX(-30vw); }
+  to   { transform: translateX(130vw); }
+}
+.ifw-hero-ship {
+  display: block; width: 100%; height: auto;
+  fill: #070d09; opacity: 0.42;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.45));
+  animation: heroShipBob 6.5s ease-in-out infinite;
+}
+@keyframes heroShipBob {
+  0%, 100% { transform: translateY(0) rotate(-0.35deg); }
+  50% { transform: translateY(-5px) rotate(0.35deg); }
+}
+.ifw-hero-waves { position: absolute; left: -4%; right: -4%; bottom: 0; height: 44%; }
+.ifw-hero-wave { position: absolute; left: 0; bottom: 0; width: 108%; height: 100%; }
+.ifw-hero-wave--back  { fill: rgba(23,45,32,0.85);  animation: heroWave 13s ease-in-out infinite; }
+.ifw-hero-wave--mid   { fill: rgba(15,32,22,0.92);  animation: heroWave 9.5s ease-in-out infinite reverse; }
+.ifw-hero-wave--front { fill: #0a130e;              animation: heroWave 7.5s ease-in-out infinite; }
+@keyframes heroWave {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-3%) translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ifw-hero-ship-track { animation: none; transform: translateX(58vw); }
+  .ifw-hero-ship, .ifw-hero-wave { animation: none; }
+}
 .ifw-hero-grad {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    108deg,
-    rgba(20,30,22,0.94) 0%,
-    rgba(20,30,22,0.78) 36%,
-    rgba(20,30,22,0.42) 58%,
-    rgba(20,30,22,0.08) 100%
-  );
+  background:
+    linear-gradient(
+      108deg,
+      rgba(14,20,15,0.96) 0%,
+      rgba(16,24,18,0.84) 34%,
+      rgba(18,27,20,0.48) 56%,
+      rgba(20,30,22,0.10) 82%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10,15,11,0.55) 0%,
+      rgba(10,15,11,0.0) 30%,
+      rgba(10,15,11,0.0) 78%,
+      rgba(10,15,11,0.45) 100%
+    );
 }
 .ifw-hero-inner {
   position: relative; z-index: 2;
@@ -511,13 +604,59 @@ import { site } from '~/lib/site';
 .ifw-hero-cta:hover { color: #B8960C; border-color: #B8960C; }
 .ifw-hero-cta svg { transition: transform 0.28s; flex-shrink: 0; }
 .ifw-hero-cta:hover svg { transform: translateX(4px); }
+
+/* Trust strip — qualitative capability chips, no invented numbers */
+.ifw-hero-trust {
+  list-style: none; margin: 2.6rem 0 0; padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(250,248,244,0.14);
+  display: flex; flex-wrap: wrap; gap: 0.6rem 0.7rem;
+}
+.ifw-hero-trust li {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(250,248,244,0.72);
+  background: rgba(250,248,244,0.06);
+  border: 1px solid rgba(250,248,244,0.14);
+  border-radius: 999px;
+  padding: 0.42rem 0.9rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Scroll-down cue */
+.ifw-hero-scroll {
+  position: absolute; z-index: 3;
+  left: 50%; bottom: 2.2rem;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  color: rgba(250,248,244,0.55);
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+}
+.ifw-hero-scroll:hover { color: #B8960C; transform: translateX(-50%) translateY(3px); }
+.ifw-hero-scroll-line {
+  width: 1px; height: 2.2rem;
+  background: linear-gradient(180deg, rgba(250,248,244,0.05), currentColor);
+}
+.ifw-hero-scroll svg { animation: heroScrollBob 2.2s ease-in-out infinite; }
+@keyframes heroScrollBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ifw-hero-scroll svg { animation: none; }
+}
 @media (max-width: 640px) {
   .ifw-hero-inner { padding: 7rem 6% 5rem; }
   .ifw-hero-h1 { font-size: clamp(3rem, 11vw, 4rem); }
   .ifw-hero-desc { max-width: 100%; }
-  .ifw-hero-grad { background: linear-gradient(180deg,rgba(20,30,22,0.88) 0%,rgba(20,30,22,0.70) 100%); }
+  .ifw-hero-grad {
+    background:
+      linear-gradient(180deg,rgba(16,24,18,0.90) 0%,rgba(18,27,20,0.72) 55%,rgba(20,30,22,0.55) 100%);
+  }
   .ifw-hero-bg { object-position: 60% 28%; }
   .ifw-closing-bg { object-position: center center; }
+  .ifw-hero-scroll { display: none; }
 }
 
 /* ── §2 Statement ────────────────────────────────────────── */
@@ -556,21 +695,36 @@ import { site } from '~/lib/site';
 .ifw-services-text .ds-h2 { margin: 0 0 2.8rem; }
 .ifw-svc-list {
   list-style: none; padding: 0; margin: 0 0 2.5rem;
-  display: flex; flex-direction: column; gap: 2.2rem;
+  display: flex; flex-direction: column; gap: 1.1rem;
 }
 .ifw-svc-item {
   display: grid;
-  grid-template-columns: 2.8rem 1fr;
-  gap: 0.5rem;
+  grid-template-columns: 3.4rem 1fr;
+  gap: 0.9rem;
   align-items: start;
-  padding-top: 1.4rem;
-  border-top: 1px solid #DCD5C9;
+  padding: 1.5rem 1.6rem;
+  background: #fff;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo);
+}
+.ifw-svc-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: rgb(var(--color-brand) / 0.25);
 }
 .ifw-svc-num {
-  font-size: 0.67rem; font-weight: 700;
-  letter-spacing: 0.06em;
+  display: flex; align-items: center; justify-content: center;
+  width: 2.6rem; height: 2.6rem;
+  border-radius: 50%;
+  background: rgb(var(--color-brand) / 0.06);
+  border: 1px solid rgb(var(--color-copper) / 0.30);
+  font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.02em;
   color: #B8960C;
-  padding-top: 0.25rem;
 }
 .ifw-svc-name {
   font-size: 1rem; font-weight: 700;
@@ -578,12 +732,16 @@ import { site } from '~/lib/site';
   letter-spacing: -0.01em;
 }
 .ifw-svc-desc {
-  font-size: 0.88rem; line-height: 1.85;
-  color: #6B6358; margin: 0;
+  font-size: 0.88rem; line-height: 1.6;
+  color: #6B6358; margin: 0 0 0.9rem;
 }
-.ifw-services-img { position: sticky; top: 5rem; }
+.ifw-services-img {
+  position: sticky; top: 5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
 .ifw-services-photo {
-  width: 100%; border-radius: 4px;
+  width: 100%; border-radius: var(--radius-xl);
   object-fit: cover;
   object-position: center center;
   aspect-ratio: 4/5;
@@ -612,9 +770,12 @@ import { site } from '~/lib/site';
 .ifw-pet-card {
   text-decoration: none; color: inherit;
   display: flex; flex-direction: column;
-  border-radius: 4px; overflow: hidden;
+  border-radius: var(--radius-lg); overflow: hidden;
   border: 1px solid #DCD5C9;
-  transition: box-shadow 0.25s, transform 0.25s;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo);
   background: #fff;
 }
 /* Featured first card — breaks the uniform 3×2 grid */
@@ -630,13 +791,14 @@ import { site } from '~/lib/site';
 .ifw-pet-card:first-child .ifw-pet-card-body {
   padding: 1.6rem 1.8rem 1.8rem;
 }
-.ifw-pet-card:hover {
-  box-shadow: 0 8px 28px rgba(20,30,22,0.10);
-  transform: translateY(-3px);
+.ifw-pet-card:hover, .ifw-pet-card:focus-visible {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: rgb(var(--color-brand) / 0.30);
 }
 .ifw-pet-card-img-wrap {
   overflow: hidden; aspect-ratio: 4/3;
-  flex-shrink: 0;
+  flex-shrink: 0; position: relative;
 }
 .ifw-pet-card-img {
   width: 100%; height: 100%;
@@ -644,7 +806,14 @@ import { site } from '~/lib/site';
   transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
   display: block;
 }
-.ifw-pet-card:hover .ifw-pet-card-img { transform: scale(1.04); }
+.ifw-pet-card:hover .ifw-pet-card-img, .ifw-pet-card:focus-visible .ifw-pet-card-img { transform: scale(1.06); }
+.ifw-pet-card-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,30,22,0) 55%, rgba(20,30,22,0.28) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.ifw-pet-card:hover .ifw-pet-card-scrim, .ifw-pet-card:focus-visible .ifw-pet-card-scrim { opacity: 1; }
 .ifw-pet-card-body {
   padding: 1.2rem 1.4rem 1.4rem;
   flex: 1;
@@ -677,37 +846,19 @@ import { site } from '~/lib/site';
   gap: 6rem; align-items: center;
 }
 .ifw-ayur-img-wrap {
-  border-radius: 4px; overflow: hidden;
+  border-radius: var(--radius-xl); overflow: hidden;
   aspect-ratio: 4/5;
+  box-shadow: var(--shadow-lg);
 }
 .ifw-ayur-img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
 }
 .ifw-ayur-text .ds-h2 { margin: 0 0 1.4rem; }
-.ifw-ayur-text .ds-body { margin-bottom: 2rem; }
-.ifw-ayur-list {
-  list-style: none; padding: 0; margin: 0 0 2.2rem;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0.7rem 1.5rem;
-}
-.ifw-ayur-list li {
-  font-size: 0.84rem; font-weight: 600;
-  color: #1C1814;
-  padding-left: 1rem; position: relative;
-}
-.ifw-ayur-list li::before {
-  content: '';
-  position: absolute; left: 0; top: 50%;
-  transform: translateY(-50%);
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #2D5A3D;
-}
+.ifw-ayur-text .ds-body { margin-bottom: 1.6rem; }
 @media (max-width: 860px) {
   .ifw-ayur-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .ifw-ayur-img-wrap { aspect-ratio: 16/9; }
-  .ifw-ayur-list { grid-template-columns: 1fr; }
 }
 
 /* ── §6 India Advantage ──────────────────────────────────── */
@@ -716,10 +867,11 @@ import { site } from '~/lib/site';
 }
 .ifw-india-header .ds-h2 { margin: 0 0 1.4rem; }
 .ifw-india-map {
-  border-radius: 4px; overflow: hidden;
+  border-radius: var(--radius-xl); overflow: hidden;
   margin-bottom: 3.5rem;
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 28px 60px -18px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.04) inset;
 }
 .ifw-india-map-img {
   width: 100%; display: block;
@@ -734,19 +886,34 @@ import { site } from '~/lib/site';
 }
 .ifw-india-stat {
   display: flex; flex-direction: column; gap: 0.4rem;
+  position: relative;
+  padding-left: 1.8rem;
 }
+.ifw-india-stat::before {
+  content: '';
+  position: absolute; left: 0; top: 0.2rem;
+  width: 2px; height: 2.6rem;
+  background: linear-gradient(180deg, rgb(var(--color-copper)), rgba(184,150,12,0));
+}
+.ifw-india-stat:first-child { padding-left: 0; }
+.ifw-india-stat:first-child::before { display: none; }
 .ifw-india-stat-num {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(3rem, 6.5vw, 6rem);
   font-weight: 800; letter-spacing: -0.04em;
-  color: #FAF8F4; line-height: 1;
+  line-height: 1;
 }
 .ifw-india-stat-label {
   font-size: 0.78rem; line-height: 1.5;
-  color: rgba(250,248,244,0.38);
   margin-top: 0.5rem;
 }
 @media (max-width: 640px) {
-  .ifw-india-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ifw-india-stats { grid-template-columns: 1fr; gap: 1.8rem; }
+  .ifw-india-stat { padding-left: 0; padding-top: 1.4rem; }
+  .ifw-india-stat::before {
+    left: 0; top: 0; width: 2.4rem; height: 2px;
+    background: linear-gradient(90deg, rgb(var(--color-copper)), rgba(184,150,12,0));
+  }
+  .ifw-india-stat:first-child { padding-top: 0; }
 }
 
 /* ── §7 Factory Strip ────────────────────────────────────── */
@@ -760,6 +927,26 @@ import { site } from '~/lib/site';
   object-position: center 15%;
   display: block;
 }
+.ifw-strip-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(14,20,15,0.62) 0%, rgba(14,20,15,0.0) 32%, rgba(14,20,15,0.0) 78%, rgba(14,20,15,0.28) 100%);
+}
+.ifw-strip-caption {
+  position: absolute; left: 5%; bottom: 1.8rem; z-index: 2;
+  margin: 0;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #FAF8F4;
+  background: rgba(20,30,22,0.42);
+  border: 1px solid rgba(250,248,244,0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+}
+@media (max-width: 640px) {
+  .ifw-strip-caption { font-size: 0.72rem; left: 6%; right: 6%; }
+}
 
 /* ── §8 Process ──────────────────────────────────────────── */
 .ifw-process-header {
@@ -767,22 +954,56 @@ import { site } from '~/lib/site';
 }
 .ifw-process-header .ds-h2 { margin: 0; }
 .ifw-process-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem 2.5rem;
   margin-bottom: 3.5rem;
 }
+/* Connecting rail between the numbered nodes (desktop 4-up only) */
+.ifw-process-grid::before {
+  content: '';
+  position: absolute;
+  left: 12.5%; right: 12.5%; top: 1.55rem;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(var(--color-border)) 0, rgb(var(--color-border)) 8px,
+    transparent 8px, transparent 14px
+  );
+  z-index: 0;
+}
 .ifw-process-step {
-  border-top: 1.5px solid #DCD5C9;
-  padding-top: 1.5rem;
+  position: relative; z-index: 1;
+}
+.ifw-process-node {
+  display: flex; align-items: center; justify-content: center;
+  width: 3.1rem; height: 3.1rem;
+  border-radius: 50%;
+  background: #FAF8F4;
+  border: 1.5px solid rgb(var(--color-copper) / 0.45);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.4rem;
+  position: relative; z-index: 1;
 }
 .ifw-process-num {
-  display: block;
-  font-size: clamp(3.8rem, 8vw, 6rem); font-weight: 800;
-  letter-spacing: -0.05em;
-  color: rgba(184,150,12,0.55);
-  margin-bottom: 0.25rem;
-  line-height: 0.9;
+  font-size: 1.05rem; font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #B8960C;
+  line-height: 1;
+}
+.ifw-process-card {
+  background: #fff;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.4rem 1.6rem;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo), transform var(--dur) var(--ease-out-expo);
+  height: 100%;
+}
+.ifw-process-step:hover .ifw-process-card {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 .ifw-process-title {
   font-size: 1rem; font-weight: 700;
@@ -790,13 +1011,12 @@ import { site } from '~/lib/site';
   letter-spacing: -0.01em;
 }
 .ifw-process-body {
-  font-size: 0.84rem; line-height: 1.85;
-  color: #6B6358; margin: 0 0 0.8rem;
+  font-size: 0.84rem; line-height: 1.6;
+  color: #6B6358; margin: 0 0 0.9rem;
 }
 .ifw-process-note {
-  display: inline-block;
-  font-size: 0.70rem; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
   color: #A0978A;
 }
 .ifw-process-cta {
@@ -805,6 +1025,7 @@ import { site } from '~/lib/site';
 }
 @media (max-width: 900px) {
   .ifw-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .ifw-process-grid::before { display: none; }
 }
 @media (max-width: 540px) {
   .ifw-process-grid { grid-template-columns: 1fr; }
@@ -825,12 +1046,19 @@ import { site } from '~/lib/site';
 }
 .ifw-closing-grad {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    108deg,
-    rgba(20,30,22,0.92) 0%,
-    rgba(20,30,22,0.70) 50%,
-    rgba(20,30,22,0.40) 100%
-  );
+  background:
+    linear-gradient(
+      108deg,
+      rgba(14,20,15,0.95) 0%,
+      rgba(16,24,18,0.78) 42%,
+      rgba(18,27,20,0.46) 68%,
+      rgba(20,30,22,0.15) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10,15,11,0.35) 0%,
+      rgba(10,15,11,0.0) 26%
+    );
 }
 .ifw-closing-inner {
   position: relative; z-index: 2;
@@ -858,6 +1086,9 @@ import { site } from '~/lib/site';
   display: flex; align-items: center;
   gap: 1.2rem; flex-wrap: wrap;
 }
+.ifw-closing-ctas .btn-primary { box-shadow: var(--shadow-brand); }
+.ifw-closing-ctas .btn-ghost-light { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.ifw-closing-ctas .btn-ghost-light:hover { box-shadow: 0 10px 26px -10px rgba(184,150,12,0.35); }
 
 /* ── §10 Contact ─────────────────────────────────────────── */
 .ifw-contact-grid {
@@ -866,8 +1097,9 @@ import { site } from '~/lib/site';
   gap: 5rem; align-items: start;
 }
 .ifw-founder-img-wrap {
-  border-radius: 4px; overflow: hidden;
+  border-radius: var(--radius-xl); overflow: hidden;
   aspect-ratio: 3/4; margin-bottom: 1.8rem;
+  box-shadow: var(--shadow-lg);
 }
 .ifw-founder-img {
   width: 100%; height: 100%;
@@ -888,6 +1120,8 @@ import { site } from '~/lib/site';
   color: #6B6358; font-style: italic;
   margin: 0 0 1.4rem;
   max-width: 400px;
+  padding-left: 1.1rem;
+  border-left: 2px solid rgb(var(--color-copper) / 0.45);
 }
 .ifw-founder-links {
   display: flex; flex-direction: column; gap: 0.55rem;
@@ -902,8 +1136,13 @@ import { site } from '~/lib/site';
 .ifw-contact-form-wrap {
   background: #fff;
   border: 1px solid #DCD5C9;
-  border-radius: 4px;
+  border-radius: var(--radius-xl);
   padding: 2.4rem;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--dur) var(--ease-out-expo);
+}
+.ifw-contact-form-wrap:focus-within {
+  box-shadow: var(--shadow-lg);
 }
 .ifw-contact-form-wrap .ds-eyebrow { margin-bottom: 0.6rem; }
 .ifw-form {

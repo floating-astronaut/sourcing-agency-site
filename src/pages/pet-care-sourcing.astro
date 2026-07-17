@@ -4,13 +4,13 @@ import FAQSchema from '~/components/schema/FAQSchema.astro';
 import { site } from '~/lib/site';
 
 const faqs = [
-  { q: 'What are the minimum order quantities?', a: "We keep order quantities low and flexible — especially for first orders and sampling rounds. We work with suppliers who can accommodate brands at early stages of growth, so there's no fixed number that applies universally. Tell us your expected volume and we'll match you with factories whose minimums make sense for your business." },
-  { q: 'How long does a typical order take from enquiry to delivery?', a: 'Sampling takes 3–4 weeks. After sample approval, bulk production typically runs 6–10 weeks depending on category, followed by 3–5 weeks for ocean freight to US/UK/EU ports. Total lead time from first contact to delivery at your warehouse is typically 14–20 weeks for a first order, and 10–14 weeks for repeat orders.' },
-  { q: 'How does the sample process work?', a: 'We coordinate sampling across our vetted manufacturer network — you receive multiple factory samples side by side. Our team handles sample sourcing, quality checks, and international courier delivery to your door. Sample costs are typically $150–400 per product category and are fully deductible from your first bulk order.' },
-  { q: 'What certifications can your manufacturers provide?', a: "Our network holds GMP, FSSAI (India's FDA equivalent), HACCP, ISO 22000, and APEDA export certifications. For US market products, we source from facilities with USDA-audited processes. Organic-certified (India Organic / USDA Organic) sourcing is available for select ingredients. We can provide full documentation packages for customs and regulatory submissions." },
-  { q: 'Can you handle custom formulations and private label packaging?', a: 'Yes — custom formulation (new recipes, ingredient swaps, functional additives) and full private label packaging design and production are core services. We work with your R&D team or can recommend formulation partners. Packaging options include stand-up pouches, kraft bags, jars, cans, and blister packs — all with your brand identity.' },
-  { q: 'Which markets do you export to?', a: 'We primarily serve brands selling into the US, UK, EU, Canada, and Australia. Our team handles all export documentation (phytosanitary certificates, certificates of origin, lab test reports) required for customs clearance in each market.' },
-  { q: 'Do you handle quality control and inspections?', a: 'Yes — every bulk order includes a pre-shipment quality inspection (AQL standard) conducted either by our team in India or a third-party inspection firm. Lab testing for contaminants, nutritional labelling compliance, and shelf-life validation are arranged on request.' },
+  { q: 'What are the minimum order quantities?', a: "We keep order quantities low and flexible, especially for first orders and sampling rounds — there's no fixed number that applies universally. Tell us your expected volume and we'll match you with factories whose minimums make sense for your business." },
+  { q: 'How long does a typical order take from enquiry to delivery?', a: 'Sampling takes 3–4 weeks. Bulk production typically runs 6–10 weeks depending on category, plus 3–5 weeks ocean freight to US/UK/EU ports. Total lead time is typically 14–20 weeks for a first order, and 10–14 weeks for repeat orders.' },
+  { q: 'How does the sample process work?', a: 'We coordinate sampling across our vetted network so you receive multiple factory samples side by side — we handle sourcing, quality checks, and courier delivery to your door. Sample costs typically run $150–400 per product category, fully deductible from your first bulk order.' },
+  { q: 'What certifications can your manufacturers provide?', a: "Our network holds GMP, FSSAI (India's FDA equivalent), HACCP, ISO 22000, and APEDA export certifications, with USDA-audited facilities for US market products and Organic-certified (India Organic / USDA Organic) sourcing for select ingredients. We provide full documentation packages for customs and regulatory submissions." },
+  { q: 'Can you handle custom formulations and private label packaging?', a: 'Yes — custom formulation (new recipes, ingredient swaps, functional additives) and full private label packaging design and production are core services. We work with your R&D team or recommend formulation partners. Packaging options include stand-up pouches, kraft bags, jars, cans, and blister packs, all with your brand identity.' },
+  { q: 'Which markets do you export to?', a: 'We primarily serve brands selling into the US, UK, EU, Canada, and Australia, and handle all export documentation — phytosanitary certificates, certificates of origin, lab test reports — required for customs clearance in each market.' },
+  { q: 'Do you handle quality control and inspections?', a: 'Yes — every bulk order includes a pre-shipment quality inspection (AQL standard) by our team in India or a third-party firm. Lab testing for contaminants, nutritional labelling compliance, and shelf-life validation is arranged on request.' },
 ] as const;
 
 const products = [
@@ -43,10 +43,15 @@ const products = [
       <p class="pc-hero-eyebrow">Pet Care Sourcing &nbsp;·&nbsp; IndoFolk Wellness</p>
       <h1 class="pc-hero-h1">Private label pet products<br>from India's best factories.</h1>
       <p class="pc-hero-desc">
-        GMP-certified manufacturers. Personal quality inspection.
-        Full export documentation for the US, UK, and EU.
-        End to end — from first sample to your warehouse.
+        Certified factories, personally inspected — from first
+        sample to your warehouse.
       </p>
+      <ul class="ds-chips pc-hero-chips">
+        <li class="ds-chip ds-chip-light">GMP-Certified Manufacturers</li>
+        <li class="ds-chip ds-chip-light">Personal Quality Inspection</li>
+        <li class="ds-chip ds-chip-light">US · UK · EU Export Docs</li>
+        <li class="ds-chip ds-chip-light">Sample → Warehouse, Managed</li>
+      </ul>
       <div class="pc-hero-ctas">
         <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           Book a free consultation
@@ -56,10 +61,15 @@ const products = [
         </a>
       </div>
     </div>
+
+    <a href="#products" class="pc-hero-scroll" aria-label="Scroll to product categories">
+      <span class="pc-hero-scroll-line" aria-hidden="true"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
   </section>
 
   <!-- ══ PRODUCT GRID ═══════════════════════════════════════ -->
-  <section class="ds-section ds-bg-white">
+  <section id="products" class="ds-section ds-bg-white">
     <div class="ds-container">
       <div class="pc-grid-header">
         <div>
@@ -69,8 +79,8 @@ const products = [
           </h2>
         </div>
         <p class="ds-body" data-reveal data-delay="2" style="max-width:420px">
-          Multiple product categories, hundreds of SKU options,
-          full custom formulation and packaging across each.
+          Hundreds of SKUs across every category — full custom
+          formulation and packaging on each.
         </p>
       </div>
 
@@ -79,6 +89,7 @@ const products = [
           <div class="pc-product-card" data-reveal data-delay={String((i % 3) + 1)}>
             <div class="pc-product-img-wrap">
               <img src={`/images/ifw/${p.img}`} alt={p.name} class="pc-product-img" loading="lazy" />
+              <span class="pc-product-scrim" aria-hidden="true"></span>
             </div>
             <div class="pc-product-body">
               <h3 class="pc-product-name">{p.name}</h3>
@@ -105,17 +116,15 @@ const products = [
           <span class="ds-eyebrow ds-eyebrow-light" data-reveal>Why India</span>
           <h2 class="ds-h2 ds-h2-light" data-reveal data-delay="1">India is the world's<br>leading pet product<br>sourcing hub.</h2>
           <p class="ds-body ds-body-light" data-reveal data-delay="2">
-            India exports over $800M in pet products annually — combining
-            traditional knowledge (like Himalayan yak chews) with modern
-            GMP manufacturing at 30–50% lower cost than US or European
-            alternatives.
+            Traditional knowledge meets modern GMP manufacturing —
+            at 30–50% lower cost than US or EU alternatives.
           </p>
           <div class="pc-why-points" data-reveal data-delay="3">
             {[
-              { title: 'Authentic Himalayan sourcing', desc: 'Yak cheese and Himalayan ingredients sourced from heritage supply chains — the real thing, not substitutes.' },
-              { title: '200+ GMP-certified factories', desc: 'Our vetted network covers every pet product category with verifiable certifications for your target market.' },
-              { title: '30–50% cost advantage', desc: 'Comparable quality to US and EU manufacturing at a fraction of the cost — without compromising on compliance.' },
-              { title: 'End-to-end export support', desc: 'Phytosanitary certificates, COO, FDA Prior Notice, and full customs documentation handled for every shipment.' },
+              { title: 'Authentic Himalayan sourcing', desc: 'Yak cheese and Himalayan ingredients from heritage supply chains — the real thing, not substitutes.' },
+              { title: '200+ GMP-certified factories', desc: 'Every pet product category covered, certifications verified for your target market.' },
+              { title: '30–50% cost advantage', desc: 'US/EU-comparable quality at a fraction of the cost, without compromising compliance.' },
+              { title: 'End-to-end export support', desc: 'Phytosanitary certificates, COO, FDA Prior Notice — customs documentation handled for every shipment.' },
             ].map((pt) => (
               <div class="pc-why-point">
                 <h4 class="pc-why-point-title">{pt.title}</h4>
@@ -130,23 +139,25 @@ const products = [
           <div class="pc-certs-grid">
             {['GMP (Good Manufacturing Practice)', 'FSSAI (India Food Safety)', 'HACCP & ISO 22000', 'APEDA Export Certified', 'USDA Organic (select factories)', 'Startup India Certified'].map(cert => (
               <div class="pc-cert-item">
-                <span class="pc-cert-check">✓</span>
+                <span class="pc-cert-check" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
                 <span>{cert}</span>
               </div>
             ))}
           </div>
           <div class="pc-stat-strip">
             <div class="pc-stat">
-              <span class="pc-stat-num">$800M+</span>
-              <span class="pc-stat-label">India pet exports annually</span>
+              <span class="ds-stat-num ds-stat-num-light pc-stat-num">$800M+</span>
+              <span class="ds-stat-label ds-stat-label-light pc-stat-label">India pet exports annually</span>
             </div>
             <div class="pc-stat">
-              <span class="pc-stat-num">200+</span>
-              <span class="pc-stat-label">Vetted factories</span>
+              <span class="ds-stat-num ds-stat-num-light pc-stat-num">200+</span>
+              <span class="ds-stat-label ds-stat-label-light pc-stat-label">Vetted factories</span>
             </div>
             <div class="pc-stat">
-              <span class="pc-stat-num">50%</span>
-              <span class="pc-stat-label">Lower COGS vs. US/EU</span>
+              <span class="ds-stat-num ds-stat-num-light pc-stat-num">50%</span>
+              <span class="ds-stat-label ds-stat-label-light pc-stat-label">Lower COGS vs. US/EU</span>
             </div>
           </div>
         </div>
@@ -162,6 +173,7 @@ const products = [
       class="pc-strip-img"
       loading="lazy"
     />
+    <div class="pc-strip-grad" aria-hidden="true"></div>
   </div>
 
   <!-- ══ PROCESS ════════════════════════════════════════════ -->
@@ -171,22 +183,25 @@ const products = [
         <span class="ds-eyebrow" data-reveal>How It Works</span>
         <h2 class="ds-h2" data-reveal data-delay="1">From enquiry to your<br>warehouse in 4 steps.</h2>
         <p class="ds-body" data-reveal data-delay="2">
-          A clear process — no hidden steps, no surprises.
-          You know exactly where your order is at every stage.
+          No hidden steps — track your order at every stage.
         </p>
       </div>
       <div class="pc-process-grid">
         {[
-          { n: '01', title: 'Discovery Call',        time: 'Day 1–2',     desc: 'We learn your product requirements, target market, price points, and volume expectations. Then we shortlist the best-fit factories from our vetted network.' },
-          { n: '02', title: 'Sampling Round',        time: 'Week 2–4',    desc: 'We coordinate samples from 2–4 factories so you can compare quality side by side. Our team pre-screens every sample before it ships to you.' },
-          { n: '03', title: 'Factory Approval & PO', time: 'Week 5–6',    desc: 'You approve your preferred factory and formulation. We handle supply agreements, payment terms, and compliance documentation for your market.' },
-          { n: '04', title: 'Production & Delivery', time: 'Week 7–20',   desc: 'We manage production timelines, conduct pre-shipment QC inspection, arrange export documentation, and track delivery to your warehouse.' },
+          { n: '01', title: 'Discovery Call',        time: 'Day 1–2',     desc: 'We map your product needs, market, and volume — then shortlist your best-fit factories.' },
+          { n: '02', title: 'Sampling Round',        time: 'Week 2–4',    desc: 'Samples from 2–4 factories, pre-screened by our team before they ship to you.' },
+          { n: '03', title: 'Factory Approval & PO', time: 'Week 5–6',    desc: 'You approve the factory and formulation — we handle agreements, payment terms, and compliance.' },
+          { n: '04', title: 'Production & Delivery', time: 'Week 7–20',   desc: 'We manage production, pre-shipment QC, export documentation, and delivery tracking to your door.' },
         ].map((step, i) => (
           <div class="pc-process-step" data-reveal data-delay={String(i + 1)}>
-            <span class="pc-process-num">{step.n}</span>
-            <h3 class="pc-process-title">{step.title}</h3>
-            <p class="pc-process-body">{step.desc}</p>
-            <span class="pc-process-note">{step.time}</span>
+            <div class="pc-process-node" aria-hidden="true">
+              <span class="pc-process-num">{step.n}</span>
+            </div>
+            <div class="pc-process-card">
+              <h3 class="pc-process-title">{step.title}</h3>
+              <p class="pc-process-body">{step.desc}</p>
+              <span class="pc-process-note">{step.time}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -238,8 +253,8 @@ const products = [
           Get your first sample kit<br>within 4 weeks.
         </h2>
         <p class="ds-body ds-body-light" data-reveal data-delay="2">
-          Book a 30-minute discovery call. We'll match you with the right
-          factories and coordinate your first sampling round.
+          Book a 30-minute call — we'll match you with the right
+          factories and start sampling.
         </p>
         <div class="pc-cta-buttons" data-reveal data-delay="3">
           <a href={site.calendlyUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -269,15 +284,30 @@ const products = [
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center 35%;
+  animation: pcHeroBreath 12s ease-out both;
 }
+@keyframes pcHeroBreath {
+  from { transform: scale(1.045); }
+  to   { transform: scale(1.00); }
+}
+@media (prefers-reduced-motion: reduce) { .pc-hero-bg { animation: none; } }
 .pc-hero-grad {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    108deg,
-    rgba(20,30,22,0.94) 0%,
-    rgba(20,30,22,0.70) 50%,
-    rgba(20,30,22,0.30) 100%
-  );
+  background:
+    linear-gradient(
+      108deg,
+      rgba(20,30,22,0.94) 0%,
+      rgba(20,30,22,0.72) 46%,
+      rgba(20,30,22,0.32) 78%,
+      rgba(20,30,22,0.12) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10,15,11,0.40) 0%,
+      rgba(10,15,11,0.0) 28%,
+      rgba(10,15,11,0.0) 76%,
+      rgba(10,15,11,0.34) 100%
+    );
 }
 .pc-hero-inner {
   position: relative; z-index: 2;
@@ -302,7 +332,33 @@ const products = [
   color: rgba(250,248,244,0.55);
   max-width: 480px; margin: 0 0 2.4rem;
 }
+.pc-hero-chips { margin: 0 0 2.2rem; }
 .pc-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.pc-hero-ctas .btn-primary { box-shadow: var(--shadow-brand); }
+.pc-hero-ctas .btn-ghost-light { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+
+/* Hero scroll cue */
+.pc-hero-scroll {
+  position: absolute; z-index: 3;
+  left: 50%; bottom: 2.1rem;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  color: rgba(250,248,244,0.55);
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+}
+.pc-hero-scroll:hover { color: #B8960C; transform: translateX(-50%) translateY(3px); }
+.pc-hero-scroll-line {
+  width: 1px; height: 2.1rem;
+  background: linear-gradient(180deg, rgba(250,248,244,0.05), currentColor);
+}
+.pc-hero-scroll svg { animation: pcScrollBob 2.2s ease-in-out infinite; }
+@keyframes pcScrollBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) { .pc-hero-scroll svg { animation: none; } }
+@media (max-width: 640px) { .pc-hero-scroll { display: none; } }
 
 /* Product grid */
 .pc-grid-header {
@@ -317,14 +373,18 @@ const products = [
   gap: 1.5rem;
 }
 .pc-product-card {
-  background: #fff; border: 1px solid #DCD5C9;
-  border-radius: 4px; overflow: hidden;
+  background: #fff; border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg); overflow: hidden;
   display: flex; flex-direction: column;
-  transition: box-shadow 0.25s, transform 0.25s;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo);
 }
 /* Featured first card */
 .pc-product-card:first-child {
   grid-column: 1 / 3;
+  box-shadow: var(--shadow-sm);
 }
 .pc-product-card:first-child .pc-product-img-wrap {
   aspect-ratio: 16/7;
@@ -335,18 +395,26 @@ const products = [
 .pc-product-card:first-child .pc-product-body {
   padding: 1.6rem 1.8rem 1.8rem;
 }
-.pc-product-card:hover {
-  box-shadow: 0 8px 28px rgba(20,30,22,0.09);
-  transform: translateY(-3px);
+.pc-product-card:hover, .pc-product-card:focus-within {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: rgb(var(--color-brand) / 0.30);
 }
 .pc-product-img-wrap {
-  overflow: hidden; aspect-ratio: 4/3; flex-shrink: 0;
+  overflow: hidden; aspect-ratio: 4/3; flex-shrink: 0; position: relative;
 }
 .pc-product-img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
 }
-.pc-product-card:hover .pc-product-img { transform: scale(1.04); }
+.pc-product-card:hover .pc-product-img { transform: scale(1.05); }
+.pc-product-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,30,22,0) 60%, rgba(20,30,22,0.20) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.pc-product-card:hover .pc-product-scrim { opacity: 1; }
 .pc-product-body {
   padding: 1.4rem; flex: 1;
   display: flex; flex-direction: column; gap: 0.5rem;
@@ -362,7 +430,7 @@ const products = [
 .pc-product-meta {
   display: flex; align-items: center;
   justify-content: space-between; gap: 1rem;
-  border-top: 1px solid #DCD5C9;
+  border-top: 1px solid rgb(var(--color-border));
   padding-top: 0.85rem; margin-top: 0.4rem;
 }
 .pc-product-moq {
@@ -385,6 +453,10 @@ const products = [
 .pc-why-point {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 1.2rem;
+  transition: border-color var(--dur) var(--ease-out-expo);
+}
+.pc-why-point:hover {
+  border-color: rgb(var(--color-copper) / 0.35);
 }
 .pc-why-point-title {
   font-size: 0.9rem; font-weight: 700;
@@ -396,61 +468,112 @@ const products = [
 }
 .pc-why-certs {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 4px; padding: 2rem;
-  display: flex; flex-direction: column; gap: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-xl); padding: 2.2rem;
+  display: flex; flex-direction: column; gap: 1.6rem;
+  box-shadow: 0 28px 52px -18px rgba(0,0,0,0.50), 0 2px 0 rgba(255,255,255,0.04) inset;
 }
 .pc-certs-label {
   font-size: 0.67rem; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(250,248,244,0.28);
+  color: rgba(250,248,244,0.30);
 }
 .pc-certs-grid {
-  display: flex; flex-direction: column; gap: 0.65rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
 }
 .pc-cert-item {
-  display: flex; align-items: center; gap: 0.65rem;
-  font-size: 0.84rem; color: rgba(250,248,244,0.65);
+  display: flex; align-items: center; gap: 0.7rem;
+  font-size: 0.83rem; font-weight: 500; color: rgba(250,248,244,0.75);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 0.62rem 1rem;
+  transition: background var(--dur) var(--ease-out-expo),
+              border-color var(--dur) var(--ease-out-expo),
+              transform var(--dur) var(--ease-out-expo);
+}
+.pc-cert-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgb(var(--color-copper) / 0.35);
+  transform: translateX(2px);
 }
 .pc-cert-check {
-  color: #2D5A3D; font-weight: 700; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  background: rgb(var(--color-brand) / 0.22);
+  color: #7FD9A0; flex-shrink: 0;
 }
 .pc-stat-strip {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1.5rem;
+  gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1.6rem;
 }
 .pc-stat { display: flex; flex-direction: column; gap: 0.3rem; }
-.pc-stat-num {
-  font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
-  letter-spacing: -0.03em; color: #FAF8F4;
-}
-.pc-stat-label {
-  font-size: 0.70rem; color: rgba(250,248,244,0.35);
-  line-height: 1.4;
-}
+.pc-stat-strip .pc-stat-num { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.pc-stat-strip .pc-stat-label { margin-top: 0; }
 
 /* Factory strip */
 .pc-strip {
-  height: 50vh; min-height: 300px; overflow: hidden;
+  height: 50vh; min-height: 300px; overflow: hidden; position: relative;
 }
 .pc-strip-img {
   width: 100%; height: 100%; object-fit: cover;
   object-position: center 15%; display: block;
+}
+.pc-strip-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(14,20,15,0.55) 0%, rgba(14,20,15,0.0) 30%, rgba(14,20,15,0.0) 75%, rgba(14,20,15,0.30) 100%);
 }
 
 /* Process */
 .pc-process-header { max-width: 580px; margin-bottom: 3rem; }
 .pc-process-header .ds-h2 { margin: 0 0 1rem; }
 .pc-process-grid {
+  position: relative;
   display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 2rem; margin-bottom: 3rem;
+  gap: 2rem 2.5rem; margin-bottom: 3rem;
 }
-.pc-process-step { border-top: 1.5px solid #DCD5C9; padding-top: 1.5rem; }
+/* Connecting rail between numbered nodes (desktop 4-up only) */
+.pc-process-grid::before {
+  content: '';
+  position: absolute;
+  left: 12.5%; right: 12.5%; top: 1.55rem;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(var(--color-border)) 0, rgb(var(--color-border)) 8px,
+    transparent 8px, transparent 14px
+  );
+  z-index: 0;
+}
+.pc-process-step { position: relative; z-index: 1; }
+.pc-process-node {
+  display: flex; align-items: center; justify-content: center;
+  width: 3.1rem; height: 3.1rem;
+  border-radius: 50%;
+  background: #FAF8F4;
+  border: 1.5px solid rgb(var(--color-copper) / 0.45);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.4rem;
+  position: relative; z-index: 1;
+}
 .pc-process-num {
-  display: block; font-size: clamp(3.8rem, 8vw, 6rem); font-weight: 800;
-  letter-spacing: -0.05em; color: rgba(184,150,12,0.55);
-  margin-bottom: 0.25rem; line-height: 0.9;
+  font-size: 1.05rem; font-weight: 800;
+  letter-spacing: -0.02em; color: #B8960C;
+  line-height: 1;
+}
+.pc-process-card {
+  background: #fff;
+  border: 1px solid rgb(var(--color-border));
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.4rem 1.6rem;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--dur) var(--ease-out-expo), transform var(--dur) var(--ease-out-expo);
+  height: 100%;
+}
+.pc-process-step:hover .pc-process-card {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 .pc-process-title {
   font-size: 0.96rem; font-weight: 700;
@@ -474,23 +597,32 @@ const products = [
 .pc-faq-sidebar .ds-h3 { margin: 0 0 1rem; }
 .pc-faq-sidebar .ds-body { margin-bottom: 1.5rem; }
 .pc-faq-list { display: flex; flex-direction: column; }
-.pc-faq-item { border-bottom: 1px solid #DCD5C9; }
+.pc-faq-item {
+  border-bottom: 1px solid rgb(var(--color-border));
+  transition: background var(--dur) var(--ease-out-expo);
+  border-radius: var(--radius-sm);
+}
+.pc-faq-item:hover { background: rgb(var(--color-surface-2) / 0.6); }
 .pc-faq-q {
-  width: 100%; padding: 1.3rem 0; background: none; border: none;
+  width: 100%; padding: 1.3rem 1rem; background: none; border: none;
   font-family: inherit; font-size: 0.92rem; font-weight: 600;
   color: #1C1814; display: flex; justify-content: space-between;
   align-items: center; gap: 1rem; text-align: left; cursor: pointer;
   transition: color 0.2s;
+  border-radius: var(--radius-sm);
 }
 .pc-faq-q:hover { color: #2D5A3D; }
 .pc-faq-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.6rem; height: 1.6rem; border-radius: 50%;
   font-size: 1.1rem; color: #2D5A3D;
-  flex-shrink: 0; transition: transform 0.25s;
+  background: rgb(var(--color-brand) / 0.07);
+  flex-shrink: 0; transition: transform 0.25s, background 0.25s;
 }
-.pc-faq-q[aria-expanded="true"] .pc-faq-icon { transform: rotate(45deg); }
+.pc-faq-q[aria-expanded="true"] .pc-faq-icon { transform: rotate(45deg); background: rgb(var(--color-brand) / 0.12); }
 .pc-faq-a {
   display: none; font-size: 0.88rem; line-height: 1.85;
-  color: #6B6358; padding-bottom: 1.2rem;
+  color: #6B6358; padding: 0 1rem 1.2rem;
 }
 
 /* Closing CTA */
@@ -499,6 +631,11 @@ const products = [
 .pc-cta-inner .ds-h2 { margin: 0 0 1.2rem; }
 .pc-cta-inner .ds-body { margin-bottom: 2.2rem; }
 .pc-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.pc-cta-buttons .btn-primary { box-shadow: var(--shadow-brand); }
+.pc-cta-buttons .btn-ghost-light {
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.pc-cta-buttons .btn-ghost-light:hover { box-shadow: 0 10px 26px -10px rgba(184,150,12,0.35); }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -508,6 +645,7 @@ const products = [
   .pc-product-card:first-child .pc-product-img-wrap { aspect-ratio: 16/9; }
   .pc-why-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pc-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .pc-process-grid::before { display: none; }
   .pc-faq-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 @media (max-width: 640px) {
