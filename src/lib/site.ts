@@ -30,6 +30,7 @@ export const site = {
 export const nav = [
   { href: '/pet-care-sourcing', label: 'Pet Care Sourcing' },
   { href: '/ayurveda-sourcing', label: 'Ayurveda Sourcing' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ] as const;
