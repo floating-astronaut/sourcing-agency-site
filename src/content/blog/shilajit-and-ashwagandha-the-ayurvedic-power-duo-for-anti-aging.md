@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurvedic"
 seoDescription: "Discover the anti-aging power of Shilajit and Ashwagandha! Learn how these Ayurvedic herbs boost vitality, slow aging, and enhance longevity naturally. Try Indofolk Wellness for premium herbal solutions."
-coverImage: "https://static.wixstatic.com/media/34116d_146d91632c384bf4a2a994345c0f970f~mv2.jpg"
+cover: "../../assets/blog/shilajit-and-ashwagandha-the-ayurvedic-power-duo-for-anti-aging.jpg"
 coverAlt: "Pure Himalayan Shilajit resin, a natural Ayurvedic remedy for energy and longevity."
 ---
 

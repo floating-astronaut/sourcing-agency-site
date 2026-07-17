@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurveda for longevity"
 seoDescription: "Discover Ayurveda’s ancient secrets to longevity with anti-aging herbs, rejuvenation therapies, and holistic wellness. Explore natural aging solutions with Indofolk Wellness."
-coverImage: "https://static.wixstatic.com/media/34116d_dd4efcf623764e8c868d603ce255f7fe~mv2.jpg"
+cover: "../../assets/blog/how-ayurveda-promotes-longevity-the-ancient-secrets-to-a-longer-healthier-life.jpg"
 coverAlt: "A sattvic diet with fresh fruits, vegetables, whole grains, and herbal teas for longevity."
 ---
 

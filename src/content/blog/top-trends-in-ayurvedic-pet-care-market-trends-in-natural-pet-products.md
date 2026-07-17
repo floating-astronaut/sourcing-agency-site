@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_14e28b2bc0a54226b55211cbd39c85de~mv2.png"
+cover: "../../assets/blog/top-trends-in-ayurvedic-pet-care-market-trends-in-natural-pet-products.png"
 coverAlt: "Close-up view of Ayurvedic herbs and powders for pet care"
 ---
 

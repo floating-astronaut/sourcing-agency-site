@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurvedic products exporters"
 seoDescription: "Discover how Indofolk Wellness, leading ayurvedic products exporters, can help you build a global wellness brand with private-label solutions."
-coverImage: "https://static.wixstatic.com/media/34116d_91340feac19740219b4ade1fe4d538cc~mv2.jpg"
+cover: "../../assets/blog/private-label-ayurvedic-products-how-to-build-a-global-wellness-brand-with-indof.jpg"
 coverAlt: "Assorted Ayurvedic supplements, including capsules, powders, and syrups, made with natural herbs.\""
 ---
 

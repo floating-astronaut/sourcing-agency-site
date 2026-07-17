@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_cf73166124a248ae9e6548f908b0994d~mv2.png"
+cover: "../../assets/blog/advantages-of-natural-private-label-dog-chews.png"
 coverAlt: "Close-up view of natural dog chews arranged neatly"
 ---
 

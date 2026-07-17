@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_13c90b5595df4b48976aff32a6738b3e~mv2.png"
+cover: "../../assets/blog/unlocking-the-benefits-of-ayurvedic-pet-product-benefits.png"
 coverAlt: "Close-up view of Ayurvedic herbs and powders used in pet care"
 ---
 

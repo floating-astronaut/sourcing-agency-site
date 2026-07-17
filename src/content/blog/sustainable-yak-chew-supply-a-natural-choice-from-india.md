@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_e6e267e801d44b66b2b4ea4886266883~mv2.jpg"
+cover: "../../assets/blog/sustainable-yak-chew-supply-a-natural-choice-from-india.jpg"
 coverAlt: ""
 ---
 

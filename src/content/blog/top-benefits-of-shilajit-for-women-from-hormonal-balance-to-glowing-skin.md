@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "shilajit"
 seoDescription: "Discover the top benefits of Shilajit for women with Shepas Secret, from promoting hormonal balance and boosting energy to enhancing skin health and achieving a radiant glow. Explore how this natural supplement supports overall well-being at Shepas Secret"
-coverImage: "https://static.wixstatic.com/media/34116d_6d67b338f40a40b3acc97d57755a5de6~mv2.jpg"
+cover: "../../assets/blog/top-benefits-of-shilajit-for-women-from-hormonal-balance-to-glowing-skin.jpg"
 coverAlt: "Women's Wellness Sherpa's Shilajit: Natural Supplement for Enhancing Female Health and Vitality, Lab-Certified for Quality and Safety."
 ---
 

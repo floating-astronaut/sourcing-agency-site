@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurvedic"
 seoDescription: "Discover the top Ayurvedic ingredients revolutionizing the wellness industry, including Ashwagandha, Turmeric, Neem, and Brahmi. Learn about their benefits, applications, and why Indofolk Wellness is the go-to supplier for bulk and private-label Ayurvedic products."
-coverImage: "https://static.wixstatic.com/media/34116d_832e1df07fca43d6b70557ee35838150~mv2.jpg"
+cover: "../../assets/blog/top-ayurvedic-ingredients-revolutionizing-the-wellness-industry-sourced-from-ind.jpg"
 coverAlt: "ayurvedic"
 ---
 

@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurveda for stress"
 seoDescription: "Discover how Ayurveda can help you manage stress, anxiety, and insomnia naturally. Explore powerful Ayurvedic remedies, lifestyle tips, and herbal solutions for better sleep and mental well-being with Indofolkwellness"
-coverImage: "https://static.wixstatic.com/media/34116d_5bf551ba4b5548469042adc6f0032937~mv2.png"
+cover: "../../assets/blog/how-ayurveda-can-help-you-manage-stress-anxiety-and-insomnia-naturally.png"
 coverAlt: "A serene woman practicing meditation with Ayurvedic herbs like Ashwagandha, Brahmi, and Tulsi placed beside her, symbolizing natural stress relief and holistic well-being."
 ---
 

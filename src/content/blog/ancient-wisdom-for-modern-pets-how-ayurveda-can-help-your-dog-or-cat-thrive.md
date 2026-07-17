@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "pet health care"
 seoDescription: "Discover how Ayurveda can transform pet health care for your furry friends. Enhance pet health care with ancient wisdom for a happier life."
-coverImage: "https://static.wixstatic.com/media/34116d_d1ccead3225e466299dec6960a7ac695~mv2.webp"
+cover: "../../assets/blog/ancient-wisdom-for-modern-pets-how-ayurveda-can-help-your-dog-or-cat-thrive.webp"
 coverAlt: "A happy dog and cat sitting beside Ayurvedic herbs, promoting natural pet wellness."
 ---
 

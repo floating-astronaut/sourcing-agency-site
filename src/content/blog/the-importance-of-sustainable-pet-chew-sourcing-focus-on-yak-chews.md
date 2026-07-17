@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_d94970ab58b047028e26a9f87890552f~mv2.png"
+cover: "../../assets/blog/the-importance-of-sustainable-pet-chew-sourcing-focus-on-yak-chews.png"
 coverAlt: "Close-up view of natural yak chews stacked neatly"
 ---
 

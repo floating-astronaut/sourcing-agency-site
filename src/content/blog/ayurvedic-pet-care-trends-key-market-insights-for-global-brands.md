@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_7307d032bb4343bd91f16d9ec0b0f4b8~mv2.png"
+cover: "../../assets/blog/ayurvedic-pet-care-trends-key-market-insights-for-global-brands.png"
 coverAlt: "Close-up view of Ayurvedic herbs and powders in wooden bowls"
 ---
 

@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurveda for adults"
 seoDescription: "Discover the ultimate guide to Ayurveda for adults. Learn how to balance mind, body, and spirit with Ayurvedic lifestyle tips, dosha-based diets, herbal remedies, and daily wellness practices for holistic health"
-coverImage: "https://static.wixstatic.com/media/34116d_eb17de5d6c5c4506a99cd96ab3db0521~mv2.png"
+cover: "../../assets/blog/the-ultimate-guide-to-ayurveda-for-adults-balancing-mind-body-and-spirit.png"
 coverAlt: "Person receiving an Ayurvedic Abhyanga massage with warm herbal oils for detoxification."
 ---
 

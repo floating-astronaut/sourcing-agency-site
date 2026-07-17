@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurvedic Pet Supplements"
 seoDescription: "Pet brands, importers, and distributors are increasingly adopting Ayurvedic ingredients such as Ashwagandha, Turmeric, Neem, Tulsi, and Moringa in pet supplements. Learn the fastest-growing pet wellness categories, sourcing considerations, and private-label opportunities."
-coverImage: "https://static.wixstatic.com/media/bf38c5_227f16e5775945b4a1d24132ba036c31~mv2.jpg"
+cover: "../../assets/blog/ayurvedic-pet-supplement-ingredients-guide.jpg"
 coverAlt: "Premium Ayurvedic ingredients including Ashwagandha, Turmeric, Tulsi, Neem, Moringa and Amla used in modern pet wellness and supplement products."
 ---
 

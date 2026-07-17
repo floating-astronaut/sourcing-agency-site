@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_3ea1929b6a7e473abe236a6f71d938a1~mv2.png"
+cover: "../../assets/blog/building-export-partnerships-for-indofolk-wellness-exports.png"
 coverAlt: "Eye-level view of natural Ayurvedic pet products arranged on wooden shelves"
 ---
 

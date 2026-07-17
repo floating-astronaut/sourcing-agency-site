@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: ""
 seoDescription: "Looking for a Himalayan Yak Chew supplier? Learn what pet brands, importers, and distributors should evaluate, from certifications and quality standards to packaging and private-label capabilities."
-coverImage: "https://static.wixstatic.com/media/bf38c5_0c593332befc45fd91f431ece323b083~mv2.jpg"
+cover: "../../assets/blog/himalayan-yak-chew-supplier-guide.jpg"
 coverAlt: "Himalayan Yak Chews in retail packaging prepared for private label distribution and international export"
 ---
 

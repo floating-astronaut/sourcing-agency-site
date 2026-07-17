@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_ab8156999fd847d8ab244bab56672c53~mv2.png"
+cover: "../../assets/blog/exploring-indofolk-wellness-b2b-sourcing-for-pet-brands-your-guide-to-b2b-wellne.png"
 coverAlt: "Eye-level view of shelves filled with natural Ayurvedic pet products"
 ---
 

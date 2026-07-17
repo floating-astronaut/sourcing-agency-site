@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurvedic"
 seoDescription: "Discover why India is the global hub for Ayurvedic product manufacturing and exports. Learn about its rich resources, skilled labor, advanced facilities, and ethical manufacturers like Indofolk Wellness. Explore the booming Ayurvedic market and its growth trends."
-coverImage: "https://static.wixstatic.com/media/34116d_d5275b53948b40948404d63ea98b5064~mv2.webp"
+cover: "../../assets/blog/why-india-is-the-world-s-preferred-hub-for-ayurvedic-product-manufacturing-and-e.webp"
 coverAlt: "A lush Indian forest featuring medicinal plants like tulsi, ashwagandha, and neem, with sunlight filtering through the dense greenery."
 ---
 

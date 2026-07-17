@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: "private label pet supplement manufacturer"
 seoDescription: "Learn how to choose the right private label pet supplement manufacturer with this complete B2B buyer's guide covering certifications, quality, OEM, exports, and manufacturing capabilities."
-coverImage: "https://static.wixstatic.com/media/bf38c5_49ef86876a964ccabbc098b89918b04e~mv2.jpg"
+cover: "../../assets/blog/choose-private-label-pet-supplement-manufacturer.jpg"
 coverAlt: "Business executive evaluating private label pet supplement manufacturing proposals with product samples, packaging concepts, quality documents, and a modern production facility in the background."
 ---
 

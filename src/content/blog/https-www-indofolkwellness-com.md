@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Understand the importance of FDA approval and lab-tested Shilajit for your brand"
 seoDescription: "Understand the importance of FDA approval and lab-tested Shilajit for your brand. Partner with Indofolkwellness for high-quality, certified Shilajit products in bulk."
-coverImage: "https://static.wixstatic.com/media/34116d_18d51be06fa24bfab8f563031c14e58e~mv2.jpg"
+cover: "../../assets/blog/https-www-indofolkwellness-com.jpg"
 coverAlt: "Indofolks Brand with FDA Approval: Trusted, high-quality Shilajit products, ensuring safety and compliance with FDA standards."
 ---
 

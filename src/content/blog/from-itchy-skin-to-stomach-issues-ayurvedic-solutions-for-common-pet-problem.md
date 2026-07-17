@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurvedic treatments for pet allergies"
 seoDescription: "Discover Ayurvedic treatments for pet allergies and improve your pet's health naturally. Explore effective Ayurvedic treatments for pet allergies today!"
-coverImage: "https://static.wixstatic.com/media/34116d_3d708ee070f245f583d0ba8915598f11~mv2.jpg"
+cover: "../../assets/blog/from-itchy-skin-to-stomach-issues-ayurvedic-solutions-for-common-pet-problem.jpg"
 coverAlt: "A dog with itchy skin being gently petted by its owner, illustrating the need for Ayurvedic solutions for pet allergies."
 ---
 

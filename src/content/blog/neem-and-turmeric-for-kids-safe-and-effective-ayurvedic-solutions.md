@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Neem and Turmeric for Kids"
 seoDescription: "Discover the amazing benefits of neem and turmeric for kids! Learn how these Ayurvedic herbs boost immunity, improve skin health, and support digestion. Explore safe, natural remedies for your child’s well-being with Indofolk Wellness. #NeemBenefitsForKids #TurmericForChildren #AyurvedicHerbsForKids"
-coverImage: "https://static.wixstatic.com/media/34116d_ef58d7555d064fe0b6132f235bfe59e2~mv2.png"
+cover: "../../assets/blog/neem-and-turmeric-for-kids-safe-and-effective-ayurvedic-solutions.png"
 coverAlt: "Young boy smiling, holding a glass of turmeric milk in a cozy living room with soft lighting. Warm colors and a cheerful mood."
 ---
 

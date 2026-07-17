@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurvedic Dog Chews"
 seoDescription: "Discover the incredible benefits of Ayurvedic yak chews for dogs. These natural, long-lasting, and nutritious dog treats promote dental health, joint support, and overall wellness. Get premium yak chews at Indofolkwellness today"
-coverImage: "https://static.wixstatic.com/media/34116d_3ccf0ae422b8454a8fc6b3b19aae4226~mv2.jpg"
+cover: "../../assets/blog/yak-chew-benefits-why-ayurvedic-dog-chews-are-a-game-changer-for-pet-health.jpg"
 coverAlt: "A happy dog enjoying a nutritious yak chew treat."
 ---
 

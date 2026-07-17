@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurvedic"
 seoDescription: "Discover how Indofolk Wellness delivers sustainable Ayurvedic products through ethical sourcing, eco-friendly manufacturing, and biodegradable packaging. Learn why global buyers trust this leading eco-conscious Ayurveda supplier from India."
-coverImage: "https://static.wixstatic.com/media/34116d_4264ced22f184435b6b0c5a2e8a78c75~mv2.png"
+cover: "../../assets/blog/from-farm-to-shelf-how-indofolk-wellness-delivers-sustainable-ayurvedic-products.png"
 coverAlt: "Indofolk Wellness banner showcasing sustainable Ayurvedic products with eco-friendly packaging and ethical sourcing commitments."
 ---
 

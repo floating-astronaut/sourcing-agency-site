@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_854876b593e84b3e8b1efff8d1230755~mv2.png"
+cover: "../../assets/blog/exploring-the-benefits-of-indofolk-wellness-b2b-wellness-sourcing-solutions.png"
 coverAlt: "Eye-level view of natural Ayurvedic herbs arranged in bowls"
 ---
 

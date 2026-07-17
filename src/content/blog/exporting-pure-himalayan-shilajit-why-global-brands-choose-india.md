@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "shilajit"
 seoDescription: "Discover why global brands trust India for exporting pure Himalayan Shilajit. Learn about its unmatched purity, ethical sourcing, and Ayurvedic processing. Get premium-quality Shilajit in the UK from Sherpa’s Secret. 🚀"
-coverImage: "https://static.wixstatic.com/media/34116d_f43afcbfd5a740dd8e8d0f3277586b01~mv2.png"
+cover: "../../assets/blog/exporting-pure-himalayan-shilajit-why-global-brands-choose-india.png"
 coverAlt: "Exporting Pure Himalayan Shilajit: Why Global Brands Choose India - Sherpa's Secret Shilajit, Renowned for Its Quality and Efficacy, Backed by Lab Certification and Trusted Worldwide."
 ---
 

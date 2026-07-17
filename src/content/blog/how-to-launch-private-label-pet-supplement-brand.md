@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: "private label pet supplements"
 seoDescription: "Learn how to launch a private label pet supplement brand in 2026. Discover product selection, manufacturing, branding, packaging, scaling strategies, and Ayurvedic pet wellness opportunities for global markets."
-coverImage: "https://static.wixstatic.com/media/bf38c5_a311fb71a6e145e292d7c79760b8c9d9~mv2.jpg"
+cover: "../../assets/blog/how-to-launch-private-label-pet-supplement-brand.jpg"
 coverAlt: "Premium private label pet supplement products featuring soft chews, powders, tablets and liquid supplements with Ayurvedic ingredients including Ashwagandha and Turmeric for pet wellness brands."
 ---
 

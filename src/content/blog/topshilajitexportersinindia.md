@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "shilajit"
 seoDescription: "Discover the top Shilajit exporters in India. Learn how to choose trusted suppliers with FDA approval, GMP certifications, and lab-tested quality. Explore Indofolkwellness for bulk orders and low MOQ."
-coverImage: "https://static.wixstatic.com/media/34116d_46724cf5e68d4c7f9a3fe271c1a0da65~mv2.png"
+cover: "../../assets/blog/topshilajitexportersinindia.png"
 coverAlt: "India is a Leading Exporter of Shilajit: Showcasing high-quality Shilajit products in various forms, highlighting India's role in the global market."
 ---
 

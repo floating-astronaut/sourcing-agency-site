@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: "Shilajit products that stand out in a competitive market. With FDA-approved facilities, low MOQs, and customizable solutions, they’ve helped multiple businesses bring their vision to life."
-coverImage: "https://static.wixstatic.com/media/34116d_e9b452b9c4cb43819d323e9baf3180f4~mv2.png"
+cover: "../../assets/blog/private-label-shilajit-manufacturer-build-your-brand-with-low-moq-and-lab-certif.png"
 coverAlt: "Private Label Shilajit jars, pouches, and bottles with blank labels for custom branding, lab-certified quality, low minimum order quantity."
 ---
 

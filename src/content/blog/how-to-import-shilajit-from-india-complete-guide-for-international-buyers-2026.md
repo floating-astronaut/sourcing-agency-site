@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: ""
+
 coverAlt: ""
 ---
 

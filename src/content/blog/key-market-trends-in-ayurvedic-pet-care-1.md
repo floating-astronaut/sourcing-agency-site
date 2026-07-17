@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_8b73998921b24d92b30bc4dbe9250ec0~mv2.png"
+cover: "../../assets/blog/key-market-trends-in-ayurvedic-pet-care-1.png"
 coverAlt: "Close-up view of Ayurvedic herbs and natural pet care products arranged on a wooden surface"
 ---
 

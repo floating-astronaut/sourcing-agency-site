@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Pet Wellness"
 seoDescription: "Discover how Ayurveda and Indofolk Wellness are revolutionizing pet care with holistic, natural solutions. Learn about herbal remedies, personalized nutrition, and sustainable pet wellness practices for a healthier, happier furry companion."
-coverImage: "https://static.wixstatic.com/media/34116d_53f7ad5922384efdbf5269f168af507c~mv2.jpg"
+cover: "../../assets/blog/the-future-of-pet-wellness-why-ayurveda-and-indofolk-wellness-are-changing-the-w.jpg"
 coverAlt: "A happy and healthy pet sitting in a serene natural setting, surrounded by Ayurvedic herbs and Indofolk wellness ingredients, symbolizing holistic pet care and natural healing practices."
 ---
 

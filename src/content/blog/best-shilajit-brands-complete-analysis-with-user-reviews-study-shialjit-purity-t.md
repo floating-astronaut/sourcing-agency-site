@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_19d14f8e06dd467fbd2a5204c68d686c~mv2.png"
+cover: "../../assets/blog/best-shilajit-brands-complete-analysis-with-user-reviews-study-shialjit-purity-t.png"
 coverAlt: ""
 ---
 

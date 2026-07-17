@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "shilajit"
 seoDescription: "Discover how Shilajit, a powerful natural resin, can support fertility in both men and women. Learn about Sherpa's Secret Shilajit, a trusted source for boosting reproductive health. Visit www.sherpassecret.com for more details!"
-coverImage: "https://static.wixstatic.com/media/34116d_fdf1a3fe122a46c9bd1153c16049d575~mv2.jpg"
+cover: "../../assets/blog/shilajit-for-fertility-a-natural-solution-for-men-and-women.jpg"
 coverAlt: "Shilajit for Fertility: A Natural Solution for Enhancing Reproductive Health in Men and Women, Backed by Lab-Certified Quality and Safety."
 ---
 

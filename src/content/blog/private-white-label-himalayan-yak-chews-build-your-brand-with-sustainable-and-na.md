@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Private Label Himalayan Yak Chews: Build Your Brand with Sustainable and Natural"
 seoDescription: "Yak Chews present an excellent opportunity to enter the premium pet treats market.  In this blog, we’ll explore how partnering with Indian exporters like Indofolkwellness can help you build a successful private-label Yak Chew brand. Private Label Himalayan Yak Chews: Build Your Brand with Sustainable and Natural"
-coverImage: "https://static.wixstatic.com/media/4d0150_43926eec8e284d8b9799cded1800f466~mv2.jpg"
+cover: "../../assets/blog/private-white-label-himalayan-yak-chews-build-your-brand-with-sustainable-and-na.jpg"
 coverAlt: "Private Label Himalayan Yak Chews: Building Your Brand with Sustainable, Natural, and Successful Products."
 ---
 

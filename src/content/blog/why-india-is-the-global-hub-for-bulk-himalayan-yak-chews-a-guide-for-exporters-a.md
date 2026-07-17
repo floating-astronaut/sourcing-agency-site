@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_26ddebc41ce04b9ca99088bcbdab0afd~mv2.jpg"
+cover: "../../assets/blog/why-india-is-the-global-hub-for-bulk-himalayan-yak-chews-a-guide-for-exporters-a.jpg"
 coverAlt: ""
 ---
 

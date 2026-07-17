@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Base from '~/layouts/Base.astro';
 import Icon from '~/components/Icon.astro';
 
@@ -28,6 +29,16 @@ function fmtDate(d: Date): string {
         {entries.map((entry) => (
           <li>
             <a href={`/blog/${entry.slug}`} class="card p-6 md:p-8 block h-full transition-transform hover:-translate-y-0.5">
+              {entry.data.cover && (
+                <Image
+                  src={entry.data.cover}
+                  alt={entry.data.coverAlt ?? entry.data.title}
+                  widths={[400, 640, 800]}
+                  sizes="(min-width: 768px) 400px, 100vw"
+                  loading="lazy"
+                  class="mb-5 w-full aspect-[16/10] object-cover rounded-lg"
+                />
+              )}
               <div class="flex items-center gap-3 text-fluid-xs text-subtle">
                 <time datetime={entry.data.publishedAt.toISOString()}>{fmtDate(entry.data.publishedAt)}</time>
                 {entry.data.readingMinutes && (

@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "shilajit"
 seoDescription: "Discover top exported Ayurvedic products from India, including Shilajit, in this detailed guide. Learn about Shilajit's benefits and global demand."
-coverImage: "https://static.wixstatic.com/media/34116d_198a44da180447c6b902c8118a064202~mv2.jpg"
+cover: "../../assets/blog/top-exported-ayurvedic-products-from-india-a-detailed-guide.jpg"
 coverAlt: "Ancient Ayurvedic scroll and a globe indicating global influence of Ayurveda."
 ---
 

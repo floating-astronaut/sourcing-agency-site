@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurvedic Remedies for pet"
 seoDescription: "Discover Ayurvedic remedies for pet anxiety, digestion, and immunity. Explore natural pet supplements and herbal treatments for dogs and cats with IndoFolks."
-coverImage: "https://static.wixstatic.com/media/34116d_08e9ceaf8ba346c39a86754d855cdfb0~mv2.jpg"
+cover: "../../assets/blog/is-your-pet-anxious-or-sick-ayurvedic-remedies-that-work-wonders.jpg"
 coverAlt: "A natural Ayurvedic remedy to reduce pet anxiety and stress."
 ---
 

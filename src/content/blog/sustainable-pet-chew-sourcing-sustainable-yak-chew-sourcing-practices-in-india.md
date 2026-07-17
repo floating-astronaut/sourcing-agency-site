@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_7c4056a72bda4629a52dc1121bb9aa6d~mv2.png"
+cover: "../../assets/blog/sustainable-pet-chew-sourcing-sustainable-yak-chew-sourcing-practices-in-india.png"
 coverAlt: "Eye-level view of a yak grazing in a Himalayan pasture"
 ---
 

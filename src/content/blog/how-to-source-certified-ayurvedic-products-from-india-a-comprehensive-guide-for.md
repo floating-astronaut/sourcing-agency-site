@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: "ayurvedic"
 seoDescription: "Learn how to source certified Ayurvedic products from India with this step-by-step guide. Discover trusted GMP-certified Ayurvedic manufacturers, quality checks, and top suppliers like Indofolk Wellness. Explore high-demand products like Ashwagandha, Turmeric, and Triphala for global import."
-coverImage: "https://static.wixstatic.com/media/34116d_034548cc2c5346ed8dea3dbf627434ad~mv2.jpg"
+cover: "../../assets/blog/how-to-source-certified-ayurvedic-products-from-india-a-comprehensive-guide-for.jpg"
 coverAlt: "Freight containers loaded with Ayurvedic products, ready for export to international markets."
 ---
 

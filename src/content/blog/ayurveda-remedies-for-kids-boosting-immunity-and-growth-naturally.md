@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurveda for kids"
 seoDescription: "Discover the power of Ayurveda for kids with natural remedies to boost immunity and support growth. Explore Ayurvedic immunity boosters, herbal remedies, and tips for natural health. Trust Indofolk Wellness for safe, effective, and holistic solutions for your child’s well-being."
-coverImage: "https://static.wixstatic.com/media/34116d_15faaf99301b4dd2885f4f0b5f8b3dbc~mv2.webp"
+cover: "../../assets/blog/ayurveda-remedies-for-kids-boosting-immunity-and-growth-naturally.webp"
 coverAlt: "Baby in orange crawling with joy on textured background. Ayurvedic items like herbs and stones are scattered. Text: Nurturing Kids through Ayurveda."
 ---
 

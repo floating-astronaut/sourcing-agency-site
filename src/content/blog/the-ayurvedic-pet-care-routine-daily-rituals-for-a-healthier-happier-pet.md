@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "pet"
 seoDescription: "Discover the secrets of Ayurvedic pet care with daily rituals designed to enhance your pet's health and happiness. Learn how to integrate natural wellness practices, balanced nutrition, and mindful bonding into your pet's routine. Explore premium Ayurvedic pet products from IndoFolk Wellness, a trusted provider of holistic pet care solutions"
-coverImage: "https://static.wixstatic.com/media/34116d_50515d4d248643209d401c3b8be30a87~mv2.jpg"
+cover: "../../assets/blog/the-ayurvedic-pet-care-routine-daily-rituals-for-a-healthier-happier-pet.jpg"
 coverAlt: "A cat being gently groomed by its owner, showcasing the importance of mindful bonding in Ayurvedic pet care"
 ---
 

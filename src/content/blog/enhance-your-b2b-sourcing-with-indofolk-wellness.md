@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: ""
 seoDescription: ""
-coverImage: "https://static.wixstatic.com/media/4d0150_522ecfe344014708bfb32bc229f149ee~mv2.png"
+cover: "../../assets/blog/enhance-your-b2b-sourcing-with-indofolk-wellness.png"
 coverAlt: "Close-up view of Ayurvedic herbal pet shampoo bottle with natural herbs"
 ---
 

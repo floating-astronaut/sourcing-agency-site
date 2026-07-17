@@ -9,7 +9,7 @@ featured: true
 draft: false
 focusKeyword: ""
 seoDescription: "Global Ashwagandha market data, export regulations, supplier sourcing strategies, and profit margins for international buyers importing from India."
-coverImage: "https://static.wixstatic.com/media/nsplsh_b1ca28668ff9430a953aba8dd00eb48d~mv2.jpg"
+cover: "../../assets/blog/ashwagandha-export-market-demand-2026.jpg"
 coverAlt: "Ashwagandha supplement capsules manufactured for export"
 ---
 

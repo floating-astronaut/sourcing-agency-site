@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "ayurveda"
 seoDescription: "Discover Ayurveda's holistic approach for kids and teens. Explore scientific insights into Ayurveda's natural wellness solutions today!"
-coverImage: "https://static.wixstatic.com/media/34116d_4e32ace9357c4f75b96f66cfdf5f8a75~mv2.jpg"
+cover: "../../assets/blog/ayurveda-for-kids-and-teens-scientific-insights-into-natural-wellness-solutions.jpg"
 coverAlt: "Energetic children playing outside, benefiting from Ashwagandha’s stamina-boosting properties."
 ---
 

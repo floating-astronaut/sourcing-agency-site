@@ -9,7 +9,7 @@ featured: false
 draft: false
 focusKeyword: "Ayurvedic"
 seoDescription: "Discover the power of Ayurvedic pet care with natural remedies for pets! Explore herbal pet supplements, holistic pet health tips, and trusted solutions from Indofolkwellness to keep your furry friends happy and healthy. Embrace the ancient wisdom of Ayurveda for your pets today!"
-coverImage: "https://static.wixstatic.com/media/34116d_d1ccead3225e466299dec6960a7ac695~mv2.webp"
+cover: "../../assets/blog/ayurvedic-remedies-for-pets-natural-healing-for-your-furry-friends.webp"
 coverAlt: "A happy dog and cat sitting peacefully with Ayurvedic herbs and essential oils in the background."
 ---
 
